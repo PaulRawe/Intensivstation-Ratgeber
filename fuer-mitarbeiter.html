@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Für Mitarbeitende auf Intensivstationen – Informationsflyer für Angehörige</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            color: #222;
+        }
+
+        header {
+            background: #2f6f8f;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2.5rem auto;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 16px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: #2f6f8f;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        ul {
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .flyer-preview img {
+            max-width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        .format-box {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            background: #eaf3f8;
+            border-left: 5px solid #2f6f8f;
+            border-radius: 6px;
+        }
+
+        .print-button {
+            display: inline-block;
+            margin: 1rem 0.8rem 0 0;
+            padding: 0.9rem 2.2rem;
+            background: #2f6f8f;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #ffffff;
+            border-top: 1px solid #ddd;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer a {
+            color: #2f6f8f;
+            text-decoration: none;
+            margin: 0 0.4rem;
+        }
+
+        /* ===== DRUCKBEREICHE ===== */
+
+        .print-version {
+            display: none;
+            text-align: center;
+        }
+
+        .print-version h2 {
+            margin-bottom: 0.6rem;
+            font-size: 1.1rem;
+        }
+
+        .print-version p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            margin-bottom: 0.8rem;
+        }
+
+        .print-version img {
+            max-width: 100%;
+        }
+
+@media print {
+
+    header,
+    main,
+    footer {
+        display: none !important;
+    }
+
+    #print-a6,
+    #print-a5 {
+        display: none;
+    }
+
+    body.print-a6 #print-a6 {
+        display: block !important;
+        width: 105mm;
+        height: 148mm;
+        margin: auto;
+    }
+
+    body.print-a5 #print-a5 {
+        display: block !important;
+        width: 148mm;
+        height: 210mm;
+        margin: auto;
+    }
+
+    body {
+        background: #ffffff;
+    }
+}
+
+    </style>
+
+    <script>
+        function printA6() {
+            document.body.className = 'print-a6';
+            window.print();
+        }
+
+        function printA5() {
+            document.body.className = 'print-a5';
+            window.print();
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Information für Mitarbeitende auf Intensivstationen</h1>
+    <p>Gezielte Angehörigeninformation – ohne zusätzlichen Aufwand</p>
+</header>
+
+<main>
+
+    <h2>Worum geht es?</h2>
+    <p>
+        Angehörige auf Intensivstationen haben häufig wiederkehrende Fragen
+        zu Abläufen, Beatmung, künstlichem Koma und Besuchsregelungen.
+        Der Flyer verweist per QR-Code auf einen unabhängigen Online-Ratgeber,
+        der diese Fragen verständlich und strukturiert beantwortet.
+    </p>
+
+    <div class="grid">
+
+        <div class="flyer-preview">
+            <h3>Flyer-Vorschau</h3>
+            <img src="Flyer.png" alt="Flyer für Angehörige auf der Intensivstation">
+        </div>
+
+        <div>
+            <h3>Nutzen für Station und Team</h3>
+            <ul>
+                <li>Reduktion wiederkehrender Standardfragen</li>
+                <li>Entlastung im pflegerischen und ärztlichen Alltag</li>
+                <li>Ruhigere, besser vorbereitete Gespräche</li>
+                <li>Zurückhaltendes, genehmigungsfähiges Informationsangebot</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="format-box">
+        <h3>Druckversionen nach Einsatzbereich</h3>
+
+        <p>
+            <strong>DIN A6 – Türbereich</strong><br>
+            Für Intensivstationstüren, Glastüren und Türrahmen.
+            Dezent, serviceorientiert, ohne visuelle Dominanz.
+        </p>
+
+        <p>
+            <strong>DIN A5 – Warte- / Besucherbereich</strong><br>
+            Besser lesbar bei Abstand, geeignet für Aufsteller oder Infowände.
+        </p>
+
+        <a class="print-button" onclick="printA6()">🖨️ DIN A6 drucken</a>
+        <a class="print-button" onclick="printA5()">🖨️ DIN A5 drucken</a>
+    </div>
+
+    <p style="margin-top:2.5rem; font-size:0.95rem; color:#555;">
+        Hinweis: Der verlinkte Ratgeber dient der allgemeinen Orientierung für Angehörige.
+        Er ersetzt keine ärztliche oder pflegerische Beratung und erhebt keinen Anspruch
+        auf klinikspezifische Regelungen.
+    </p>
+<h3 style="margin-top:3rem;">Hinweis für Leitung und Qualitätsmanagement</h3>
+
+<p style="font-size:0.95rem; color:#555; line-height:1.6;">
+Der eingesetzte QR-Code verweist auf eine öffentlich zugängliche Informationsseite,
+die sich mit häufigen Fragen von Angehörigen sowie Patientinnen und Patienten
+im Zusammenhang mit einem Aufenthalt auf der Intensivstation befasst.
+</p>
+
+<p style="font-size:0.95rem; color:#555; line-height:1.6;">
+Die Inhalte dienen der allgemeinen Orientierung und ersetzen ausdrücklich
+keine ärztliche oder pflegerische Beratung sowie keine klinikinternen Regelungen.
+</p>
+
+<p style="font-size:0.95rem; color:#555; line-height:1.6;">
+Die Informationsseite wird privat betrieben und kann ergänzend dezente
+Werbeeinblendungen sowie Hinweise auf kostenpflichtige Ratgeber enthalten.
+Diese stellen optionale Zusatzangebote dar und sind nicht Bestandteil
+der klinischen Versorgung.
+</p>
+
+<p style="font-size:0.95rem; color:#555; line-height:1.6;">
+Es erfolgt keine Erhebung personenbezogener Gesundheitsdaten,
+keine Registrierungspflicht und keine aktive Dateneingabe durch Nutzende.
+Die Nutzung erfolgt freiwillig und eigenverantwortlich.
+</p>
+
+<p style="font-size:0.95rem; color:#555; line-height:1.6;">
+Die Platzierung des QR-Codes erfolgt dezent (z. B. Tür- oder Besucherbereich)
+und hat keinen Einfluss auf klinische Abläufe, Hygiene-, Sicherheits-
+oder Datenschutzanforderungen.
+</p>
+
+</main>
+
+<footer>
+    <p>
+        <a href="impressum.html">Impressum</a> |
+        <a href="datenschutz.html">Datenschutz</a>
+    </p>
+    <p>© 2026 Paul Rawe – Intensivstation Ratgeber</p>
+</footer>
+
+<!-- ===== DRUCKLAYOUTS ===== -->
+
+<div id="print-a6" class="print-version">
+    <h2>Information für Angehörige</h2>
+    <p>
+        Antworten auf häufige Fragen zur Intensivstation.<br>
+        Verständlich · unabhängig · kostenlos
+    </p>
+    <img src="Flyer.png" alt="QR-Code Ratgeber">
+</div>
+
+<div id="print-a5" class="print-version">
+    <h2>Information für Angehörige auf der Intensivstation</h2>
+    <p>
+        Dieser QR-Code führt zu verständlichen Antworten
+        zu Abläufen, Beatmung und künstlichem Koma
+        auf der Intensivstation.
+    </p>
+    <img src="Flyer.png" alt="QR-Code Ratgeber">
+</div>
+
+</body>
+</html>

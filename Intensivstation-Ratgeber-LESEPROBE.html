@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intensivstation Ratgeber – Kostenlose Leseprobe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #2c5f7d;
+            --color-secondary: #5dade2;
+            --color-accent: #3498db;
+            --color-light: #ebf8ff;
+            --color-white: #ffffff;
+            --color-text: #2c3e50;
+            --color-text-light: #7f8c8d;
+            --color-border: #d4e6f1;
+            --color-success: #27ae60;
+            --shadow-md: 0 4px 16px rgba(44, 95, 125, 0.12);
+            --shadow-lg: 0 8px 32px rgba(44, 95, 125, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            line-height: 1.7;
+            color: var(--color-text);
+            background: linear-gradient(135deg, #ebf8ff 0%, #f8f9fa 100%);
+            font-size: 18px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #1e4460 100%);
+            color: var(--color-white);
+            padding: 3rem 2rem 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header-icon {
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 1;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .preview-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+        }
+
+        .author-section {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-md);
+            border-left: 5px solid var(--color-secondary);
+        }
+
+        .author-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .author-section p {
+            margin-bottom: 0.8rem;
+            color: var(--color-text-light);
+        }
+
+        .section {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .section-number {
+            background: var(--color-secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .checklist {
+            background: var(--color-light);
+            border-left: 5px solid var(--color-secondary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .checklist h4 {
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .checklist-item {
+            margin: 0.8rem 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .checklist-item:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 22px;
+            color: var(--color-secondary);
+            font-weight: bold;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #e8f8f5 0%, #d5f4e6 100%);
+            border-left: 5px solid var(--color-success);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .tip-box h4 {
+            color: var(--color-success);
+            margin-bottom: 0.8rem;
+        }
+
+        .fade-out {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fade-out::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, white);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-box ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            list-style: none;
+        }
+
+        .cta-box li {
+            padding: 0.5rem 0 0.5rem 2rem;
+            position: relative;
+        }
+
+        .cta-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #5dade2;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background: white;
+            color: var(--color-primary);
+            padding: 1.2rem 3rem;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        .btn-buy:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+        }
+
+        .secure-note {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        ul {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .cta-box h2 {
+                font-size: 2rem;
+            }
+            .price-tag {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="header-icon">🏥</div>
+    <h1>Intensivstation Ratgeber<br>für Angehörige</h1>
+    <p class="subtitle">
+        Praktischer Leitfaden aus 15 Jahren Intensiv-Erfahrung
+    </p>
+    <div class="preview-badge">📄 Kostenlose Leseprobe</div>
+</div>
+
+<div class="container">
+
+<!-- Autor -->
+<div class="author-section">
+    <h2>Über den Autor</h2>
+    <p>
+        <strong>Paul Rawe</strong> ist Fachkrankenpfleger für Intensiv- und Anästhesiepflege 
+        mit 15 Jahren Berufserfahrung auf der Intensivstation. Als ehemaliger Stationsleiter 
+        einer 23-Betten-Intensivstation kennt er die Sorgen und Fragen von Angehörigen genau.
+    </p>
+</div>
+
+<!-- Leseprobe: Die ersten 24 Stunden -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-number">1</div>
+        <h2 class="section-title">📋 Die ersten 24 Stunden – Ihre Checkliste</h2>
+    </div>
+    
+    <p>
+        Wenn Ihr Angehöriger plötzlich auf die Intensivstation kommt, ist das ein Schock. 
+        Diese Checkliste hilft Ihnen, in den ersten Stunden das Wichtigste zu organisieren.
+    </p>
+
+    <div class="checklist">
+        <h4>Sofort erledigen:</h4>
+        <div class="checklist-item">Personalausweis / Reisepass mitbringen</div>
+        <div class="checklist-item">Krankenversicherungskarte dabei haben</div>
+        <div class="checklist-item">Auf der Station nach dem zuständigen Arzt fragen</div>
+        <div class="checklist-item">Nach der Bezugspflegekraft fragen</div>
+        <div class="checklist-item">Telefonnummer der Station notieren</div>
+        <div class="checklist-item">Besuchszeiten erfragen</div>
+    </div>
+
+    <div class="tip-box">
+        <h4>💡 Praxis-Tipp von Paul:</h4>
+        <p>
+            Fotografieren Sie die Telefonnummer der Station mit Ihrem Handy. Schreiben Sie auch 
+            die Zimmernummer auf. In der ersten Aufregung vergisst man solche Details schnell.
+        </p>
+    </div>
+</div>
+
+<!-- Leseprobe: Verhalten (gekürzt) -->
+<div class="section fade-out">
+    <div class="section-header">
+        <div class="section-number">2</div>
+        <h2 class="section-title">🤝 Verhalten auf der Intensivstation</h2>
+    </div>
+
+    <h3>Was hilfreich ist</h3>
+    <ul>
+        <li><strong>Ruhig sprechen</strong> – auch wenn der Patient nicht reagiert</li>
+        <li><strong>Sich ankündigen</strong> – "Hallo Papa, ich bin es, Maria"</li>
+        <li><strong>Hygiene STRIKT einhalten</strong> – Händedesinfektion!</li>
+        <li><strong>Anweisungen des Personals befolgen</strong></li>
+        <li><strong>Sanfte Berührungen</strong> – Hand halten (wenn erlaubt)</li>
+    </ul>
+
+    <h3>Was Sie vermeiden sollten</h3>
+    <ul>
+        <li>❌ Belastende Gespräche am Bett</li>
+        <li>❌ Medizinische Geräte berühren</li>
+        <li>❌ Zu viele Besucher gleichzeitig</li>
+    </ul>
+
+    <p style="margin-top: 2rem; opacity: 0.6; font-style: italic;">
+        [Leseprobe endet hier – Der vollständige Ratgeber enthält ausführliche Erklärungen...]
+    </p>
+</div>
+
+<!-- Call to Action -->
+<div class="cta-box">
+    <h2>💎 Der vollständige Ratgeber enthält:</h2>
+    <p>Über 40 Seiten geballtes Wissen aus 15 Jahren Intensiv-Erfahrung</p>
+    
+    <ul>
+        <li>✅ Strukturierter Fragenkatalog fürs Arztgespräch</li>
+        <li>✅ Medizinische Begriffe verständlich erklärt</li>
+        <li>✅ Notfall-Kontaktliste zum Ausfüllen</li>
+        <li>✅ Tagesprotokoll / Tagebuch-Vorlage</li>
+        <li>✅ Was darf ich mitbringen? (ICU-spezifisch!)</li>
+        <li>✅ Wichtige Dokumente & Unterlagen</li>
+        <li>✅ Umgang mit emotionalen Reaktionen</li>
+        <li>✅ Selbstfürsorge für Angehörige</li>
+        <li>✅ Unterstützung & Anlaufstellen</li>
+        <li>✅ Was tun bei Verschlechterung?</li>
+        <li>✅ Nach der Intensivstation – wie geht's weiter?</li>
+        <li>✅ Und vieles mehr...</li>
+    </ul>
+
+    <div class="price-tag">Nur 4,99 €</div>
+    
+    <a href="https://paulrawe.gumroad.com/l/vniudu" target="_blank" class="btn-buy">📄 Jetzt kaufen & herunterladen</a>
+    
+    <p class="secure-note">
+        🔒 Sicherer Download via Gumroad<br>
+        Sofort als PDF zum Download verfügbar
+    </p>
+</div>
+
+<!-- Zusatz-Info -->
+<div class="author-section" style="text-align: center;">
+    <p style="font-size: 1.1rem; line-height: 1.8;">
+        <strong>Dieser Ratgeber ist Ihr Begleiter in einer der schwierigsten Zeiten Ihres Lebens.</strong><br>
+        Praktisch, verständlich, empathisch – geschrieben von jemandem, der weiß, wovon er spricht.
+    </p>
+</div>
+
+</div>
+
+
+<!-- Rechtlicher Footer -->
+<div style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-top: 2px solid #d4e6f1; text-align: center; font-size: 0.9rem; color: #7f8c8d;">
+    <p><a href="impressum.html" style="color: #2f6f8f; text-decoration: none; margin: 0 1rem;">Impressum</a> | 
+    <a href="datenschutz.html" style="color: #2f6f8f; text-decoration: none; margin: 0 1rem;">Datenschutzerklärung</a> | 
+    <a href="widerruf.html" style="color: #2f6f8f; text-decoration: none; margin: 0 1rem;">Widerrufsbelehrung</a> | 
+    <a href="agb.html" style="color: #2f6f8f; text-decoration: none; margin: 0 1rem;">AGB</a></p>
+    <p style="margin-top: 0.5rem;">© 2025 Paul Rawe – Intensivstation Ratgeber</p>
+</div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background-color: #2e2e2e; color: #ffffff; padding: 1.5rem; box-shadow: 0 -2px 10px rgba(0,0,0,0.2); z-index: 1000;">
+    <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+        <p style="margin: 0 0 1rem 0; line-height: 1.6; font-size: 0.95rem;">
+            Diese Website verwendet Cookies. 
+            <a href="datenschutz.html" style="color: #5fa8c9; text-decoration: underline;">Datenschutzerklärung</a>
+        </p>
+        <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+            <button onclick="acceptCookies()" style="padding: 0.6rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; font-size: 0.95rem; font-weight: bold; background-color: #2f6f8f; color: #ffffff;">Akzeptieren</button>
+            <button onclick="declineCookies()" style="padding: 0.6rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; font-size: 0.95rem; font-weight: bold; background-color: #6b6b6b; color: #ffffff;">Ablehnen</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/cookie-consent.js"></script>
+
+</body>
+</html>
