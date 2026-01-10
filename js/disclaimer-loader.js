@@ -29,11 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(function () {
             // Fallback (rechtlich ausreichend)
             inner.innerHTML = `
-                <strong>Medizinischer Hinweis:</strong><br>
-                Die Inhalte dieser Website dienen ausschließlich der allgemeinen Information
-                und stellen keine medizinische Beratung dar.<br>
-                Sie ersetzen weder eine ärztliche Aufklärung noch eine individuelle
-                Diagnose oder Behandlung durch qualifiziertes medizinisches Fachpersonal.
+                 Die Inhalte dieser Website dienen der allgemeinen Information und
+        ersetzen keine ärztliche oder pflegerische Beratung im Einzelfall.
             `;
         });
 });
+
