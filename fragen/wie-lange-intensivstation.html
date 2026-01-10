@@ -138,7 +138,7 @@
 
         <!-- Sidebar -->
         <aside class="sidebar">
-               
+             <div id="sidebar-downloads"></div>
             <!-- Schnellnavigation -->
             <div class="sidebar-box">
                 <h3>🔍 Alle Fragen</h3>
@@ -176,10 +176,22 @@
             <p class="footer-year">© 2025 Paul Rawe – Intensivstation Ratgeber</p>
         </div>
     </div>
+<div id="cookie-banner">
+    <button id="cookie-accept">Alle akzeptieren</button>
+    <button id="cookie-decline">Nur notwendige</button>
+</div>
 </footer>
 
 <!-- Gumroad Overlay Script -->
 <script src="https://gumroad.com/js/gumroad.js"></script>
-
+<script src="../js/disclaimer-loader.js"></script>
+    <script>
+fetch('../includes/sidebar-downloads.html')
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById('sidebar-downloads').innerHTML = html;
+  });
+</script>
+ <script src="../js/cookie-consent.js"></script>   
 </body>
 </html>
