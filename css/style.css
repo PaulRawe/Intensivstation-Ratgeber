@@ -257,16 +257,17 @@ footer {
 
 .medical-disclaimer-wrapper {
     width: 100%;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #ccc;
+    background-color: #f1f4f6;          /* sehr helles Blau-Grau */
+    border-bottom: 1px solid #d6dde3;
 }
 
 .medical-disclaimer-inner {
-    max-width: 1200px;   /* identisch zu .container */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 10px 20px;
     font-size: 0.85rem;
     line-height: 1.5;
-    color: #333;
+    color: #4a4a4a;
     text-align: center;
 }
+
