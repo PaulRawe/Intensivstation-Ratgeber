@@ -254,3 +254,19 @@ footer {
         text-align: center;
     }
 }
+
+.medical-disclaimer-wrapper {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.medical-disclaimer-inner {
+    max-width: 1200px;   /* identisch zu .container */
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+}
