@@ -169,7 +169,20 @@ function insertSearchBox() {
   // Füge Suchbox nach der Navigation ein
   nav.insertAdjacentHTML('afterend', searchBoxHTML);
 }
-
+// Funktion um den richtigen Pfad zu berechnen
+function getCorrectPath(url) {
+  // Prüfe ob wir in einem Unterordner sind (z.B. fragen/)
+  const currentPath = window.location.pathname;
+  
+  // Wenn wir in einem Unterordner sind (enthält /fragen/)
+  if (currentPath.includes('/fragen/')) {
+    // Füge ../ vor die URL um eine Ebene nach oben zu gehen
+    return '../' + url;
+  }
+  
+  // Ansonsten nutze die URL wie sie ist (für Startseite)
+  return url;
+}
 // Suchfunktion
 function performSearch() {
   const searchInput = document.getElementById('searchInput');
@@ -205,7 +218,8 @@ function performSearch() {
     
     results.forEach(result => {
       html += '<li class="search-result-item">';
-      html += '<a href="' + result.url + '" class="search-result-link">' + result.title + '</a>';
+     const correctUrl = getCorrectPath(result.url);
+      html += '<a href="' + correctUrl + '" class="search-result-link">' + result.title + '</a>';
       html += '<span class="search-result-category">Kategorie: ' + result.category + '</span>';
       html += '</li>';
     });
@@ -237,3 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, 100);
 });
+
+
+});
+
