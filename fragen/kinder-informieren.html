@@ -31,13 +31,17 @@
                 <li><a href="../index.html">Startseite</a></li>
                 <li><a href="../ueber-mich.html">Über mich</a></li>
                 <li><a href="../index.html#kontakt">Kontakt</a></li>
+                <li><a href="../fuer-mitarbeiter.html">👥 Für Mitarbeiter von Intensivstationen</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- Medizinischer Hinweis (zentral geladen) -->
+<!-- Medizinischer Disclaimer - wird per JS geladen -->
 <div id="article-disclaimer"></div>
+
+<!-- Sales-Banner - wird per JS geladen -->
+<div id="sales-banner-container"></div>
 
 <div class="container">
     <div class="content-wrapper">
@@ -56,7 +60,7 @@
 
                 <p>
                     Aus meiner Erfahrung weiß ich, dass diese Gespräche vielen mehr Angst machen
-                    als das Gespräch mit Ärzten. Dabei gibt es keinen „perfekten“ Weg –
+                    als das Gespräch mit Ärzten. Dabei gibt es keinen „perfekten" Weg –
                     aber es gibt hilfreiche Grundsätze.
                 </p>
 
@@ -75,7 +79,7 @@
                 <p>
                     Kleine Kinder brauchen einfache, klare Aussagen:
                     „Opa ist sehr krank und muss in einem besonderen Zimmer im Krankenhaus liegen,
-                    damit Ärzte und Pflegekräfte ihm helfen können.“
+                    damit Ärzte und Pflegekräfte ihm helfen können."
                 </p>
 
                 <p>
@@ -93,7 +97,7 @@
                 <p>
                     Hier dürfen Sie mehr erklären – und auch ehrlich sagen,
                     wenn Sie etwas noch nicht wissen.
-                    „Das wissen wir im Moment noch nicht“ ist eine völlig legitime Antwort.
+                    „Das wissen wir im Moment noch nicht" ist eine völlig legitime Antwort.
                 </p>
 
                 <h2>Gefühle zulassen</h2>
@@ -105,8 +109,8 @@
 
                 <p>
                     Versuchen Sie nicht, diese Gefühle wegzureden.
-                    Sätze wie „Ich sehe, dass dich das traurig macht“
-                    helfen oft mehr als „Du brauchst keine Angst zu haben“.
+                    Sätze wie „Ich sehe, dass dich das traurig macht"
+                    helfen oft mehr als „Du brauchst keine Angst zu haben".
                 </p>
 
                 <h2>Dürfen Kinder die Intensivstation besuchen?</h2>
@@ -132,7 +136,7 @@
                     Mein Rat aus der Praxis:
                     Sie müssen das nicht perfekt machen.
                     Zuhören, ehrlich sein und Nähe zeigen
-                    ist oft wichtiger als die „richtigen Worte“.
+                    ist oft wichtiger als die „richtigen Worte".
                 </p>
 
                 <div class="summary-box">
@@ -150,20 +154,15 @@
             </div>
         </main>
 
-        <aside class="sidebar">
-            <div id="sidebar-downloads"></div>
-
-            <div class="sidebar-box">
-                <h3>🔍 Alle Fragen</h3>
-                <p><a href="../index.html#kategorie-1">Erste Orientierung</a></p>
-                <p><a href="../index.html#kategorie-2">Künstliches Koma</a></p>
-                <p><a href="../index.html#kategorie-3">Beatmung</a></p>
-                <p><a href="../index.html#kategorie-4">Kommunikation</a></p>
-            </div>
+        <aside class="sidebar" id="sidebar-downloads">
+            <!-- Download-Boxen werden hier per JS geladen -->
         </aside>
 
     </div>
 </div>
+
+<!-- Cookie-Banner - wird per JS geladen -->
+<div id="cookie-banner-container"></div>
 
 <footer>
     <div class="footer-content">
@@ -173,19 +172,23 @@
                 <a href="../datenschutz.html">Datenschutz</a> |
                 <a href="../agb.html">AGB</a>
             </p>
-            <p class="footer-year">© 2025 Paul Rawe</p>
+            <p class="footer-year">© 2025 Paul Rawe – Intensivstation Ratgeber</p>
         </div>
     </div>
 </footer>
 
-<!-- Cookie Banner -->
-<div id="cookie-banner">
-    <button id="cookie-accept">Alle akzeptieren</button>
-    <button id="cookie-decline">Nur notwendige</button>
-</div>
-
 <!-- SCRIPTS -->
 <script src="../js/disclaimer-loader.js"></script>
+
+<script>
+fetch('../includes/sales-banner.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('sales-banner-container');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Sales-Banner konnte nicht geladen werden'));
+</script>
 
 <script>
 fetch('../includes/sidebar-downloads.html')
@@ -193,10 +196,22 @@ fetch('../includes/sidebar-downloads.html')
   .then(html => {
     const el = document.getElementById('sidebar-downloads');
     if (el) el.innerHTML = html;
-  });
+  })
+  .catch(err => console.log('Sidebar-Downloads konnten nicht geladen werden'));
+</script>
+
+<script>
+fetch('../includes/cookie-banner.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('cookie-banner-container');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Cookie-Banner konnte nicht geladen werden'));
 </script>
 
 <script src="../js/cookie-consent.js"></script>
+<script src="../js/sticky-sales.js"></script>
 <script src="../js/goatcounter-init.js"></script>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 
