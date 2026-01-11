@@ -8,13 +8,6 @@
     <meta name="description" content="Wie halte ich die Zeit auf der Intensivstation als Angehöriger aus? Ein erfahrener Intensivpfleger erklärt, was hilft, wenn die Belastung kaum auszuhalten ist.">
 
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- Cookie Consent -->
-    <script src="../js/cookie-consent.js" defer></script>
-
-    <!-- GoatCounter -->
-    <script data-goatcounter="https://pauleheissta.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
 </head>
 
 <body>
@@ -38,13 +31,17 @@
                 <li><a href="../index.html">Startseite</a></li>
                 <li><a href="../ueber-mich.html">Über mich</a></li>
                 <li><a href="../index.html#kontakt">Kontakt</a></li>
+                <li><a href="../fuer-mitarbeiter.html">👥 Für Mitarbeiter von Intensivstationen</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- ZENTRALER MEDIZINISCHER HINWEIS -->
+<!-- Medizinischer Disclaimer - wird per JS geladen -->
 <div id="article-disclaimer"></div>
+
+<!-- Sales-Banner - wird per JS geladen -->
+<div id="sales-banner-container"></div>
 
 <div class="container">
     <div class="content-wrapper">
@@ -58,7 +55,7 @@
                 <p>
                     Diese Frage stellen sich fast alle Angehörigen irgendwann –
                     oft leise, manchmal verzweifelt:
-                    <em>„Wie halte ich das alles aus?“</em>
+                    <em>„Wie halte ich das alles aus?"</em>
                 </p>
 
                 <p>
@@ -66,7 +63,7 @@
                     Diese Situation fühlt sich für die meisten Menschen
                     kaum aushaltbar an.
                     Sie sind nicht zu empfindlich, nicht zu schwach
-                    und nicht „falsch“, weil Sie an Ihre Grenzen kommen.
+                    und nicht „falsch", weil Sie an Ihre Grenzen kommen.
                     Eine Intensivstation ist für Angehörige
                     eine emotionale Ausnahmesituation.
                 </p>
@@ -77,7 +74,7 @@
                     und irgendwie zu funktionieren.
                     Genau das kostet jedoch enorm viel Kraft.
                     Wichtig ist zu verstehen:
-                    Sie müssen diese Situation nicht „wegstecken“.
+                    Sie müssen diese Situation nicht „wegstecken".
                 </p>
 
                 <h2>Den Zeitraum klein halten</h2>
@@ -122,7 +119,7 @@
 
                 <p>
                     Auf Intensivstationen erleben wir häufig,
-                    dass Angehörige innerlich „zumachen“,
+                    dass Angehörige innerlich „zumachen",
                     bis sie emotional zusammenbrechen.
                     Frühzeitig zu reden
                     kann genau das verhindern.
@@ -192,44 +189,15 @@
             </div>
         </main>
 
-        <aside class="sidebar">
-
-            <div class="sidebar-box sidebar-download">
-                <h3>📥 Ratgeber für Angehörige</h3>
-                <p class="download-title"><strong>Ihr Begleiter durch die Intensivzeit</strong></p>
-                <p class="download-description">
-                    Orientierung, Checklisten und Halt
-                    in einer extrem belastenden Zeit
-                </p>
-                <p>
-                    <a href="../Intensivstation-Ratgeber-LESEPROBE.html"
-                       target="_blank"
-                       style="color:#5dade2;text-decoration:underline;">
-                        👉 Kostenlose Leseprobe
-                    </a>
-                </p>
-                <p class="download-price">Nur 4,99 €</p>
-                <a href="https://autismusadhsalltag.gumroad.com/l/vniudu"
-                   class="download-btn"
-                   target="_blank">
-                    📄 Jetzt kaufen
-                </a>
-                <p class="download-secure">🔒 Sicherer Download via Gumroad</p>
-            </div>
-
-            <div class="sidebar-box sidebar-disclaimer">
-                <h3>💡 Wichtiger Hinweis</h3>
-                <p>
-                    Diese Inhalte dienen der allgemeinen Orientierung
-                    und ersetzen keine individuelle medizinische,
-                    psychologische oder therapeutische Beratung.
-                </p>
-            </div>
-
+        <aside class="sidebar" id="sidebar-downloads">
+            <!-- Download-Boxen werden hier per JS geladen -->
         </aside>
 
     </div>
 </div>
+
+<!-- Cookie-Banner - wird per JS geladen -->
+<div id="cookie-banner-container"></div>
 
 <footer>
     <div class="footer-content">
@@ -245,6 +213,42 @@
     </div>
 </footer>
 
+<!-- SCRIPTS -->
+<script src="../js/disclaimer-loader.js"></script>
+
+<script>
+fetch('../includes/sales-banner.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('sales-banner-container');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Sales-Banner konnte nicht geladen werden'));
+</script>
+
+<script>
+fetch('../includes/sidebar-downloads.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('sidebar-downloads');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Sidebar-Downloads konnten nicht geladen werden'));
+</script>
+
+<script>
+fetch('../includes/cookie-banner.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('cookie-banner-container');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Cookie-Banner konnte nicht geladen werden'));
+</script>
+
+<script src="../js/cookie-consent.js"></script>
+<script src="../js/sticky-sales.js"></script>
+<script src="../js/goatcounter-init.js"></script>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 
 </body>
