@@ -632,12 +632,6 @@ footer {
     font-weight: 700;
 }
 
-/* Icon vor Disclaimer */
-.medical-disclaimer-inner::before {
-    content: '⚠️';
-    font-size: 1.5rem;
-    margin-right: var(--spacing-xs);
-}
 
 /* ===================================
    ACCESSIBILITY - WCAG 2.1 AA
@@ -802,3 +796,4 @@ textarea:focus {
     }
     */
 }
+
