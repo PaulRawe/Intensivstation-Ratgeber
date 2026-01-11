@@ -1207,6 +1207,137 @@ textarea:focus {
         display: none !important;
     }
 }
+/* ==========================================
+   SUCHFUNKTION
+   ========================================== */
+
+.search-box {
+  margin: 40px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 100%;
+}
+
+.search-box h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+#searchInput::placeholder {
+  color: #999;
+}
+
+#searchResults {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+  display: none; /* versteckt bis Suche aktiv */
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.search-results-container {
+  padding: 20px;
+}
+
+.search-results-container h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.search-results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-result-item {
+  margin-bottom: 12px;
+  padding: 15px;
+  border-left: 4px solid #0066cc;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.search-result-item:hover {
+  background-color: #e9ecef;
+  transform: translateX(3px);
+}
+
+.search-result-link {
+  display: block;
+  font-size: 16px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.search-result-link:hover {
+  text-decoration: underline;
+  color: #004999;
+}
+
+.search-result-category {
+  color: #6c757d;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.search-no-results {
+  padding: 30px 20px;
+  color: #6c757d;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  .search-box {
+    padding: 20px 15px;
+    margin: 30px auto;
+  }
+  
+  .search-box h2 {
+    font-size: 20px;
+  }
+  
+  #searchInput {
+    font-size: 16px; /* iOS zoom verhindern */
+  }
+  
+  #searchResults {
+    max-height: 400px;
+  }
+}
 
 
 
