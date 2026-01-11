@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ===================== -->
+  <!-- HAUPTSEITEN -->
+  <!-- ===================== -->
+
+  <url>
+    <loc>https://intensivstation-ratgeber.de/</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://intensivstation-ratgeber.de/ueber-mich.html</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://intensivstation-ratgeber.de/fuer-mitarbeiter.html</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===================== -->
+  <!-- KATEGORIE 1 – ORIENTIERUNG -->
+  <!-- ===================== -->
+
+  <url><loc>https://intensivstation-ratgeber.de/fragen/was-bedeutet-intensivstation.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/wann-darf-ich-besuchen.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/besuchszeiten.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/wieviele-besucher.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/was-anziehen.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/blumen-mitbringen.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/uebernachten.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/wie-lange-intensivstation.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/wie-bereite-ich-mich-vor.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/handy-auf-intensivstation.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/was-ist-imc.html</loc><lastmod>2026-01-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/intensivstation-finden.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+
+  <!-- ===================== -->
+  <!-- KATEGORIE 2 – KÜNSTLICHES KOMA -->
+  <!-- ===================== -->
+
+  <url><loc>https://intensivstation-ratgeber.de/fragen/was-ist-kuenstliches-koma.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/wie-lange-kuenstliches-koma.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/wie-gefaehrlich.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/wann-aufwachen.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/aufwachphase-dauer.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/was-passiert-beim-aufwachen.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/alles-mitbekommen.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/kann-man-sterben.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/warum-kuenstliches-koma.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/traeumt-man-im-koma.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://intensivstation-ratgeber.de/fragen/koma-beenden.html</loc><lastmod>2026-01-11</lastmod><priority>0.9</priority></url>
+
+</urlset>
