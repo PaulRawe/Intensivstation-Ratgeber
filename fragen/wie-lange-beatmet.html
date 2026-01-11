@@ -8,12 +8,6 @@
     <meta name="description" content="Ein erfahrener Intensivpfleger erklärt, wie lange eine Beatmung dauern kann – von wenigen Stunden bis zu Wochen oder Monaten – und wovon die Dauer abhängt.">
 
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- Cookie Consent -->
-    <script src="../js/cookie-consent.js" defer></script>
-
-    <!-- GoatCounter Analytics -->
-    <script src="../js/goatcounter-init.js" defer></script>
 </head>
 
 <body>
@@ -37,10 +31,17 @@
                 <li><a href="../index.html">Startseite</a></li>
                 <li><a href="../ueber-mich.html">Über mich</a></li>
                 <li><a href="../index.html#kontakt">Kontakt</a></li>
+                <li><a href="../fuer-mitarbeiter.html">👥 Für Mitarbeiter von Intensivstationen</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
+<!-- Medizinischer Disclaimer - wird per JS geladen -->
+<div id="article-disclaimer"></div>
+
+<!-- Sales-Banner - wird per JS geladen -->
+<div id="sales-banner-container"></div>
 
 <div class="container">
     <div class="content-wrapper">
@@ -132,39 +133,19 @@
                     </ul>
                 </div>
 
-                <div class="disclaimer-box">
-                    <h4>⚠️ Wichtiger Hinweis</h4>
-                    <p>
-                        Diese Informationen dienen der allgemeinen Orientierung
-                        und ersetzen nicht das persönliche Gespräch
-                        mit dem behandelnden Ärzteteam.
-                        Jeder Krankheitsverlauf ist individuell.
-                    </p>
-                </div>
-
                 <a href="../index.html" class="back-link">← Zurück zur Übersicht</a>
             </div>
         </main>
 
-        <aside class="sidebar">
-            <div class="sidebar-box sidebar-download">
-                <h3>📥 Leitfaden für Angehörige</h3>
-                <p class="download-title"><strong>Intensivstation Ratgeber</strong></p>
-                <p class="download-description">
-                    Orientierung, Checklisten und Sicherheit
-                    für Angehörige in der Intensivzeit
-                </p>
-                <p class="download-price">Nur 4,99 €</p>
-                <a href="#" class="download-btn gumroad-button"
-                   data-gumroad-product-id="DEIN-PRODUKT-ID">
-                    📄 Jetzt kaufen
-                </a>
-                <p class="download-secure">🔒 Sicherer Download via Gumroad</p>
-            </div>
+        <aside class="sidebar" id="sidebar-downloads">
+            <!-- Download-Boxen werden hier per JS geladen -->
         </aside>
 
     </div>
 </div>
+
+<!-- Cookie-Banner - wird per JS geladen -->
+<div id="cookie-banner-container"></div>
 
 <footer>
     <div class="footer-content">
@@ -180,6 +161,42 @@
     </div>
 </footer>
 
+<!-- SCRIPTS -->
+<script src="../js/disclaimer-loader.js"></script>
+
+<script>
+fetch('../includes/sales-banner.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('sales-banner-container');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Sales-Banner konnte nicht geladen werden'));
+</script>
+
+<script>
+fetch('../includes/sidebar-downloads.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('sidebar-downloads');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Sidebar-Downloads konnten nicht geladen werden'));
+</script>
+
+<script>
+fetch('../includes/cookie-banner.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('cookie-banner-container');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Cookie-Banner konnte nicht geladen werden'));
+</script>
+
+<script src="../js/cookie-consent.js"></script>
+<script src="../js/sticky-sales.js"></script>
+<script src="../js/goatcounter-init.js"></script>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 
 </body>
