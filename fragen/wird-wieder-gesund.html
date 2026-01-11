@@ -8,9 +8,6 @@
     <meta name="description" content="Ein erfahrener Intensivpfleger erklärt ehrlich und einfühlsam, warum diese Frage schwer zu beantworten ist und welche Verläufe nach einem Intensivaufenthalt möglich sind.">
 
     <link rel="stylesheet" href="../css/style.css">
-
-    <script src="../js/cookie-consent.js" defer></script>
-    <script src="../js/goatcounter-init.js" defer></script>
 </head>
 
 <body>
@@ -34,10 +31,17 @@
                 <li><a href="../index.html">Startseite</a></li>
                 <li><a href="../ueber-mich.html">Über mich</a></li>
                 <li><a href="../index.html#kontakt">Kontakt</a></li>
+                <li><a href="../fuer-mitarbeiter.html">👥 Für Mitarbeiter von Intensivstationen</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
+<!-- Medizinischer Disclaimer - wird per JS geladen -->
+<div id="article-disclaimer"></div>
+
+<!-- Sales-Banner - wird per JS geladen -->
+<div id="sales-banner-container"></div>
 
 <div class="container">
     <div class="content-wrapper">
@@ -61,7 +65,7 @@
                     Verletzungen und intensive Therapien.
                 </p>
 
-                <h2>Was bedeutet „wieder gesund“?</h2>
+                <h2>Was bedeutet „wieder gesund"?</h2>
                 <p>
                     Für manche Angehörige bedeutet es,
                     dass der Patient wieder genauso leistungsfähig ist wie vor der Erkrankung.
@@ -127,75 +131,29 @@
                     <h3>📝 Kurz zusammengefasst:</h3>
                     <ul>
                         <li>Eine sichere Prognose ist meist nicht möglich</li>
-                        <li>„Gesund“ kann für jeden etwas anderes bedeuten</li>
+                        <li>„Gesund" kann für jeden etwas anderes bedeuten</li>
                         <li>Es gibt unterschiedliche mögliche Verläufe</li>
                         <li>Geduld, Reha und Unterstützung sind entscheidend</li>
                         <li>Realistische Gespräche mit dem Ärzteteam helfen</li>
                     </ul>
                 </div>
 
-                <div class="disclaimer-box">
-                    <h4>⚠️ Wichtiger Hinweis</h4>
-                    <p>
-                        Diese Informationen basieren auf langjähriger Erfahrung in der Intensivpflege
-                        und dienen der allgemeinen Orientierung.
-                        Sie ersetzen nicht das persönliche Gespräch
-                        mit dem behandelnden Ärzteteam.
-                        Jeder Krankheitsverlauf ist individuell.
-                    </p>
-                </div>
-
                 <a href="../index.html" class="back-link">← Zurück zur Übersicht</a>
             </div>
         </main>
 
-        <aside class="sidebar">
-            <div class="sidebar-box sidebar-download">
-                <h3>📥 Leitfaden für Angehörige</h3>
-                <p class="download-title"><strong>Intensivstation Ratgeber</strong></p>
-                <p class="download-description">
-                    Umfangreicher Leitfaden mit Checklisten,
-                    Fragen fürs Arztgespräch und vielen praktischen Tipps.
-                </p>
-                <p class="download-price">Nur 4,99 €</p>
-                <a href="#" class="download-btn gumroad-button" data-gumroad-product-id="DEIN-PRODUKT-ID">
-                    📄 Jetzt kaufen
-                </a>
-                <p class="download-secure">🔒 Sicherer Download via Gumroad</p>
-            </div>
-
-            <div class="sidebar-box">
-                <h3>🔍 Alle Fragen</h3>
-                <p><a href="../index.html#kategorie-1">Erste Orientierung</a></p>
-                <p><a href="../index.html#kategorie-2">Künstliches Koma</a></p>
-                <p><a href="../index.html#kategorie-3">Beatmung</a></p>
-                <p><a href="../index.html#kategorie-4">Kommunikation</a></p>
-                <p><a href="../index.html#kategorie-5">Prognose & Verlauf</a></p>
-            </div>
-
-            <div class="sidebar-box sidebar-disclaimer">
-                <h3>💡 Wichtiger Hinweis</h3>
-                <p>
-                    Die hier beschriebenen Informationen stellen keine Prognose dar
-                    und ersetzen nicht die individuelle ärztliche Beratung.
-                </p>
-            </div>
+        <aside class="sidebar" id="sidebar-downloads">
+            <!-- Download-Boxen werden hier per JS geladen -->
         </aside>
 
     </div>
 </div>
 
+<!-- Cookie-Banner - wird per JS geladen -->
+<div id="cookie-banner-container"></div>
+
 <footer>
     <div class="footer-content">
-        <div class="footer-about">
-            <h4>Über diese Webseite</h4>
-            <p>
-                Diese Webseite wurde von Paul Rawe erstellt –
-                Fachkrankenpfleger für Intensiv- und Anästhesiepflege
-                mit langjähriger Erfahrung auf der Intensivstation.
-            </p>
-        </div>
-
         <div class="footer-legal">
             <p>
                 <a href="../impressum.html">Impressum</a> |
@@ -208,6 +166,42 @@
     </div>
 </footer>
 
+<!-- SCRIPTS -->
+<script src="../js/disclaimer-loader.js"></script>
+
+<script>
+fetch('../includes/sales-banner.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('sales-banner-container');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Sales-Banner konnte nicht geladen werden'));
+</script>
+
+<script>
+fetch('../includes/sidebar-downloads.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('sidebar-downloads');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Sidebar-Downloads konnten nicht geladen werden'));
+</script>
+
+<script>
+fetch('../includes/cookie-banner.html')
+  .then(r => r.text())
+  .then(html => {
+    const el = document.getElementById('cookie-banner-container');
+    if (el) el.innerHTML = html;
+  })
+  .catch(err => console.log('Cookie-Banner konnte nicht geladen werden'));
+</script>
+
+<script src="../js/cookie-consent.js"></script>
+<script src="../js/sticky-sales.js"></script>
+<script src="../js/goatcounter-init.js"></script>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 
 </body>
