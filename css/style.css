@@ -1340,6 +1340,63 @@ textarea:focus {
   }
 }
 
+/* ===================================
+   FIXER DOWNLOAD-BUTTON (DEZENT)
+   =================================== */
 
+.fixed-download-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-white);
+    color: var(--primary-dark);
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 9999;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -1px 6px rgba(0,0,0,0.08);
+    transition: background var(--transition-base), color var(--transition-base);
+}
 
+.fixed-download-button:hover {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
 
+/* Platz schaffen */
+body {
+    padding-bottom: 64px;
+}
+
+/* Mobile Feinjustierung */
+@media (max-width: 600px) {
+    .fixed-download-button {
+        font-size: 0.9rem;
+        padding: 11px 14px;
+    }
+}
+/* ===================================
+   DOWNLOAD-SEITE – GLEICHE KARTENHÖHEN
+   =================================== */
+
+.download-grid {
+    align-items: stretch;
+}
+
+.download-grid .sidebar-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.download-grid .download-btn {
+    margin-top: auto;
+}
+/* Sicherstellen, dass der Sales-Banner sichtbar ist */
+.sales-banner {
+    position: relative;
+    z-index: 10;
