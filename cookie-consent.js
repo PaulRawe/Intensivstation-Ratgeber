@@ -252,3 +252,19 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 100);
 });
 
+// Auto-Scroll für Unterseiten zur Hauptüberschrift
+window.addEventListener('load', function() {
+  const istIndexSeite = window.location.pathname.endsWith('index.html') || 
+                        window.location.pathname === '/' ||
+                        window.location.pathname.endsWith('/');
+  
+  if (!istIndexSeite) {
+    const hauptueberschrift = document.querySelectorAll('h1')[1];
+    
+    if (hauptueberschrift) {
+      setTimeout(function() {
+        hauptueberschrift.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
+});
