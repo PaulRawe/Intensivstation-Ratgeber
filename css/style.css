@@ -749,7 +749,114 @@ textarea:focus {
         max-width: 100%;
     }
 }
+/* ===================================
+   RESPONSIVE FIXES FÜR DOWNLOAD-SEITE
+   =================================== */
 
+/* Tablet und kleiner */
+@media (max-width: 968px) {
+    .download-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .sidebar-box h3 {
+        font-size: 1.3rem;
+    }
+    
+    .download-title {
+        font-size: 1.05rem;
+    }
+    
+    .download-benefits {
+        font-size: 0.95rem;
+    }
+    
+    .download-price {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .download-intro h1 {
+        font-size: 1.6rem;
+    }
+    
+    .welcome-section p {
+        font-size: 0.95rem;
+    }
+    
+    .sidebar-box {
+        padding: 20px;
+    }
+    
+    .sidebar-box h3 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+    
+    .download-title {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    
+    .download-benefits {
+        font-size: 1rem;
+        margin: 15px 0;
+    }
+    
+    .download-benefits li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+    
+    .download-price {
+        font-size: 1.8rem;
+        margin: 15px 0;
+    }
+    
+    .bundle-price {
+        font-size: 1.1rem;
+    }
+    
+    .bundle-price strong {
+        font-size: 1.8rem;
+    }
+    
+    .old-price {
+        font-size: 1rem;
+    }
+    
+    .download-btn {
+        padding: 16px 24px;
+        font-size: 1.05rem;
+    }
+    
+    .download-secure {
+        font-size: 0.9rem;
+    }
+    
+    .trust-section {
+        font-size: 0.95rem;
+        padding: 20px 15px;
+    }
+}
+
+/* Sehr kleine Phones */
+@media (max-width: 400px) {
+    .sidebar-box h3 {
+        font-size: 1.3rem;
+    }
+    
+    .download-title {
+        font-size: 1.05rem;
+    }
+    
+    .download-price {
+        font-size: 1.6rem;
+    }
+}
 /* ===================================
    PRINT STYLES
    =================================== */
@@ -1442,3 +1549,4 @@ body:has(.download-grid) .search-wrapper {
 .download-grid .sidebar-box {
   cursor: pointer;
 }
+
