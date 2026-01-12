@@ -252,8 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 100);
 });
 
-
-});
 // Auto-Scroll für Unterseiten zur Verkaufsbox unter dem Disclaimer
 window.addEventListener('load', function () {
   const istIndexSeite =
@@ -271,4 +269,3 @@ window.addEventListener('load', function () {
     }
   }
 });
-
