@@ -1416,3 +1416,26 @@ body:has(.download-grid) .search-wrapper {
   font-weight: 600;
   color: var(--text-dark);
 }
+.download-divider {
+  border: none;
+  border-top: 1px solid var(--text-light);
+  opacity: 0.35;
+  margin: 3rem 0 2.2rem;
+}
+/* Download-Boxen insgesamt leicht anheben */
+.download-grid {
+  margin-top: 0.5rem;
+}
+
+.download-grid .sidebar-box {
+  transform: translateY(-4px);
+}
+/* Subtiler Interaktionseffekt */
+.download-grid .sidebar-box {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.download-grid .sidebar-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
