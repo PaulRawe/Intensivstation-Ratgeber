@@ -15,20 +15,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Direkt nach dem Header einfügen
     header.insertAdjacentElement('afterend', wrapper);
 
- // Auto-Scroll für Unterseiten zur Verkaufsbox unter dem Disclaimer
-window.addEventListener('load', function () {
-  const istIndexSeite =
-    window.location.pathname.endsWith('index.html') ||
-    window.location.pathname === '/' ||
-    window.location.pathname.endsWith('/');
-
-  if (!istIndexSeite) {
-    const salesBox = document.getElementById('sales-banner-container');
-
-    if (salesBox) {
-      setTimeout(function () {
-        salesBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
-  }
+    // Disclaimer laden
+    fetch('includes/disclaimer-include.html')
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error('HTTP-Status ' + response.status);
+            }
+            return response.text();
+        })
+        .then(function (html) {
+            inner.innerHTML = html;
+        })
+        .catch(function () {
+            // Fallback (rechtlich ausreichend)
+            inner.innerHTML = `
+                 Die Inhalte dieser Website dienen der allgemeinen Information und
+        ersetzen keine ärztliche oder pflegerische Beratung im Einzelfall.
+            `;
+        });
 });
+
