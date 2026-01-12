@@ -1,3 +1,12 @@
-<Files "send-email.php">
-  Require all granted
-</Files>
+<IfModule mod_authz_core.c>
+  <Files "send-email.php">
+    Require all granted
+  </Files>
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+  <Files "send-email.php">
+    Order allow,deny
+    Allow from all
+  </Files>
+</IfModule>
