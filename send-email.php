@@ -1,5 +1,5 @@
 <?php
-// send-email.php – Kontaktformular (zu Freenet)
+// send-email.php – Kontaktformular (Freenet direkt)
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: index.html');
@@ -15,31 +15,31 @@ if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($messag
     exit;
 }
 
-// Honeypot (optional)
+// Honeypot (falls Feld existiert)
 if (!empty($_POST['website'])) {
     exit;
 }
 
-// Zieladresse (Freenet)
+// Zieladresse (deine Freenet-Mail)
 $to = 'rawe.p@freenet.de';
 $subject = 'Neue Kontaktanfrage – Intensivstation Ratgeber';
 
 // Mailinhalt
-$body  = "Neue Kontaktanfrage über intensivstation-ratgeber.de\n\n";
+$body  = "Neue Kontaktanfrage über die Website\n\n";
 $body .= "Name: $name\n";
 $body .= "E-Mail: $email\n\n";
 $body .= "Nachricht:\n$message\n\n";
 $body .= "Gesendet am: " . date('d.m.Y H:i:s') . "\n";
 $body .= "IP: " . $_SERVER['REMOTE_ADDR'] . "\n";
 
-// WICHTIG: Domain-Absender!
-$headers  = "From: Intensivstation Ratgeber <kontakt@intensivstation-ratgeber.de>\r\n";
+// Absender = DEINE Freenet-Adresse
+$headers  = "From: Paul Rawe <rawe.p@freenet.de>\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
 // Senden
 mail($to, $subject, $body, $headers);
 
-// Weiterleitung mit Erfolg
+// Erfolg
 header('Location: index.html?kontakt=ok#kontakt');
 exit;
