@@ -135,9 +135,7 @@ header {
     padding: var(--spacing-md) 0 0 0;
     box-shadow: var(--shadow-sm);
     border-bottom: 4px solid var(--primary);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position: static;
 }
 
 .header-content {
@@ -197,6 +195,9 @@ header h1 {
 nav {
     background: var(--bg-light);
     border-top: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -1338,6 +1339,7 @@ textarea:focus {
     max-height: 400px;
   }
 }
+
 
 
 
