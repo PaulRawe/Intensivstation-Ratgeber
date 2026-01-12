@@ -253,20 +253,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Auto-Scroll für Unterseiten zur Verkaufsbox unter dem Disclaimer
-window.addEventListener('load', function () {
-  const istIndexSeite =
-    window.location.pathname.endsWith('index.html') ||
-    window.location.pathname === '/' ||
-    window.location.pathname.endsWith('/');
-
-  if (!istIndexSeite) {
-    const salesBox = document.getElementById('sales-banner-container');
-
-    if (salesBox) {
-      setTimeout(function () {
-        salesBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
+window.addEventListener('load', () => {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
   }
+
+  const p = location.pathname;
+  if (p.endsWith('index.html') || p === '/' || p.endsWith('/')) return;
+
+  const salesBox = document.getElementById('sales-banner-container');
+  if (!salesBox) return;
+
+  setTimeout(() => {
+    salesBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 100);
 });
 
