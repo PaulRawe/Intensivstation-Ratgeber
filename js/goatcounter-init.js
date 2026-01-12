@@ -3,12 +3,6 @@
  * 
  * GoatCounter ist eine datenschutzfreundliche Alternative zu Google Analytics.
  * 
- * Anleitung:
- * 1. Erstelle einen kostenlosen Account bei https://www.goatcounter.com
- * 2. Wähle deinen Code (z.B. "intensivstation-ratgeber")
- * 3. Ersetze unten "DEIN-CODE" mit deinem Code
- * 4. Fertig!
- * 
  * GoatCounter:
  * - Keine Cookies
  * - Keine persönlichen Daten
@@ -16,8 +10,8 @@
  * - Kostenlos für kleine Websites
  */
 
-// Ersetze "DEIN-CODE" mit deinem GoatCounter-Code
-const GOATCOUNTER_CODE = 'DEIN-CODE';
+// GoatCounter Code für intensivstation-ratgeber.de
+const GOATCOUNTER_CODE = 'pauleheissta';
 
 // GoatCounter Script laden
 if (GOATCOUNTER_CODE !== 'DEIN-CODE') {
