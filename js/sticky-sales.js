@@ -4,8 +4,26 @@
 
   document.addEventListener('DOMContentLoaded', function () {
 
+    const isDownloadPage = window.location.pathname.endsWith('/download.html');
+
+    /* ===================================
+       1) SIDEBAR-DOWNLOAD-BOXEN STEUERN
+       =================================== */
+
+    document.querySelectorAll(
+      '#sidebar-downloads, .sidebar-download, .sidebar-box.sidebar-download'
+    ).forEach(el => {
+      if (!isDownloadPage) {
+        el.style.display = 'none';
+      }
+    });
+
+    /* ===================================
+       2) FIXER DOWNLOAD-BUTTON
+       =================================== */
+
     // Auf der Download-Seite keinen Button anzeigen
-    if (window.location.pathname.endsWith('/download.html')) {
+    if (isDownloadPage) {
       return;
     }
 
