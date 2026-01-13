@@ -1561,7 +1561,38 @@ body:has(.download-grid) .search-wrapper {
         line-height: 1.5;
     }
 }
-
+/* Download-Karten: ALLE Texte VIEL größer auf Mobile */
+@media (max-width: 600px) {
+    /* Karten-Überschriften VIEL größer */
+    .download-grid .sidebar-box h3 {
+        font-size: 1.8rem !important;
+        margin-bottom: 15px;
+    }
+    
+    /* Download-Titel VIEL größer */
+    .download-grid .download-title {
+        font-size: 1.3rem !important;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    
+    /* Bullet-Liste VIEL größer */
+    .download-grid .download-benefits {
+        font-size: 1.2rem !important;
+        padding-left: 20px;
+    }
+    
+    .download-grid .download-benefits li {
+        margin-bottom: 12px;
+        line-height: 1.7;
+    }
+    
+    /* Preis RIESIG */
+    .download-grid .download-price {
+        font-size: 2.8rem !important;
+        margin: 20px 0;
+        font-weight: 800;
+    }
 @media (max-width: 600px) {
     .medical-disclaimer-inner {
         font-size: 0.75rem;
@@ -1569,37 +1600,7 @@ body:has(.download-grid) .search-wrapper {
     }
 }
 
-/* Download-Karten: ALLE Texte größer auf Mobile */
-@media (max-width: 600px) {
-    /* Karten-Überschriften größer */
-    .download-grid .sidebar-box h3 {
-        font-size: 1.5rem !important;
-        margin-bottom: 15px;
-    }
-    
-    /* Download-Titel größer */
-    .download-grid .download-title {
-        font-size: 1.15rem !important;
-        line-height: 1.6;
-        margin-bottom: 12px;
-    }
-    
-    /* Bullet-Liste größer */
-    .download-grid .download-benefits {
-        font-size: 1.05rem !important;
-        padding-left: 20px;
-    }
-    
-    .download-grid .download-benefits li {
-        margin-bottom: 10px;
-        line-height: 1.7;
-    }
-    
-    /* Preis VIEL größer */
-    .download-grid .download-price {
-        font-size: 2.2rem !important;
-        margin: 18px 0;
-    }
+
     
     /* Bundle-Preis */
     .download-grid .bundle-price {
@@ -1616,17 +1617,7 @@ body:has(.download-grid) .search-wrapper {
         font-size: 1.1rem;
     }
     
-    /* Button größer und besser klickbar */
-    .download-grid .download-btn {
-        padding: 18px 28px !important;
-        font-size: 1.1rem !important;
-        margin: 20px 0 12px 0;
-    }
-    
-    /* Sicherheitstext größer */
-    .download-grid .download-secure {
-        font-size: 0.95rem !important;
-    }
+    /
     
     /* Welcome Section größer */
     .download-intro h1 {
@@ -1636,7 +1627,19 @@ body:has(.download-grid) .search-wrapper {
     .welcome-section p {
         font-size: 1rem !important;
     }
+    /* Button RIESIG und besser klickbar */
+    .download-grid .download-btn {
+        padding: 20px 32px !important;
+        font-size: 1.25rem !important;
+        margin: 20px 0 12px 0;
+        font-weight: 700;
+    }
     
+    /* Sicherheitstext größer */
+    .download-grid .download-secure {
+        font-size: 1.05rem !important;
+    }
+}
     /* Trust Section */
     .trust-section p {
         font-size: 1rem !important;
@@ -1657,4 +1660,5 @@ body:has(.download-grid) .search-wrapper {
         font-size: 2rem !important;
     }
 }
+
 
