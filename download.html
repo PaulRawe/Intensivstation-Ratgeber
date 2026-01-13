@@ -1,216 +1,833 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-   <link rel="stylesheet" href="css/style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intensivstation Ratgeber - Orientierung in der schwersten Zeit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8f9fa;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5f7d 100%);
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-subtext {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .trust-bar p {
+            font-size: 1.1rem;
+            color: #2c5f7d;
+            font-weight: 600;
+        }
+
+        .trust-bar span {
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* Featured Product - Soforthilfe */
+        .featured-section {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .featured-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .featured-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .featured-card:hover .featured-image img {
+            transform: scale(1.05);
+        }
+
+        .featured-content {
+            padding: 3rem;
+        }
+
+        .featured-content h2 {
+            font-size: 2rem;
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .featured-content .tagline {
+            font-size: 1.2rem;
+            color: #ff6b35;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .featured-benefits {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .featured-benefits li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+            color: #333;
+        }
+
+        .featured-benefits li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .price-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a5f;
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            text-align: center;
+            display: block;
+            margin: 1.5rem 0;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .cta-button-secondary {
+            background: linear-gradient(135deg, #2c5f7d 0%, #3498db 100%);
+            box-shadow: 0 4px 15px rgba(44, 95, 125, 0.3);
+        }
+
+        .cta-button-secondary:hover {
+            box-shadow: 0 6px 20px rgba(44, 95, 125, 0.4);
+        }
+
+        .secure-badge {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin: 4rem 0 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        .product-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-content h3 {
+            font-size: 1.8rem;
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+        }
+
+        .product-tagline {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .product-benefits {
+            list-style: none;
+            margin: 1.5rem 0;
+            flex: 1;
+        }
+
+        .product-benefits li {
+            padding: 0.6rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            color: #333;
+        }
+
+        .product-benefits li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .product-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            text-align: center;
+            margin: 1.5rem 0 1rem;
+        }
+
+        /* Bundle Card */
+        .bundle-card {
+            background: linear-gradient(135deg, #e8f4f0 0%, #d5f4e6 100%);
+            border: 3px solid #27ae60;
+            position: relative;
+        }
+
+        .bundle-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+
+        .savings {
+            color: #27ae60;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            background: white;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .trust-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .trust-content h3 {
+            font-size: 2rem;
+            color: #1e3a5f;
+            margin-bottom: 1.5rem;
+        }
+
+        .trust-content p {
+            font-size: 1.15rem;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .author-signature {
+            font-size: 1.1rem;
+            color: #2c5f7d;
+            font-weight: 600;
+            margin-top: 2rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #1e3a5f;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 3rem 2rem 2rem;
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid white;
+            border-radius: 30px;
+            margin: 2rem 0;
+            transition: all 0.3s;
+        }
+
+        .back-home-btn:hover {
+            background: white;
+            color: #1e3a5f;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .featured-card {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-content {
+                padding: 2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: #ff6b35;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
 <body>
 
-<header>
-
-</header>
-
-<!-- Medizinischer Disclaimer -->
-
-<section class="download-intro text-center">
-  <h1>Download-Ratgeber für die Intensivzeit</h1>
-</section>
-<main>
-  <div class="container">
-
-    <!-- EINORDNUNG -->
-<section class="welcome-section text-center">
-  <p style="font-weight:600;">
-    Verständliche Orientierung für Angehörige und Patienten
-    in einer intensivmedizinischen Ausnahmesituation.
-  </p>
-
-  <p style="margin-top:0.8rem;">
-    Die Ratgeber helfen Ihnen,
-    Gespräche einzuordnen,
-    Entscheidungen besser zu verstehen
-    und Sicherheit zu gewinnen.
-  </p>
-</section>
-<hr class="download-divider">
-    
-    <!-- DOWNLOADS -->
-    <section class="download-grid">
-       <br>
-     <br>
-         <hr>
-<!-- ARZTGESPRÄCH INTENSIVSTATION – HIGHLIGHT -->
-
-<section class="download-card highlight-card">
-  <h3>Arztgespräch auf der Intensivstation</h3>
-
-  <p class="download-title" style="font-weight:600;">
-    Wenn Sie im Wartezimmer sitzen<br>
-    und nicht wissen, was Sie fragen sollen.
-  </p>
-
-  <p style="margin-top:0.6rem;">
-    Dieser kompakte Mini-Ratgeber hilft Ihnen genau in dem Moment,
-    in dem Arztgespräche stattfinden:
-    unter Zeitdruck, mit vielen Fachbegriffen
-    und hoher emotionaler Belastung.
-  </p>
-
-  <ul class="download-benefits">
-    <li>Soforthilfe für das Arztgespräch im Wartezimmer</li>
-    <li>Klare Beispielfragen, die Sie direkt nutzen können</li>
-    <li>Erklärungen, die medizinische Aussagen einordnen</li>
-    <li>Zusätzliche Vorbereitung & Reflexion für zuhause</li>
-  </ul>
-
-  <div class="bundle-price" style="margin-top:1rem;">
-    <strong>2,99 €</strong>
-  </div>
-
-  <a href="https://paulrawe.gumroad.com/l/oroga"
-     target="_blank" rel="noopener"
-     class="download-btn"
-     style="margin-top:0.8rem;">
-    Jetzt herunterladen
-  </a>
-
-  <p class="download-secure">
-    Sofortiger PDF-Download · sicher über Gumroad<br>
-    Keine Registrierung · kein Abo
-  </p>
-</section>
-<br>
-     <br>
-         <hr>
-      <!-- ANGERHÖRIGE -->
-     <div class="download-card">
-        <h3>Für Angehörige</h3>
-
-        <p class="download-title">
-          Orientierung, Gespräche und Entscheidungen,
-          wenn plötzlich alles gleichzeitig passiert.
-        </p>
-
-        <ul class="download-benefits">
-          <li>Arztgespräche sicher vorbereiten</li>
-          <li>Besuche und Abläufe besser einordnen</li>
-          <li>Eigene Belastung verstehen und ernst nehmen</li>
-        </ul>
-
-        <p class="download-price">4,99 €</p>
-
-        <a href="https://paulrawe.gumroad.com/l/vniudu"
-           target="_blank" rel="noopener"
-           class="download-btn">
-          Jetzt herunterladen
-        </a>
-
-        <p class="download-secure">
-          Sofortiger PDF-Download · sicher über Gumroad
-        </p>
-      </div>
-<br>
-     <br>
-         <hr>
-      <!-- PATIENTEN -->
-     <div class="download-card">
-        <h3>Für Patienten</h3>
-
-        <p class="download-title">
-          Vorbereitung und Verständnis für das,
-          was auf der Intensivstation passiert.
-        </p>
-
-        <ul class="download-benefits">
-          <li>Beatmung und Koma verständlich erklärt</li>
-          <li>Abläufe realistisch einordnen</li>
-          <li>Aufwachphase besser verstehen</li>
-        </ul>
-
-        <p class="download-price">4,99 €</p>
-
-        <a href="https://paulrawe.gumroad.com/l/hucwg"
-           target="_blank" rel="noopener"
-           class="download-btn">
-          Jetzt herunterladen
-        </a>
-
-        <p class="download-secure">
-          Sofortiger PDF-Download · sicher über Gumroad
-        </p>
-      </div>
-<br>
-     <br>
-         <hr>
-      <!-- BUNDLE -->
-     <div class="download-card bundle-card">
-        <h3>Beide Ratgeber kombiniert</h3>
-
-        <p class="download-title">
-          Empfohlen, wenn Angehörige und Patienten
-          gemeinsam durch diese Zeit gehen.
-        </p>
-
-        <ul class="download-benefits">
-          <li>Beide Perspektiven verstehen</li>
-          <li>Missverständnisse vermeiden</li>
-          <li>Gemeinsame Orientierung</li>
-        </ul>
-
-        <p class="bundle-price">
-          <span class="old-price">9,98 €</span><br>
-          <strong>7,99 €</strong>
-        </p>
-
-        <a href="https://paulrawe.gumroad.com/l/otohnp"
-           target="_blank" rel="noopener"
-           class="download-btn">
-          Bundle wählen
-        </a>
-
-        <p class="download-secure">
-          Sofortiger Download · beide Ratgeber enthalten
-        </p>
-      </div>
-<br>
-     <br>
-    </section>
-  <hr>
-    <!-- VERTRAUEN -->
-    <section class="trust-section text-center" style="margin-top:3rem;">
-      <p>
-        <strong>Warum diese Ratgeber?</strong><br>
-        Ich arbeite seit über 15 Jahren auf Intensivstationen.
-        Die Inhalte basieren nicht auf Theorie,
-        sondern auf täglichen Gesprächen mit Angehörigen und Patienten.
-      </p>
-    </section>
-
-  </div>
-<div class="back-home">
-  <a href="index.html" class="back-home-btn">
-    ← Zurück zur Startseite
-  </a>
-</div>
-</main>
-
-<footer>
-  <div class="footer-content">
-    <div class="footer-legal">
-      <p>
-        <a href="impressum.html">Impressum</a> |
-        <a href="datenschutz.html">Datenschutz</a> |
-        <a href="agb.html">AGB</a>
-      </p>
-      <p class="footer-year">© 2025 Paul Rawe – Intensivstation Ratgeber</p>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Intensivstation Ratgeber</h1>
+            <p>Orientierung & Sicherheit in der schwersten Zeit</p>
+            <p class="hero-subtext">
+                Verständliche Hilfe für Angehörige und Patienten –<br>
+                aus 17 Jahren Erfahrung auf der Intensivstation
+            </p>
+        </div>
     </div>
-  </div>
-</footer>
 
-<script src="js/disclaimer-loader.js"></script>
-<script src="js/cookie-consent.js"></script>
-<script src="js/sticky-sales.js"></script>
-<script src="https://gumroad.com/js/gumroad.js"></script>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <p>
+            ✓ Sofort verfügbar <span>|</span> 
+            ✓ Keine Registrierung <span>|</span> 
+            ✓ Kein Abo <span>|</span> 
+            ✓ Sicherer Download
+        </p>
+    </div>
+
+    <!-- Featured Product - Soforthilfe -->
+    <div class="featured-section">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="featured-badge">🔥 Meistgekauft</span>
+            </div>
+            
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="soforthilfe.png" alt="Arztgespräch auf der Intensivstation - Soforthilfe">
+                </div>
+                
+                <div class="featured-content">
+                    <h2>Arztgespräch auf der Intensivstation</h2>
+                    <p class="tagline">Wenn Sie im Wartezimmer sitzen und nicht wissen, was Sie fragen sollen.</p>
+                    
+                    <p style="margin-bottom: 1.5rem; color: #666;">
+                        Dieser kompakte Mini-Ratgeber hilft Ihnen <strong>genau in dem Moment</strong>, 
+                        wenn Arztgespräche stattfinden: unter Zeitdruck, mit vielen Fachbegriffen 
+                        und hoher emotionaler Belastung.
+                    </p>
+
+                    <ul class="featured-benefits">
+                        <li>Soforthilfe für das Arztgespräch im Wartezimmer</li>
+                        <li>Klare Beispielfragen, die Sie direkt nutzen können</li>
+                        <li>Erklärungen, die medizinische Aussagen einordnen</li>
+                        <li>Zusätzliche Vorbereitung & Reflexion für zuhause</li>
+                    </ul>
+
+                    <div class="price-box">
+                        <div class="price">2,99 €</div>
+                        <p class="price-note">Sofortiger PDF-Download</p>
+                    </div>
+
+                    <a href="https://paulrawe.gumroad.com/l/oroga" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cta-button">
+                        Jetzt herunterladen →
+                    </a>
+
+                    <p class="secure-badge">
+                        🔒 Sicherer Download über Gumroad · Keine Registrierung nötig
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Products Section -->
+    <div class="container">
+        <div class="section-header">
+            <h2>Umfassende Ratgeber für Ihre Situation</h2>
+            <p>Wählen Sie den Ratgeber, der zu Ihrer Situation passt</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Angehörige -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="ratgeberangeh.jpg" alt="Intensivstation Ratgeber für Angehörige">
+                </div>
+                
+                <div class="product-content">
+                    <h3>Für Angehörige</h3>
+                    
+                    <p class="product-tagline">
+                        Orientierung, Gespräche und Entscheidungen, 
+                        wenn plötzlich alles gleichzeitig passiert.
+                    </p>
+
+                    <ul class="product-benefits">
+                        <li>Checklisten für die ersten 24 Stunden</li>
+                        <li>Die richtigen Fragen für Arztgespräche</li>
+                        <li>Alle medizinischen Begriffe verständlich erklärt</li>
+                        <li>Besuchszeiten optimal nutzen</li>
+                        <li>Umgang mit schwierigen Entscheidungen</li>
+                        <li>Selbstfürsorge in der Belastung</li>
+                        <li>Vorlagen zum Ausfüllen & Ausdrucken</li>
+                    </ul>
+
+                    <div class="product-price">4,99 €</div>
+
+                    <a href="https://paulrawe.gumroad.com/l/vniudu" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cta-button cta-button-secondary">
+                        Jetzt herunterladen →
+                    </a>
+
+                    <p class="secure-badge">
+                        Sofortiger PDF-Download · sicher über Gumroad
+                    </p>
+                </div>
+            </div>
+
+            <!-- Patienten -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="ratgeberpat.png" alt="Intensivstation Ratgeber für Patienten">
+                </div>
+                
+                <div class="product-content">
+                    <h3>Für Patienten</h3>
+                    
+                    <p class="product-tagline">
+                        Vorbereitung und Verständnis für das, 
+                        was auf der Intensivstation passiert.
+                    </p>
+
+                    <ul class="product-benefits">
+                        <li>Checklisten zur Vorbereitung (2-3 Wochen vorher)</li>
+                        <li>Beatmung und Sedierung verständlich erklärt</li>
+                        <li>Was erwartet Sie nach dem Aufwachen?</li>
+                        <li>Abläufe auf der Intensivstation</li>
+                        <li>Was sollten Sie mitbringen?</li>
+                        <li>Mobilisierung und Verlegung</li>
+                        <li>Praktische Vorlagen & Notfallkontakte</li>
+                    </ul>
+
+                    <div class="product-price">4,99 €</div>
+
+                    <a href="https://paulrawe.gumroad.com/l/hucwg" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cta-button cta-button-secondary">
+                        Jetzt herunterladen →
+                    </a>
+
+                    <p class="secure-badge">
+                        Sofortiger PDF-Download · sicher über Gumroad
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bundle Card -->
+        <div style="max-width: 600px; margin: 4rem auto;">
+            <div class="product-card bundle-card">
+                <span class="bundle-badge">SPARE 20%</span>
+                
+                <div class="product-content">
+                    <h3 style="text-align: center;">Beide Ratgeber kombiniert</h3>
+                    
+                    <p class="product-tagline" style="text-align: center;">
+                        Empfohlen, wenn Angehörige und Patienten 
+                        gemeinsam durch diese Zeit gehen.
+                    </p>
+
+                    <ul class="product-benefits">
+                        <li>Beide Perspektiven verstehen</li>
+                        <li>Missverständnisse vermeiden</li>
+                        <li>Gemeinsame Orientierung gewinnen</li>
+                        <li>Vollständiges Paket mit allen Checklisten</li>
+                    </ul>
+
+                    <div class="product-price">
+                        <span class="old-price">9,98 €</span><br>
+                        <span style="color: #27ae60;">7,99 €</span>
+                        <div class="savings">Sie sparen 1,99 €</div>
+                    </div>
+
+                    <a href="https://paulrawe.gumroad.com/l/otohnp" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cta-button">
+                        Bundle wählen & sparen →
+                    </a>
+
+                    <p class="secure-badge">
+                        Sofortiger Download · beide Ratgeber enthalten
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Section -->
+    <div class="trust-section">
+        <div class="trust-content">
+            <h3>Warum diese Ratgeber?</h3>
+            <p>
+                Ich arbeite seit über <strong>17 Jahren auf Intensivstationen</strong> 
+                und war Stationsleiter einer 23-Betten-Intensivstation. 
+                Die Inhalte basieren nicht auf Theorie, sondern auf 
+                <strong>tausenden Gesprächen</strong> mit Angehörigen und Patienten.
+            </p>
+            <p>
+                Ich habe gesehen, welche Fragen immer wieder auftauchen. 
+                Welche Missverständnisse entstehen. Und vor allem: 
+                <strong>Wie man mit Wissen Angst nehmen kann.</strong>
+            </p>
+            <p>
+                Diese Ratgeber geben Ihnen genau das weiter, was ich in 
+                17 Jahren gelernt habe – verständlich, ehrlich und auf Augenhöhe.
+            </p>
+            <p class="author-signature">
+                Paul Rawe<br>
+                Fachkrankenpfleger für Intensiv- und Anästhesiepflege
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <div class="section-header">
+            <h2>Häufige Fragen</h2>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Wie erhalte ich die Ratgeber?
+            </div>
+            <div class="faq-answer">
+                Nach dem Kauf über Gumroad erhalten Sie sofort einen Download-Link per E-Mail. 
+                Sie können die PDF-Datei herunterladen, speichern und ausdrucken – so oft Sie möchten.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Brauche ich ein Konto bei Gumroad?
+            </div>
+            <div class="faq-answer">
+                Nein, Sie benötigen keine Registrierung. Sie bezahlen einfach mit Kreditkarte 
+                oder PayPal und erhalten sofort den Download-Link.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Ersetzt der Ratgeber eine ärztliche Beratung?
+            </div>
+            <div class="faq-answer">
+                Nein. Die Ratgeber bieten Orientierung und Verständnis basierend auf praktischer 
+                Erfahrung, ersetzen aber keine individuelle medizinische Beratung durch Ihr behandelndes Team.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Welchen Ratgeber brauche ich?
+            </div>
+            <div class="faq-answer">
+                <strong>Soforthilfe (2,99€):</strong> Wenn Sie jetzt im Wartezimmer sitzen und sofort Hilfe brauchen.<br><br>
+                <strong>Angehörige (4,99€):</strong> Wenn Ihr Angehöriger auf der Intensivstation liegt.<br><br>
+                <strong>Patienten (4,99€):</strong> Wenn Sie selbst eine geplante OP haben und auf die Intensivstation kommen.<br><br>
+                <strong>Bundle (7,99€):</strong> Wenn Sie beide Perspektiven verstehen möchten oder gemeinsam vorbereitet sein wollen.
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="agb.html">AGB</a>
+        </div>
+        
+        <a href="index.html" class="back-home-btn">
+            ← Zurück zur Startseite
+        </a>
+        
+        <p style="opacity: 0.8; margin-top: 2rem;">
+            © 2025 Paul Rawe – Intensivstation Ratgeber
+        </p>
+    </div>
+
+    <script src="js/disclaimer-loader.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <script src="https://gumroad.com/js/gumroad.js"></script>
 
 </body>
 </html>
