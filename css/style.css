@@ -1,10 +1,10 @@
 /* ===================================
    INTENSIVSTATION RATGEBER - CSS
-   PROFESSIONAL VERSION mit Performance & SEO
+   Optimiert & Bereinigt - 2025
    =================================== */
 
 /* ===================================
-   ROOT VARIABLES (Design System)
+   ROOT VARIABLES
    =================================== */
 :root {
     /* Farben */
@@ -51,26 +51,12 @@
 }
 
 /* ===================================
-   RESET & PERFORMANCE OPTIMIERUNGEN
+   RESET & BASE
    =================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-/* Performance: GPU-Beschleunigung für Animationen */
-.profile-img,
-.question-link,
-nav a {
-    will-change: transform;
-    backface-visibility: hidden;
-    transform: translateZ(0);
 }
 
 body {
@@ -80,17 +66,15 @@ body {
     background-color: var(--bg-light);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    padding-bottom: 64px;
 }
 
-/* Bilder optimieren */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Links Base-Style */
 a {
     color: var(--primary);
     text-decoration: none;
@@ -127,7 +111,7 @@ main {
 }
 
 /* ===================================
-   HEADER - OPTIMIERT
+   HEADER
    =================================== */
 header {
     background: var(--bg-white);
@@ -135,7 +119,6 @@ header {
     padding: var(--spacing-md) 0 0 0;
     box-shadow: var(--shadow-sm);
     border-bottom: 4px solid var(--primary);
-    position: static;
 }
 
 .header-content {
@@ -143,11 +126,6 @@ header {
     padding-bottom: var(--spacing-sm);
 }
 
-.header-photo-real {
-    margin-bottom: var(--spacing-md);
-}
-
-/* Profilbild - Optimiert mit lazy loading hint */
 .profile-img {
     width: 105px;
     height: 105px;
@@ -156,7 +134,7 @@ header {
     border: 4px solid var(--primary);
     box-shadow: 0 4px 16px rgba(93, 173, 226, 0.3);
     transition: transform var(--transition-base);
-    margin: 0 auto;
+    margin: 0 auto var(--spacing-md);
 }
 
 .profile-img:hover {
@@ -165,7 +143,7 @@ header {
 
 .header-title,
 header h1 {
-    font-size: clamp(1.5rem, 4vw, 2.2rem);  /* Responsive Typography */
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     margin-bottom: 10px;
     font-weight: 600;
     color: var(--text-dark);
@@ -190,7 +168,7 @@ header h1 {
 }
 
 /* ===================================
-   NAVIGATION - VERBESSERT
+   NAVIGATION
    =================================== */
 nav {
     background: var(--bg-light);
@@ -208,10 +186,6 @@ nav ul {
     gap: 4px;
 }
 
-nav li {
-    margin: 0;
-}
-
 nav a {
     display: block;
     color: var(--text-dark);
@@ -220,20 +194,6 @@ nav a {
     text-decoration: none;
     transition: all var(--transition-base);
     border-radius: var(--radius-sm);
-    position: relative;
-}
-
-/* Hover-Effekt mit Underline Animation */
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 8px;
-    left: 25px;
-    right: 25px;
-    height: 2px;
-    background: var(--primary);
-    transform: scaleX(0);
-    transition: transform var(--transition-base);
 }
 
 nav a:hover {
@@ -241,11 +201,6 @@ nav a:hover {
     color: white;
 }
 
-nav a:hover::after {
-    transform: scaleX(1);
-}
-
-/* Active State */
 nav a.active {
     background: var(--primary-light);
     color: var(--primary-dark);
@@ -253,7 +208,7 @@ nav a.active {
 }
 
 /* ===================================
-   TYPOGRAPHY - PROFESSIONELL
+   TYPOGRAPHY
    =================================== */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
@@ -285,10 +240,9 @@ p {
     margin-bottom: 15px;
     text-align: left;
     line-height: var(--line-height-base);
-    max-width: 75ch;  /* Optimale Leselänge */
+    max-width: 75ch;
 }
 
-/* Bessere Lesbarkeit für Listen */
 ul:not(.questions-list):not(nav ul),
 ol {
     margin-left: 1.5rem;
@@ -299,14 +253,31 @@ li {
     margin-bottom: 0.5rem;
 }
 
-/* Stärkere Betonung */
 strong, b {
     font-weight: 600;
     color: var(--text-dark);
 }
 
 /* ===================================
-   WELCOME SECTION - OPTIMIERT
+   MEDICAL DISCLAIMER
+   =================================== */
+.medical-disclaimer-wrapper {
+    width: 100%;
+    background: var(--warning-bg);
+}
+
+.medical-disclaimer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px 18px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--warning-text);
+    text-align: center;
+}
+
+/* ===================================
+   WELCOME SECTION
    =================================== */
 .welcome-section {
     background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-light) 100%);
@@ -323,16 +294,12 @@ strong, b {
     margin-right: auto;
 }
 
-.welcome-section strong {
-    color: var(--primary-dark);
-}
-
 /* ===================================
-   CATEGORY SECTIONS - VERBESSERT
+   CATEGORY SECTIONS
    =================================== */
 .category-section {
     margin: 50px 0;
-    scroll-margin-top: 100px;  /* Smooth Scroll Offset */
+    scroll-margin-top: 100px;
 }
 
 .category-title {
@@ -370,7 +337,6 @@ strong, b {
     margin-bottom: 10px;
 }
 
-/* Question Links - Mit Micro-Interactions */
 .question-link {
     display: flex;
     align-items: center;
@@ -382,26 +348,6 @@ strong, b {
     text-decoration: none;
     font-weight: 500;
     transition: all var(--transition-base);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Hover-Effekt mit Gradient */
-.question-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, var(--primary-light) 0%, transparent 100%);
-    opacity: 0;
-    transition: opacity var(--transition-base);
-    z-index: 0;
-}
-
-.question-link:hover::before {
-    opacity: 1;
 }
 
 .question-link:hover {
@@ -410,7 +356,6 @@ strong, b {
     box-shadow: var(--shadow-sm);
 }
 
-/* Pfeil-Icon bei Hover */
 .question-link::after {
     content: '→';
     margin-left: auto;
@@ -427,7 +372,7 @@ strong, b {
 }
 
 /* ===================================
-   SIDEBAR - STICKY & OPTIMIERT
+   SIDEBAR
    =================================== */
 .sidebar {
     position: sticky;
@@ -437,7 +382,6 @@ strong, b {
     overflow-y: auto;
 }
 
-/* Custom Scrollbar */
 .sidebar::-webkit-scrollbar {
     width: 6px;
 }
@@ -478,11 +422,14 @@ strong, b {
     margin-bottom: var(--spacing-sm);
 }
 
-/* Download-Buttons in Sidebar */
-.download-button {
+/* ===================================
+   DOWNLOAD BUTTONS & ELEMENTS
+   =================================== */
+.download-button,
+.download-btn {
     display: block;
     width: 100%;
-    padding: 12px 20px;
+    padding: 14px 20px;
     margin-bottom: 10px;
     background: var(--primary);
     color: white;
@@ -491,17 +438,152 @@ strong, b {
     font-weight: 600;
     transition: all var(--transition-base);
     box-shadow: var(--shadow-sm);
+    text-decoration: none;
 }
 
-.download-button:hover {
+.download-button:hover,
+.download-btn:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
     color: white;
 }
 
+.download-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    display: block;
+    line-height: 1.6;
+}
+
+.download-description {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.download-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin: 16px 0;
+    text-align: center;
+}
+
+.download-secure {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    text-align: center;
+    margin: 8px 0 0 0;
+}
+
+.download-benefits {
+    list-style: none;
+    margin: 18px 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.download-benefits li {
+    margin-bottom: 10px;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.download-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
 /* ===================================
-   CONTACT FORM - PROFESSIONELL
+   DOWNLOAD PAGE SPECIFIC
+   =================================== */
+.download-intro {
+    margin: 2rem 0 1.5rem;
+}
+
+.download-intro h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.download-divider {
+    border: none;
+    border-top: 1px solid var(--text-light);
+    opacity: 0.35;
+    margin: 3rem 0 2.2rem;
+}
+
+.download-grid {
+    display: grid;
+    gap: 0;
+    margin-top: 0.5rem;
+    align-items: stretch;
+}
+
+.download-card {
+    background: var(--bg-white);
+    padding: 28px 24px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.download-card + .download-card {
+    border-top: 1px solid var(--border-color);
+    margin-top: 32px;
+    padding-top: 32px;
+}
+
+.download-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.download-card .download-btn {
+    margin-top: auto;
+    font-size: 1.15rem;
+    padding: 18px 22px;
+}
+
+/* Bundle Card */
+.bundle-price {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.bundle-price strong {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+    border-left: 5px solid #ff6b35;
+}
+
+/* ===================================
+   CONTACT FORM
    =================================== */
 .contact-form {
     background: var(--bg-light);
@@ -569,341 +651,100 @@ strong, b {
     box-shadow: var(--shadow-md);
 }
 
-.contact-form button:active {
-    transform: translateY(0);
-}
-
 /* ===================================
-   FOOTER - VERBESSERT
+   SEARCH FUNCTION
    =================================== */
-footer {
-    background: var(--text-dark);
-    color: white;
-    padding: var(--spacing-lg) 0 var(--spacing-md);
-    margin-top: 80px;
+.search-box {
+    margin: 40px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    max-width: 100%;
 }
 
-.footer-legal {
-    text-align: center;
-    font-size: 0.9rem;
-    line-height: 2;
+.search-box h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--text-dark);
+    font-weight: 600;
 }
 
-.footer-legal a {
-    color: var(--primary);
-    margin: 0 var(--spacing-xs);
-    text-decoration: none;
-    transition: color var(--transition-base);
-}
-
-.footer-legal a:hover {
-    color: var(--primary-light);
-    text-decoration: underline;
-}
-
-.footer-copyright {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 0.85rem;
-    color: #95a5a6;
-}
-
-/* ===================================
-   MEDICAL DISCLAIMER - AUFFÄLLIG
-   =================================== */
-.medical-disclaimer-wrapper {
+#searchInput {
     width: 100%;
-    background: var(--warning-bg);
-    border: none;
+    padding: 14px 18px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-family: inherit;
 }
 
-.medical-disclaimer-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 16px 18px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--warning-text);
-    text-align: center;
-
-    /* WICHTIG: keine eigene Box-Wirkung */
-    background: transparent;
-    border: none;
-    box-shadow: none;
+#searchInput:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(93, 173, 226, 0.1);
 }
 
-/* ===================================
-   ACCESSIBILITY - WCAG 2.1 AA
-   =================================== */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
+#searchResults {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    display: none;
+    box-shadow: var(--shadow-lg);
+    max-height: 500px;
+    overflow-y: auto;
 }
 
-/* Skip-Link für Screenreader */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--primary);
-    color: white;
-    padding: var(--spacing-xs) var(--spacing-md);
+.search-results-container {
+    padding: 20px;
+}
+
+.search-results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-result-item {
+    margin-bottom: 12px;
+    padding: 15px;
+    border-left: 4px solid var(--primary);
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.search-result-item:hover {
+    background-color: #e9ecef;
+    transform: translateX(3px);
+}
+
+.search-result-link {
+    display: block;
+    font-size: 16px;
+    color: var(--primary);
     text-decoration: none;
-    z-index: 1000;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 1.4;
 }
 
-.skip-link:focus {
-    top: 0;
+.search-result-link:hover {
+    text-decoration: underline;
+    color: var(--primary-dark);
 }
 
-/* Focus-sichtbar auch für Tastaturnutzer */
-*:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-}
-
-/* ===================================
-   UTILITY CLASSES
-   =================================== */
-.text-center {
-    text-align: center;
-}
-
-.text-muted {
-    color: var(--text-light);
-}
-
-.mb-lg {
-    margin-bottom: var(--spacing-lg);
-}
-
-.mt-lg {
-    margin-top: var(--spacing-lg);
+/* Hide search on download page */
+body:has(.download-grid) .search-box,
+body:has(.download-grid) .search-container {
+    display: none !important;
 }
 
 /* ===================================
-   RESPONSIVE DESIGN - MOBILE FIRST
-   =================================== */
-@media (max-width: 968px) {
-    .content-wrapper {
-        grid-template-columns: 1fr;
-    }
-    
-    .sidebar {
-        position: static;
-        margin-top: var(--spacing-xl);
-        max-height: none;
-    }
-    
-    main {
-        padding: 25px;
-    }
-    
-    header {
-        position: relative;  /* Sticky header nur Desktop */
-    }
-}
-
-@media (max-width: 600px) {
-    :root {
-        --spacing-lg: 20px;
-        --spacing-xl: 30px;
-    }
-    
-    .profile-img {
-        width: 75px;
-        height: 75px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    nav a {
-        text-align: center;
-        padding: 12px 20px;
-    }
-    
-    main {
-        padding: var(--spacing-md);
-    }
-    
-    .welcome-section {
-        padding: var(--spacing-md);
-    }
-    
-    .question-link {
-        padding: 12px 15px;
-        font-size: 0.95rem;
-    }
-    
-    /* Text auf Mobile immer linksbündig */
-    p {
-        text-align: left !important;
-        max-width: 100%;
-    }
-}
-/* ===================================
-   RESPONSIVE FIXES FÜR DOWNLOAD-SEITE
-   =================================== */
-
-/* Tablet und kleiner */
-@media (max-width: 968px) {
-    .download-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    
-    .sidebar-box h3 {
-        font-size: 1.3rem;
-    }
-    
-    .download-title {
-        font-size: 1.05rem;
-    }
-    
-    .download-benefits {
-        font-size: 0.95rem;
-    }
-    
-    .download-price {
-        font-size: 1.6rem;
-    }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .download-intro h1 {
-        font-size: 1.6rem;
-    }
-    
-    .welcome-section p {
-        font-size: 0.95rem;
-    }
-    
-    .sidebar-box {
-        padding: 20px;
-    }
-    
-    .sidebar-box h3 {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-    }
-    
-    .download-title {
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
-    
-    .download-benefits {
-        font-size: 1rem;
-        margin: 15px 0;
-    }
-    
-    .download-benefits li {
-        margin-bottom: 8px;
-        line-height: 1.6;
-    }
-    
-    .download-price {
-        font-size: 1.8rem;
-        margin: 15px 0;
-    }
-    
-    .bundle-price {
-        font-size: 1.1rem;
-    }
-    
-    .bundle-price strong {
-        font-size: 1.8rem;
-    }
-    
-    .old-price {
-        font-size: 1rem;
-    }
-    
-    .download-btn {
-        padding: 16px 24px;
-        font-size: 1.05rem;
-    }
-    
-    .download-secure {
-        font-size: 0.9rem;
-    }
-    
-    .trust-section {
-        font-size: 0.95rem;
-        padding: 20px 15px;
-    }
-}
-
-/* Sehr kleine Phones */
-@media (max-width: 400px) {
-    .sidebar-box h3 {
-        font-size: 1.3rem;
-    }
-    
-    .download-title {
-        font-size: 1.05rem;
-    }
-    
-    .download-price {
-        font-size: 1.6rem;
-    }
-}
-/* ===================================
-   PRINT STYLES
-   =================================== */
-@media print {
-    header,
-    nav,
-    .sidebar,
-    footer,
-    .medical-disclaimer-wrapper {
-        display: none;
-    }
-    
-    main {
-        box-shadow: none;
-        padding: 0;
-    }
-    
-    a {
-        color: #000;
-        text-decoration: underline;
-    }
-    
-    .question-link {
-        break-inside: avoid;
-    }
-}
-
-/* ===================================
-   DARK MODE SUPPORT (Optional)
-   =================================== */
-@media (prefers-color-scheme: dark) {
-    /* Nur aktivieren wenn gewünscht:
-    
-    :root {
-        --bg-light: #1a1a1a;
-        --bg-white: #2d2d2d;
-        --text-dark: #f0f0f0;
-        --text-medium: #d0d0d0;
-        --text-light: #a0a0a0;
-        --border-color: #404040;
-    }
-    
-    body {
-        background-color: var(--bg-light);
-    }
-    */
-}
-/* ===================================
-   COOKIE BANNER - DSGVO-konform
+   COOKIE BANNER
    =================================== */
 .cookie-banner {
     position: fixed;
@@ -957,15 +798,6 @@ textarea:focus {
     color: #ecf0f1;
 }
 
-.cookie-banner-text a {
-    color: var(--primary-light);
-    text-decoration: underline;
-}
-
-.cookie-banner-text a:hover {
-    color: white;
-}
-
 .cookie-banner-buttons {
     display: flex;
     gap: 12px;
@@ -991,7 +823,6 @@ textarea:focus {
 .cookie-btn-accept:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(93, 173, 226, 0.3);
 }
 
 .cookie-btn-decline {
@@ -1002,11 +833,280 @@ textarea:focus {
 
 .cookie-btn-decline:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Mobile Anpassung */
+/* ===================================
+   STICKY SALES BUTTON
+   =================================== */
+.sticky-sales-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    box-shadow: 0 6px 24px rgba(93, 173, 226, 0.4);
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(100px) scale(0.8);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sticky-sales-button.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.sticky-sales-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 32px rgba(93, 173, 226, 0.5);
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+footer {
+    background: var(--text-dark);
+    color: white;
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    margin-top: 80px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-legal {
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 2;
+}
+
+.footer-legal a {
+    color: var(--primary);
+    margin: 0 var(--spacing-xs);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.footer-legal a:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+.footer-year {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #95a5a6;
+}
+
+.back-home {
+    text-align: center;
+    margin: 3rem 0 1rem;
+}
+
+.back-home-btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    transition: all var(--transition-base);
+}
+
+.back-home-btn:hover {
+    background: var(--primary-light);
+}
+
+/* ===================================
+   FIXED DOWNLOAD BUTTON
+   =================================== */
+.fixed-download-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-white);
+    color: var(--primary-dark);
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 9999;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -1px 6px rgba(0,0,0,0.08);
+    transition: all var(--transition-base);
+}
+
+.fixed-download-button:hover {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: var(--text-light);
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* ===================================
+   RESPONSIVE - TABLET
+   =================================== */
+@media (max-width: 968px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: static;
+        margin-top: var(--spacing-xl);
+        max-height: none;
+    }
+    
+    main {
+        padding: 25px;
+    }
+    
+    header {
+        position: relative;
+    }
+    
+    .download-card + .download-card {
+        margin-top: 25px;
+        padding-top: 25px;
+    }
+}
+
+/* ===================================
+   RESPONSIVE - MOBILE
+   =================================== */
 @media (max-width: 600px) {
+    :root {
+        --spacing-lg: 20px;
+        --spacing-xl: 30px;
+    }
+    
+    body {
+        padding-bottom: 50px;
+    }
+    
+    .profile-img {
+        width: 75px;
+        height: 75px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 12px 20px;
+    }
+    
+    main {
+        padding: var(--spacing-md);
+    }
+    
+    .welcome-section {
+        padding: var(--spacing-md);
+    }
+    
+    .question-link {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    p {
+        text-align: left !important;
+        max-width: 100%;
+    }
+    
+    /* Medical Disclaimer */
+    .medical-disclaimer-inner {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        padding: 12px 14px;
+        text-align: left;
+    }
+    
+    /* Download Cards */
+    .download-card {
+        padding: 26px 22px;
+    }
+    
+    .download-card + .download-card {
+        margin-top: 24px;
+        padding-top: 24px;
+    }
+    
+    .download-card h3 {
+        font-size: 1.35rem;
+        line-height: 1.3;
+    }
+    
+    .download-title {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+    
+    .download-benefits {
+        font-size: 1rem;
+        margin: 18px 0;
+    }
+    
+    .download-benefits li {
+        margin-bottom: 10px;
+    }
+    
+    .download-price,
+    .bundle-price strong {
+        font-size: 1.9rem;
+    }
+    
+    .download-btn {
+        font-size: 1.1rem;
+        padding: 18px 20px;
+    }
+    
+    .download-secure {
+        font-size: 0.9rem;
+    }
+    
+    /* Search */
+    .search-box {
+        padding: 20px 15px;
+        margin: 30px auto;
+    }
+    
+    #searchResults {
+        max-height: 400px;
+    }
+    
+    /* Cookie Banner */
     .cookie-banner {
         padding: 15px;
     }
@@ -1023,777 +1123,57 @@ textarea:focus {
         flex: 1;
         min-width: 120px;
     }
-}
-
-/* ===================================
-   SALES BANNER - Unter Disclaimer
-   =================================== */
-.sales-banner {
-    background: linear-gradient(135deg, #ebf8ff 0%, #fff9e6 100%);
-    border-bottom: none;   
-    padding: 16px 20px;
-    margin-bottom: 0;
-}
-
-.sales-banner-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.sales-banner-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-}
-
-.sales-banner-text {
-    flex: 1;
-    min-width: 200px;
-}
-
-.sales-banner-text strong {
-    display: block;
-    color: var(--text-dark);
-    font-size: 1.05rem;
-    margin-bottom: 4px;
-}
-
-.sales-banner-subtitle {
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-.sales-banner-cta {
-    background: var(--primary);
-    color: white;
-    padding: 10px 24px;
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    font-size: 0.95rem;
-    white-space: nowrap;
-    transition: all var(--transition-base);
-    box-shadow: var(--shadow-sm);
-}
-
-.sales-banner-cta:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    color: white;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .sales-banner {
-        padding: 12px 15px;
-    }
     
-    .sales-banner-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-    }
-    
-    .sales-banner-cta {
-        width: 100%;
-        padding: 12px 20px;
-    }
-}
-
-/* ===================================
-   STICKY SALES BUTTON - Dezent
-   =================================== */
-.sticky-sales-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    color: white;
-    padding: 14px 20px;
-    border-radius: 50px;
-    box-shadow: 0 6px 24px rgba(93, 173, 226, 0.4);
-    cursor: pointer;
-    z-index: 999;
-    opacity: 0;
-    transform: translateY(100px) scale(0.8);
-    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    user-select: none;
-}
-
-.sticky-sales-button.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.sticky-sales-button:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 32px rgba(93, 173, 226, 0.5);
-}
-
-.sticky-sales-close {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: var(--danger);
-    color: white;
-    border: 2px solid white;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    font-size: 18px;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition-base);
-    font-weight: bold;
-    padding: 0;
-}
-
-.sticky-sales-close:hover {
-    background: #c0392b;
-    transform: rotate(90deg);
-}
-
-.sticky-sales-content {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.sticky-sales-icon {
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
-.sticky-sales-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.sticky-sales-text strong {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.sticky-sales-text span {
-    font-size: 0.85rem;
-    opacity: 0.9;
-}
-
-/* Mobile Anpassung */
-@media (max-width: 600px) {
+    /* Sticky Button */
     .sticky-sales-button {
         bottom: 20px;
         right: 20px;
         padding: 12px 16px;
     }
     
-    .sticky-sales-icon {
-        font-size: 1.5rem;
-    }
-    
-    .sticky-sales-text strong {
-        font-size: 0.9rem;
-    }
-    
-    .sticky-sales-text span {
-        font-size: 0.8rem;
-    }
-}
-
-/* ===================================
-   SIDEBAR DOWNLOAD BOXES - Fehlende Styles
-   =================================== */
-.sidebar-download {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border: 2px solid var(--primary);
-}
-
-.sidebar-download h3 {
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-
-.download-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 8px;
-    display: block;
-}
-
-.download-description {
-    font-size: 0.9rem;
-    color: var(--text-medium);
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.download-price {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin: 12px 0;
-    text-align: center;
-}
-
-.download-btn {
-    display: block;
-    width: 100%;
-    padding: 14px 20px;
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all var(--transition-base);
-    box-shadow: var(--shadow-sm);
-    text-decoration: none;
-    margin: 12px 0;
-}
-
-.download-btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    color: white;
-}
-
-.download-secure {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    text-align: center;
-    margin: 8px 0 0 0;
-}
-
-/* Bundle-Box bereits inline gestylt, aber hier noch Ergänzungen */
-.sidebar-box[style*="linear-gradient"] .download-btn {
-    background: #f39c12;
-}
-
-.sidebar-box[style*="linear-gradient"] .download-btn:hover {
-    background: #e67e22;
-}
-
-/* ===================================
-   SIDEBAR DISCLAIMER ENTFERNEN
-   (wird durch Kommentar im HTML gelöst)
-   =================================== */
-.sidebar-disclaimer {
-    /* Diese Box wird aus dem HTML entfernt,
-       da der Disclaimer bereits oben unter dem Header ist */
-    display: none;
-}
-
-/* ===================================
-   ACCESSIBILITY FÜR NEUE ELEMENTE
-   =================================== */
-.sticky-sales-button:focus,
-.cookie-btn:focus,
-.sales-banner-cta:focus,
-.download-btn:focus {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-}
-
-/* ===================================
-   PRINT: Neue Elemente ausblenden
-   =================================== */
-@media print {
-    .cookie-banner,
-    .sales-banner,
-    .sticky-sales-button,
-    .sidebar-download {
-        display: none !important;
-    }
-}
-/* ==========================================
-   SUCHFUNKTION
-   ========================================== */
-
-.search-box {
-  margin: 40px auto;
-  padding: 25px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  max-width: 100%;
-}
-
-.search-box h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 24px;
-  color: #2c3e50;
-  font-weight: 600;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 14px 18px;
-  font-size: 16px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-  font-family: inherit;
-}
-
-#searchInput:focus {
-  outline: none;
-  border-color: #0066cc;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
-}
-
-#searchInput::placeholder {
-  color: #999;
-}
-
-#searchResults {
-  margin-top: 20px;
-  background-color: white;
-  border-radius: 8px;
-  display: none; /* versteckt bis Suche aktiv */
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  max-height: 500px;
-  overflow-y: auto;
-}
-
-.search-results-container {
-  padding: 20px;
-}
-
-.search-results-container h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: #2c3e50;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.search-results-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.search-result-item {
-  margin-bottom: 12px;
-  padding: 15px;
-  border-left: 4px solid #0066cc;
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-.search-result-item:hover {
-  background-color: #e9ecef;
-  transform: translateX(3px);
-}
-
-.search-result-link {
-  display: block;
-  font-size: 16px;
-  color: #0066cc;
-  text-decoration: none;
-  font-weight: 500;
-  margin-bottom: 5px;
-  line-height: 1.4;
-}
-
-.search-result-link:hover {
-  text-decoration: underline;
-  color: #004999;
-}
-
-.search-result-category {
-  color: #6c757d;
-  font-size: 14px;
-  font-style: italic;
-}
-
-.search-no-results {
-  padding: 30px 20px;
-  color: #6c757d;
-  text-align: center;
-  font-size: 16px;
-}
-
-/* Responsive Anpassungen */
-@media (max-width: 768px) {
-  .search-box {
-    padding: 20px 15px;
-    margin: 30px auto;
-  }
-  
-  .search-box h2 {
-    font-size: 20px;
-  }
-  
-  #searchInput {
-    font-size: 16px; /* iOS zoom verhindern */
-  }
-  
-  #searchResults {
-    max-height: 400px;
-  }
-}
-
-/* ===================================
-   FIXER DOWNLOAD-BUTTON (DEZENT)
-   =================================== */
-
-.fixed-download-button {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: var(--bg-white);
-    color: var(--primary-dark);
-    text-align: center;
-    padding: 12px 16px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    z-index: 9999;
-    border-top: 1px solid var(--border-color);
-    box-shadow: 0 -1px 6px rgba(0,0,0,0.08);
-    transition: background var(--transition-base), color var(--transition-base);
-}
-
-.fixed-download-button:hover {
-    background: var(--primary-light);
-    color: var(--primary-dark);
-}
-
-/* Platz schaffen */
-body {
-    padding-bottom: 64px;
-}
-
-/* Mobile Feinjustierung */
-@media (max-width: 600px) {
+    /* Fixed Download Button */
     .fixed-download-button {
         font-size: 0.9rem;
         padding: 11px 14px;
     }
-}
-/* ===================================
-   DOWNLOAD-SEITE – GLEICHE KARTENHÖHEN
-   =================================== */
-
-.download-grid {
-    align-items: stretch;
-}
-
-.download-grid .sidebar-box {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.download-grid .download-btn {
-    margin-top: auto;
-}
-
-/* ===================================
-   DOWNLOAD-SEITE: Suche ausblenden
-   =================================== */
-
-body:has(.download-grid) .search,
-body:has(.download-grid) .search-container,
-body:has(.download-grid) .faq-search,
-body:has(.download-grid) .search-wrapper {
-    display: none !important;
-}
-.download-intro {
-  margin: 2rem 0 1.5rem;
-}
-
-.download-intro h1 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-.download-divider {
-  border: none;
-  border-top: 1px solid var(--text-light);
-  opacity: 0.35;
-  margin: 3rem 0 2.2rem;
-}
-/* Download-Boxen insgesamt leicht anheben */
-.download-grid {
-  margin-top: 0.5rem;
-}
-
-.download-grid .sidebar-box {
-  transform: translateY(-4px);
-}
-/* Subtiler Interaktionseffekt */
-.download-grid .sidebar-box {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.download-grid .sidebar-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-.download-grid .sidebar-box {
-  cursor: pointer;
-}
-/* ===================================
-   MOBILE FEINJUSTIERUNG – DOWNLOAD & DISCLAIMER
-   =================================== */
-
-@media (max-width: 600px) {
-
-    /* Medical Disclaimer – ruhig & lesbar */
-    .medical-disclaimer-inner {
-        font-size: 0.85rem;
-        line-height: 1.5;
-        padding: 12px 14px;
-        text-align: left;
-    }
-
-    /* Welcome-Text („Sie befinden sich…“) */
-    .welcome-section p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    /* Download-Karten */
-    .sidebar-box h3 {
-        font-size: 1.25rem;
-    }
-
-    .download-title {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    .download-benefits {
-        font-size: 0.95rem;
-    }
-
-    .download-price {
-        font-size: 1.6rem;
-    }
-
-    .download-btn {
-        font-size: 1.05rem;
-        padding: 16px 20px;
-    }
-
-    .download-secure {
-        font-size: 0.85rem;
-    }
-
-    /* Footer Rechtstexte */
+    
+    /* Footer */
     .footer-legal {
         font-size: 0.95rem;
-        line-height: 2;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+@media print {
+    header,
+    nav,
+    .sidebar,
+    footer,
+    .medical-disclaimer-wrapper,
+    .cookie-banner,
+    .sticky-sales-button,
+    .fixed-download-button,
+    .search-box {
+        display: none !important;
     }
     
-	.download-grid .bundle-price strong {
-   	font-size: 1.9rem;
-     }
-}
-.back-home {
-  text-align: center;
-  margin: 3rem 0 1rem;
-}
-
-.back-home-btn {
-  display: inline-block;
-  padding: 14px 24px;
-  border-radius: 8px;
-  background: var(--bg-light);
-  color: var(--text-dark);
-  font-weight: 600;
-  border: 1px solid var(--border-color);
-}
-
-.back-home-btn:hover {
-  background: var(--primary-light);
-}
-/* ===================================
-   DOWNLOAD-KARTEN – MOBILE LESBARKEIT
-   =================================== */
-@media (max-width: 600px) {
-
-  /* Gesamte Karte */
-  .download-grid .sidebar-box {
-    padding: 24px 20px;
-  }
-
-  /* Überschrift */
-  .download-grid h3 {
-    font-size: 1.35rem;
-    line-height: 1.3;
-    color: var(--text-dark);
-  }
-
-  /* Beschreibung */
-  .download-grid .download-title {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--text-dark);
-  }
-
-  /* Nutzenliste */
-  .download-grid .download-benefits {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text-dark);
-    margin: 18px 0;
-  }
-
-  .download-grid .download-benefits li {
-    margin-bottom: 10px;
-  }
-
-  /* Preis */
-  .download-grid .download-price,
-  .download-grid .bundle-price strong {
-    font-size: 1.9rem;
-    color: var(--primary-dark);
-  }
-
-  /* Button */
-  .download-grid .download-btn {
-    font-size: 1.1rem;
-    padding: 18px 20px;
-  }
-
-  /* Sicherheitstext */
-  .download-grid .download-secure {
-    font-size: 0.9rem;
-    color: var(--text-medium);
-  }
-}
-/* ===================================
-   DOWNLOAD CARDS – FINAL OVERRIDE
-   =================================== */
-
-.download-card {
-    background: var(--bg-white);
-    padding: 28px 24px;
-    border-radius: 14px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
-}
-
-.download-card h3 {
-    font-size: 1.5rem;
-    color: var(--text-dark);
-    margin-bottom: 12px;
-}
-
-.download-card .download-title {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--text-dark);
-}
-
-.download-card .download-benefits {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text-dark);
-    margin: 18px 0;
-}
-
-.download-card .download-benefits li {
-    margin-bottom: 10px;
-}
-
-.download-card .download-price,
-.download-card .bundle-price strong {
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-    color: var(--primary-dark);
-    margin: 16px 0;
-}
-
-.download-card .download-btn {
-    font-size: 1.15rem;
-    padding: 18px 22px;
-}
-
-.download-card .download-secure {
-    font-size: 0.9rem;
-    color: var(--text-medium);
-    text-align: center;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .download-card {
-        padding: 26px 22px;
+    body {
+        padding-bottom: 0;
+    }
+    
+    main {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .question-link {
+        break-inside: avoid;
     }
 }
-/* ===================================
-   DOWNLOAD BOXEN – TRENNLINIEN STATT RAHMEN
-   =================================== */
-
-/* Kein Außenrahmen */
-.download-card {
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-/* Trennlinie zwischen den Boxen */
-.download-card + .download-card {
-    border-top: 1px solid var(--border-color);
-    margin-top: 32px;
-    padding-top: 32px;
-}
-
-/* Mobile etwas enger */
-@media (max-width: 600px) {
-    .download-card + .download-card {
-        margin-top: 24px;
-        padding-top: 24px;
-    }
-}
-.featured-image {
-    position: relative;
-    overflow: hidden;
-    max-height: 450px;
-}
-
-.featured-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    max-height: 450px;
-    transition: transform 0.3s ease;
-}
-
-.product-image {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-    background: #f8f9fa;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-
-
-
-
-
