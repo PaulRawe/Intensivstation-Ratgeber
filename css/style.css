@@ -1031,7 +1031,7 @@ textarea:focus {
    =================================== */
 .sales-banner {
     background: linear-gradient(135deg, #ebf8ff 0%, #fff9e6 100%);
-    border-bottom: 2px solid var(--primary);
+    border-bottom: none;   
     padding: 16px 20px;
     margin-bottom: 0;
 }
@@ -1623,3 +1623,4 @@ body:has(.download-grid) .search-wrapper {
 .back-home-btn:hover {
   background: var(--primary-light);
 }
+
