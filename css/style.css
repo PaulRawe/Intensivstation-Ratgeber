@@ -1678,7 +1678,7 @@ body:has(.download-grid) .search-wrapper {
   }
 }
 /* ===================================
-   DOWNLOAD CARDS – EIGENE KOMPONENTE
+   DOWNLOAD CARDS – FINAL OVERRIDE
    =================================== */
 
 .download-card {
@@ -1689,11 +1689,10 @@ body:has(.download-grid) .search-wrapper {
     box-shadow: 0 8px 28px rgba(0,0,0,0.08);
 }
 
-/* Typografie */
 .download-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 12px;
     color: var(--text-dark);
+    margin-bottom: 12px;
 }
 
 .download-card .download-title {
@@ -1705,8 +1704,8 @@ body:has(.download-grid) .search-wrapper {
 .download-card .download-benefits {
     font-size: 1rem;
     line-height: 1.6;
-    margin: 18px 0;
     color: var(--text-dark);
+    margin: 18px 0;
 }
 
 .download-card .download-benefits li {
