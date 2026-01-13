@@ -1549,4 +1549,112 @@ body:has(.download-grid) .search-wrapper {
 .download-grid .sidebar-box {
   cursor: pointer;
 }
+/* ===================================
+   MOBILE FIX: DISCLAIMER & DOWNLOAD-KARTEN
+   =================================== */
+
+/* Disclaimer auf Mobile kleiner */
+@media (max-width: 768px) {
+    .medical-disclaimer-inner {
+        font-size: 0.8rem;
+        padding: 12px 15px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 600px) {
+    .medical-disclaimer-inner {
+        font-size: 0.75rem;
+        padding: 10px 12px;
+    }
+}
+
+/* Download-Karten: ALLE Texte größer auf Mobile */
+@media (max-width: 600px) {
+    /* Karten-Überschriften größer */
+    .download-grid .sidebar-box h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 15px;
+    }
+    
+    /* Download-Titel größer */
+    .download-grid .download-title {
+        font-size: 1.15rem !important;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    
+    /* Bullet-Liste größer */
+    .download-grid .download-benefits {
+        font-size: 1.05rem !important;
+        padding-left: 20px;
+    }
+    
+    .download-grid .download-benefits li {
+        margin-bottom: 10px;
+        line-height: 1.7;
+    }
+    
+    /* Preis VIEL größer */
+    .download-grid .download-price {
+        font-size: 2.2rem !important;
+        margin: 18px 0;
+    }
+    
+    /* Bundle-Preis */
+    .download-grid .bundle-price {
+        font-size: 1.2rem;
+    }
+    
+    .download-grid .bundle-price strong {
+        font-size: 2.2rem !important;
+        display: block;
+        margin-top: 8px;
+    }
+    
+    .download-grid .old-price {
+        font-size: 1.1rem;
+    }
+    
+    /* Button größer und besser klickbar */
+    .download-grid .download-btn {
+        padding: 18px 28px !important;
+        font-size: 1.1rem !important;
+        margin: 20px 0 12px 0;
+    }
+    
+    /* Sicherheitstext größer */
+    .download-grid .download-secure {
+        font-size: 0.95rem !important;
+    }
+    
+    /* Welcome Section größer */
+    .download-intro h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .welcome-section p {
+        font-size: 1rem !important;
+    }
+    
+    /* Trust Section */
+    .trust-section p {
+        font-size: 1rem !important;
+    }
+}
+
+/* Sehr kleine Phones (unter 400px) */
+@media (max-width: 400px) {
+    .download-grid .sidebar-box h3 {
+        font-size: 1.35rem !important;
+    }
+    
+    .download-grid .download-price {
+        font-size: 2rem !important;
+    }
+    
+    .download-grid .bundle-price strong {
+        font-size: 2rem !important;
+    }
+}
 
