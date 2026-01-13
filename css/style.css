@@ -619,20 +619,19 @@ footer {
 }
 
 .medical-disclaimer-inner {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 18px var(--spacing-md);
+    padding: 16px 18px;
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--warning-text);
     text-align: center;
-}
 
-.medical-disclaimer-inner strong {
-    color: var(--danger);
-    font-weight: 700;
+    /* WICHTIG: keine eigene Box-Wirkung */
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
-
 
 /* ===================================
    ACCESSIBILITY - WCAG 2.1 AA
@@ -1550,115 +1549,77 @@ body:has(.download-grid) .search-wrapper {
   cursor: pointer;
 }
 /* ===================================
-   MOBILE FIX: DISCLAIMER & DOWNLOAD-KARTEN
+   MOBILE FEINJUSTIERUNG – DOWNLOAD & DISCLAIMER
    =================================== */
 
-/* Disclaimer auf Mobile kleiner */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+
+    /* Medical Disclaimer – ruhig & lesbar */
     .medical-disclaimer-inner {
-        font-size: 0.8rem;
-        padding: 12px 15px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        padding: 12px 14px;
+        text-align: left;
+    }
+
+    /* Welcome-Text („Sie befinden sich…“) */
+    .welcome-section p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Download-Karten */
+    .sidebar-box h3 {
+        font-size: 1.25rem;
+    }
+
+    .download-title {
+        font-size: 1rem;
         line-height: 1.5;
     }
+
+    .download-benefits {
+        font-size: 0.95rem;
+    }
+
+    .download-price {
+        font-size: 1.6rem;
+    }
+
+    .download-btn {
+        font-size: 1.05rem;
+        padding: 16px 20px;
+    }
+
+    .download-secure {
+        font-size: 0.85rem;
+    }
+
+    /* Footer Rechtstexte */
+    .footer-legal {
+        font-size: 0.95rem;
+        line-height: 2;
+    }
+    
+	.download-grid .bundle-price strong {
+   	font-size: 1.9rem;
+     }
 }
-/* Download-Karten: ALLE Texte VIEL größer auf Mobile */
-@media (max-width: 600px) {
-    /* Karten-Überschriften VIEL größer */
-    .download-grid .sidebar-box h3 {
-        font-size: 1.8rem !important;
-        margin-bottom: 15px;
-    }
-    
-    /* Download-Titel VIEL größer */
-    .download-grid .download-title {
-        font-size: 1.3rem !important;
-        line-height: 1.6;
-        margin-bottom: 12px;
-    }
-    
-    /* Bullet-Liste VIEL größer */
-    .download-grid .download-benefits {
-        font-size: 1.2rem !important;
-        padding-left: 20px;
-    }
-    
-    .download-grid .download-benefits li {
-        margin-bottom: 12px;
-        line-height: 1.7;
-    }
-    
-    /* Preis RIESIG */
-    .download-grid .download-price {
-        font-size: 2.8rem !important;
-        margin: 20px 0;
-        font-weight: 800;
-    }
-@media (max-width: 600px) {
-    .medical-disclaimer-inner {
-        font-size: 0.75rem;
-        padding: 10px 12px;
-    }
+.back-home {
+  text-align: center;
+  margin: 3rem 0 1rem;
 }
 
-
-    
-    /* Bundle-Preis */
-    .download-grid .bundle-price {
-        font-size: 1.2rem;
-    }
-    
-    .download-grid .bundle-price strong {
-        font-size: 2.2rem !important;
-        display: block;
-        margin-top: 8px;
-    }
-    
-    .download-grid .old-price {
-        font-size: 1.1rem;
-    }
-    
-    /
-    
-    /* Welcome Section größer */
-    .download-intro h1 {
-        font-size: 1.5rem !important;
-    }
-    
-    .welcome-section p {
-        font-size: 1rem !important;
-    }
-    /* Button RIESIG und besser klickbar */
-    .download-grid .download-btn {
-        padding: 20px 32px !important;
-        font-size: 1.25rem !important;
-        margin: 20px 0 12px 0;
-        font-weight: 700;
-    }
-    
-    /* Sicherheitstext größer */
-    .download-grid .download-secure {
-        font-size: 1.05rem !important;
-    }
-}
-    /* Trust Section */
-    .trust-section p {
-        font-size: 1rem !important;
-    }
+.back-home-btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 8px;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-weight: 600;
+  border: 1px solid var(--border-color);
 }
 
-/* Sehr kleine Phones (unter 400px) */
-@media (max-width: 400px) {
-    .download-grid .sidebar-box h3 {
-        font-size: 1.35rem !important;
-    }
-    
-    .download-grid .download-price {
-        font-size: 2rem !important;
-    }
-    
-    .download-grid .bundle-price strong {
-        font-size: 2rem !important;
-    }
+.back-home-btn:hover {
+  background: var(--primary-light);
 }
-
-
