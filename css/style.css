@@ -502,6 +502,59 @@ strong, b {
     color: var(--primary);
     font-weight: bold;
 }
+/* ===================================
+   DOWNLOAD PAGE - BILDER
+   =================================== */
+
+/* Featured Image (großes Hero-Bild oben) */
+.featured-image {
+    position: relative;
+    overflow: hidden;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    max-height: 450px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Product Images (Karten Angehörige/Patienten) */
+.product-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.featured-card:hover .featured-image img {
+    transform: scale(1.03);
+}
 
 /* ===================================
    DOWNLOAD PAGE SPECIFIC
@@ -1177,3 +1230,4 @@ textarea:focus {
         break-inside: avoid;
     }
 }
+
