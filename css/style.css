@@ -1623,4 +1623,61 @@ body:has(.download-grid) .search-wrapper {
 .back-home-btn:hover {
   background: var(--primary-light);
 }
+/* ===================================
+   DOWNLOAD-KARTEN – MOBILE LESBARKEIT
+   =================================== */
+@media (max-width: 600px) {
+
+  /* Gesamte Karte */
+  .download-grid .sidebar-box {
+    padding: 24px 20px;
+  }
+
+  /* Überschrift */
+  .download-grid h3 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+    color: var(--text-dark);
+  }
+
+  /* Beschreibung */
+  .download-grid .download-title {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+  }
+
+  /* Nutzenliste */
+  .download-grid .download-benefits {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 18px 0;
+  }
+
+  .download-grid .download-benefits li {
+    margin-bottom: 10px;
+  }
+
+  /* Preis */
+  .download-grid .download-price,
+  .download-grid .bundle-price strong {
+    font-size: 1.9rem;
+    color: var(--primary-dark);
+  }
+
+  /* Button */
+  .download-grid .download-btn {
+    font-size: 1.1rem;
+    padding: 18px 20px;
+  }
+
+  /* Sicherheitstext */
+  .download-grid .download-secure {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+  }
+}
+
+
 
