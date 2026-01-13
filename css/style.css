@@ -1738,6 +1738,32 @@ body:has(.download-grid) .search-wrapper {
         padding: 26px 22px;
     }
 }
+/* ===================================
+   DOWNLOAD BOXEN – TRENNLINIEN STATT RAHMEN
+   =================================== */
+
+/* Kein Außenrahmen */
+.download-card {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Trennlinie zwischen den Boxen */
+.download-card + .download-card {
+    border-top: 1px solid var(--border-color);
+    margin-top: 32px;
+    padding-top: 32px;
+}
+
+/* Mobile etwas enger */
+@media (max-width: 600px) {
+    .download-card + .download-card {
+        margin-top: 24px;
+        padding-top: 24px;
+    }
+}
+
 
 
 
