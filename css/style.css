@@ -1677,6 +1677,68 @@ body:has(.download-grid) .search-wrapper {
     color: var(--text-medium);
   }
 }
+/* ===================================
+   DOWNLOAD CARDS – EIGENE KOMPONENTE
+   =================================== */
+
+.download-card {
+    background: var(--bg-white);
+    padding: 28px 24px;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+}
+
+/* Typografie */
+.download-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.download-card .download-title {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.download-card .download-benefits {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 18px 0;
+    color: var(--text-dark);
+}
+
+.download-card .download-benefits li {
+    margin-bottom: 10px;
+}
+
+.download-card .download-price,
+.download-card .bundle-price strong {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--primary-dark);
+    margin: 16px 0;
+}
+
+.download-card .download-btn {
+    font-size: 1.15rem;
+    padding: 18px 22px;
+}
+
+.download-card .download-secure {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .download-card {
+        padding: 26px 22px;
+    }
+}
 
 
 
