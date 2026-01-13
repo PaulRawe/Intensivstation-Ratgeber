@@ -1763,6 +1763,35 @@ body:has(.download-grid) .search-wrapper {
         padding-top: 24px;
     }
 }
+.featured-image {
+    position: relative;
+    overflow: hidden;
+    max-height: 450px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    max-height: 450px;
+    transition: transform 0.3s ease;
+}
+
+.product-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
 
 
 
