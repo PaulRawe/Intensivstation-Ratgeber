@@ -277,6 +277,68 @@ strong, b {
 }
 
 /* ===================================
+   SALES BANNER
+   =================================== */
+.sales-banner {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+    border: 2px solid #ff6b35;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.15);
+}
+
+.sales-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+}
+
+.sales-banner-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.sales-banner-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.sales-banner-text strong Baron{
+    font-size: 1.2rem;
+    color: #1e3a5f;
+}
+
+.sales-banner-subtitle {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.sales-banner-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sales-banner-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+    color: white;
+}
+
+/* ===================================
    WELCOME SECTION
    =================================== */
 .welcome-section {
@@ -502,6 +564,7 @@ strong, b {
     color: var(--primary);
     font-weight: bold;
 }
+
 /* ===================================
    DOWNLOAD PAGE - BILDER
    =================================== */
@@ -1050,6 +1113,37 @@ textarea:focus {
         margin-top: 25px;
         padding-top: 25px;
     }
+    
+    /* Featured Content Mobile Fix */
+    .featured-content {
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+    
+    .featured-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .featured-benefits li {
+        text-align: left;
+    }
+    
+    /* Sales Banner Tablet */
+    .sales-banner-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .sales-banner-text {
+        align-items: center;
+    }
+    
+    .sales-banner-cta {
+        width: 100%;
+        max-width: 350px;
+    }
 }
 
 /* ===================================
@@ -1106,6 +1200,40 @@ textarea:focus {
         text-align: left;
     }
     
+    /* Sales Banner Mobile */
+    .sales-banner {
+        margin: 1rem auto;
+    }
+    
+    .sales-banner-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.2rem 1rem;
+        gap: 1rem;
+    }
+    
+    .sales-banner-icon {
+        font-size: 2rem;
+    }
+    
+    .sales-banner-text strong {
+        font-size: 1.1rem;
+    }
+    
+    .sales-banner-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .sales-banner-text {
+        align-items: center;
+    }
+    
+    .sales-banner-cta {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.75rem 1.5rem;
+    }
+    
     /* Download Cards */
     .download-card {
         padding: 26px 22px;
@@ -1147,6 +1275,20 @@ textarea:focus {
     
     .download-secure {
         font-size: 0.9rem;
+    }
+    
+    /* Featured Content Mobile */
+    .featured-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .featured-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .featured-image {
+        min-height: 200px;
+        max-height: 300px;
     }
     
     /* Search */
@@ -1208,7 +1350,8 @@ textarea:focus {
     .cookie-banner,
     .sticky-sales-button,
     .fixed-download-button,
-    .search-box {
+    .search-box,
+    .sales-banner {
         display: none !important;
     }
     
@@ -1230,4 +1373,3 @@ textarea:focus {
         break-inside: avoid;
     }
 }
-
