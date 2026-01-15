@@ -114,12 +114,33 @@ const searchData = [
   {title: "Was ist der Unterschied zwischen invasiver und nicht-invasiver Beatmung?", url: "fragen/invasive-nicht-invasive-beatmung.html", category: "Beatmung"},
   {title: "Kann man mit Beatmung essen und trinken?", url: "fragen/mit-beatmung-essen.html", category: "Beatmung"},
   
-  // Kommunikation
-  {title: "Wie läuft ein Arztgespräch ab?", url: "fragen/arztgespraech.html", category: "Kommunikation"},
-  {title: "Welche Fragen sollte ich im Arztgespräch stellen?", url: "fragen/welche-fragen-stellen.html", category: "Kommunikation"},
-  {title: "Wer gibt mir Auskunft über meinen Angehörigen?", url: "fragen/wer-gibt-auskunft.html", category: "Kommunikation"},
-  {title: "Kann ich telefonisch Auskunft bekommen?", url: "fragen/telefonisch-auskunft.html", category: "Kommunikation"},
-  {title: "Kann ich eine zweite Meinung einholen?", url: "fragen/zweite-meinung.html", category: "Kommunikation"},
+  // Kommunikation mit dem Team
+  {title: "Wie läuft ein Arztgespräch ab?", url: "fragen/arztgespraech.html", category: "Kommunikation mit dem Team"},
+  {title: "Welche Fragen sollte ich im Arztgespräch stellen?", url: "fragen/welche-fragen-stellen.html", category: "Kommunikation mit dem Team"},
+  {title: "Wer gibt mir Auskunft über meinen Angehörigen?", url: "fragen/wer-gibt-auskunft.html", category: "Kommunikation mit dem Team"},
+  {title: "Kann ich telefonisch Auskunft bekommen?", url: "fragen/telefonisch-auskunft.html", category: "Kommunikation mit dem Team"},
+  {title: "Kann ich eine zweite Meinung einholen?", url: "fragen/zweite-meinung.html", category: "Kommunikation mit dem Team"},
+  
+  // Kommunikation mit dem Patienten
+  {title: "Kann mein Angehöriger mich hören?", url: "fragen/kann-mich-hoeren.html", category: "Kommunikation mit dem Patienten"},
+  {title: "Wie kommuniziere ich mit einem beatmeten Patienten?", url: "fragen/kommunikation-beatmeter-patient.html", category: "Kommunikation mit dem Patienten"},
+  {title: "Warum erkennt mich mein Angehöriger nicht?", url: "fragen/erkennt-mich-nicht.html", category: "Kommunikation mit dem Patienten"},
+  
+  // Medizinische Begriffe und Geräte
+  {title: "Was ist eine Sepsis?", url: "fragen/was-ist-sepsis.html", category: "Medizinische Begriffe"},
+  {title: "Was ist ein Delir?", url: "fragen/was-ist-delir.html", category: "Medizinische Begriffe"},
+  {title: "Was sind Katecholamine?", url: "fragen/was-sind-katecholamine.html", category: "Medizinische Begriffe"},
+  {title: "Wann ist eine Dialyse nötig?", url: "fragen/dialyse-wann-noetig.html", category: "Medizinische Begriffe"},
+  {title: "Was bedeuten die Werte auf dem Monitor?", url: "fragen/monitor-werte-bedeutung.html", category: "Medizinische Begriffe"},
+  {title: "Warum hat mein Angehöriger so viele Schläuche?", url: "fragen/warum-viele-schlaeuche.html", category: "Medizinische Begriffe"},
+  {title: "Warum reagiert mein Angehöriger nicht?", url: "fragen/warum-keine-reaktion.html", category: "Medizinische Begriffe"},
+  {title: "Warum dauert alles so lange?", url: "fragen/warum-dauert-lange.html", category: "Medizinische Begriffe"},
+  
+  // Verlauf und Prognose
+  {title: "Wie sind die Überlebenschancen?", url: "fragen/ueberlebenschancen.html", category: "Verlauf und Prognose"},
+  {title: "Wird mein Angehöriger wieder gesund?", url: "fragen/wird-wieder-gesund.html", category: "Verlauf und Prognose"},
+  {title: "Wann erfolgt die Verlegung von der Intensivstation?", url: "fragen/wann-verlegung.html", category: "Verlauf und Prognose"},
+  {title: "Was kommt nach der Intensivstation?", url: "fragen/was-kommt-danach.html", category: "Verlauf und Prognose"},
   
   // Emotionale Belastung
   {title: "Wie halte ich diese Situation aus?", url: "fragen/wie-aushalten.html", category: "Emotionale Belastung"},
@@ -130,15 +151,19 @@ const searchData = [
   {title: "Wie erkläre ich die Situation meinen Kindern?", url: "fragen/kinder-informieren.html", category: "Emotionale Belastung"},
   {title: "Wie kann ich Hoffnung behalten?", url: "fragen/hoffnung-behalten.html", category: "Emotionale Belastung"},
   
-  // Organisatorisches
+  // Organisatorisches und Rechtliches
   {title: "Wer bezahlt die Intensivstation?", url: "fragen/kosten-intensivstation.html", category: "Organisatorisches"},
+  {title: "Was kostet ein Tag auf der Intensivstation?", url: "fragen/was-kostet-intensivstation.html", category: "Organisatorisches"},
   {title: "Brauche ich eine Vollmacht oder Betreuung?", url: "fragen/vollmacht-betreuung.html", category: "Organisatorisches"},
   {title: "Was ist eine Patientenverfügung?", url: "fragen/patientenverfuegung.html", category: "Organisatorisches"},
   {title: "Muss ich meinen Arbeitgeber informieren?", url: "fragen/arbeitgeber-informieren.html", category: "Organisatorisches"},
   {title: "Gibt es Pflegezeit für Angehörige?", url: "fragen/pflegezeit.html", category: "Organisatorisches"},
   {title: "Brauche ich eine Krankschreibung als Angehöriger?", url: "fragen/krankschreibung-angehoerige.html", category: "Organisatorisches"},
   {title: "Wie organisiere ich Langzeitbesuche von weit her?", url: "fragen/langzeitbesuche-organisieren.html", category: "Organisatorisches"},
-  {title: "Was mache ich mit der Arbeit meines Angehörigen?", url: "fragen/arbeit-des-angehoerigen.html", category: "Organisatorisches"}
+  {title: "Was mache ich mit der Arbeit meines Angehörigen?", url: "fragen/arbeit-des-angehoerigen.html", category: "Organisatorisches"},
+  {title: "Wie informiere ich die Familie?", url: "fragen/familie-informieren.html", category: "Organisatorisches"}
+];
+// Suchbox automatisch nach der Navigation einfügen
 ];
 // Suchbox automatisch nach der Navigation einfügen
 function insertSearchBox() {
@@ -267,4 +292,5 @@ window.addEventListener('load', () => {
     salesBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 100);
 });
+
 
