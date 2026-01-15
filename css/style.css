@@ -173,7 +173,7 @@ header h1 {
 nav {
     background: var(--bg-light);
     border-top: 1px solid var(--border-color);
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 100;
 }
@@ -1373,3 +1373,4 @@ textarea:focus {
         break-inside: avoid;
     }
 }
+
