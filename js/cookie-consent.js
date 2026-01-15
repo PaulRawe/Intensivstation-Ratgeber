@@ -71,6 +71,7 @@
     });
 
 })();
+
 // ==========================================
 // AUTOMATISCHE SUCHFUNKTION
 // ==========================================
@@ -163,20 +164,13 @@ const searchData = [
   {title: "Was mache ich mit der Arbeit meines Angehörigen?", url: "fragen/arbeit-des-angehoerigen.html", category: "Organisatorisches"},
   {title: "Wie informiere ich die Familie?", url: "fragen/familie-informieren.html", category: "Organisatorisches"}
 ];
-// Suchbox automatisch nach der Navigation einfügen
-];
+
 // Suchbox automatisch nach der Navigation einfügen
 function insertSearchBox() {
-  // Finde das <nav> Element
   const nav = document.querySelector('nav');
-  
-  // Wenn Navigation nicht gefunden, abbrechen
   if (!nav) return;
-  
-  // Prüfe ob Suchbox bereits existiert (verhindert doppeltes Einfügen)
   if (document.getElementById('auto-search-box')) return;
   
-  // Erstelle die Suchbox
   const searchBoxHTML = `
     <div class="search-box" id="auto-search-box">
       <h2>Frage suchen</h2>
@@ -190,47 +184,41 @@ function insertSearchBox() {
     </div>
   `;
   
-  // Füge Suchbox nach der Navigation ein
   nav.insertAdjacentHTML('afterend', searchBoxHTML);
 }
+
 // Funktion um den richtigen Pfad zu berechnen
 function getCorrectPath(url) {
-  // Prüfe ob wir in einem Unterordner sind (z.B. fragen/)
   const currentPath = window.location.pathname;
   
   // Wenn wir in einem Unterordner sind (enthält /fragen/)
   if (currentPath.includes('/fragen/')) {
-    // Füge ../ vor die URL um eine Ebene nach oben zu gehen
     return '../' + url;
   }
   
-  // Ansonsten nutze die URL wie sie ist (für Startseite)
   return url;
 }
+
 // Suchfunktion
 function performSearch() {
   const searchInput = document.getElementById('searchInput');
   const resultsDiv = document.getElementById('searchResults');
   
-  // Prüfen ob Elemente existieren
   if (!searchInput || !resultsDiv) return;
   
   const searchTerm = searchInput.value.toLowerCase().trim();
   
-  // Leere Suche
   if (searchTerm === '') {
     resultsDiv.innerHTML = '';
     resultsDiv.style.display = 'none';
     return;
   }
   
-  // Suche durchführen
   const results = searchData.filter(item => {
     return item.title.toLowerCase().includes(searchTerm) || 
            item.category.toLowerCase().includes(searchTerm);
   });
   
-  // Ergebnisse anzeigen
   resultsDiv.style.display = 'block';
   
   if (results.length === 0) {
@@ -242,7 +230,7 @@ function performSearch() {
     
     results.forEach(result => {
       html += '<li class="search-result-item">';
-     const correctUrl = getCorrectPath(result.url);
+      const correctUrl = getCorrectPath(result.url);
       html += '<a href="' + correctUrl + '" class="search-result-link">' + result.title + '</a>';
       html += '<span class="search-result-category">Kategorie: ' + result.category + '</span>';
       html += '</li>';
@@ -255,18 +243,12 @@ function performSearch() {
 
 // Initialisierung wenn Seite geladen ist
 document.addEventListener('DOMContentLoaded', function() {
-  // Suchbox automatisch einfügen
   insertSearchBox();
   
-  // Event Listener für Suchfeld hinzufügen
-  // Warte kurz, damit die Suchbox sicher eingefügt ist
   setTimeout(function() {
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
-      // Live-Suche während der Eingabe
       searchInput.addEventListener('input', performSearch);
-      
-      // Suche auch bei Enter
       searchInput.addEventListener('keyup', function(event) {
         if (event.key === 'Enter') {
           performSearch();
@@ -292,5 +274,3 @@ window.addEventListener('load', () => {
     salesBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 100);
 });
-
-
