@@ -160,16 +160,15 @@ window.addEventListener('load', () => {
     'use strict';
 
     function shouldLoadQuickCheck() {
-        const path = window.location.pathname;
-        
-        if (path.includes('index.html') || path === '/' || 
-            path.includes('download') || path.includes('impressum') || 
-            path.includes('datenschutz') || path.includes('agb') || 
-            path.includes('ueber-mich') || path.includes('fuer-mitarbeiter')) {
-            return false;
-        }
-        
-        return path.includes('/fragen/');
+    const path = window.location.pathname;
+    
+    // Quick Check NICHT anzeigen nur auf der Index-Seite
+    if (path.endsWith('index.html') || path === '/' || path.endsWith('/')) {
+        return false;
+    }
+    
+    // Auf allen anderen Seiten anzeigen
+    return true;
     }
 
     function getQuickCheckHTML() {
@@ -432,4 +431,5 @@ window.addEventListener('load', () => {
         injectQuickCheck();
     }
 })();
+
 
