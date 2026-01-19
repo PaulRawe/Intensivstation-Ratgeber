@@ -268,7 +268,8 @@ window.addEventListener('load', () => {
                 link: "https://paulrawe.gumroad.com/l/oroga"
             },
             schwierige: {
-                title: "„Wir müssen reden"",
+                title: '„Wir müssen reden“',
+
                 badge: "Für schwierige Entscheidungen",
                 description: "Orientierung bei Therapiebegrenzung, Palliativversorgung und schwierigen medizinischen Entscheidungen.",
                 benefits: ["Die 10 wichtigsten Fragen für schwere Gespräche", "Wer entscheidet was? – Klarheit über Ihre Rolle", "Checklisten & Entscheidungshilfe zum Ausfüllen", "Beispielgespräche aus der Praxis"],
@@ -431,3 +432,4 @@ window.addEventListener('load', () => {
         injectQuickCheck();
     }
 })();
+
