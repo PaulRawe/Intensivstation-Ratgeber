@@ -306,7 +306,7 @@ window.addEventListener('load', () => {
         return false;
     }
 
-    // Quick Check HTML + CSS + JS
+    // Quick Check HTML + CSS
     function getQuickCheckHTML() {
         return `
 <style>
@@ -715,225 +715,231 @@ window.addEventListener('load', () => {
 
         <div class="qc-recommended-products" id="qcRecommendedProducts"></div>
 
-        <button class="qc-restart-button" onclick="window.qcRestart()">
+        <button class="qc-restart-button" id="qcRestartButton">
             ← Nochmal von vorne
         </button>
     </div>
 </div>
 </div>
-
-<script>
-(function() {
-    let qcCurrentQuestion = 1;
-    let qcAnswers = {};
-    const qcTotalQuestions = 3;
-
-    const qcProducts = {
-        soforthilfe: {
-            title: "Arztgespräch auf der Intensivstation",
-            badge: "Soforthilfe",
-            description: "Kompakte Orientierung für das nächste Arztgespräch – mit konkreten Beispielfragen und Begriffserklärungen.",
-            benefits: [
-                "Direkt nutzbare Fragen fürs Arztgespräch",
-                "Wichtigste medizinische Begriffe erklärt",
-                "Passt in jede Tasche (15 Seiten)",
-                "Sofort verfügbar als PDF"
-            ],
-            price: "2,99 €",
-            link: "https://paulrawe.gumroad.com/l/oroga"
-        },
-        schwierige: {
-            title: "„Wir müssen reden"",
-            badge: "Für schwierige Entscheidungen",
-            description: "Orientierung bei Therapiebegrenzung, Palliativversorgung und schwierigen medizinischen Entscheidungen.",
-            benefits: [
-                "Die 10 wichtigsten Fragen für schwere Gespräche",
-                "Wer entscheidet was? – Klarheit über Ihre Rolle",
-                "Checklisten & Entscheidungshilfe zum Ausfüllen",
-                "Beispielgespräche aus der Praxis"
-            ],
-            price: "2,99 €",
-            link: "https://paulrawe.gumroad.com/l/wtyksz"
-        },
-        angehoerige: {
-            title: "Intensivstation Ratgeber für Angehörige",
-            badge: "Umfassend",
-            description: "Vollständiger Ratgeber mit allen wichtigen Informationen, Checklisten und Vorlagen für Angehörige.",
-            benefits: [
-                "Checklisten für die ersten 24 Stunden",
-                "Alle medizinischen Begriffe verständlich erklärt",
-                "Umgang mit schwierigen Situationen",
-                "Vorlagen zum Ausfüllen & Ausdrucken"
-            ],
-            price: "4,99 €",
-            link: "https://paulrawe.gumroad.com/l/vniudu"
-        },
-        patienten: {
-            title: "Intensivstation Ratgeber für Patienten",
-            badge: "Für Patienten",
-            description: "Umfassende Vorbereitung auf Ihren geplanten Aufenthalt – inkl. Checklisten und Packliste.",
-            benefits: [
-                "Checklisten zur Vorbereitung (2-3 Wochen vorher)",
-                "Was Sie mitbringen sollten",
-                "Beatmung und Aufwachphase erklärt",
-                "Praktische Vorlagen & Notfallkontakte"
-            ],
-            price: "4,99 €",
-            link: "https://paulrawe.gumroad.com/l/hucwg"
-        },
-        bundle: {
-            title: "Bundle: Beide Ratgeber kombiniert",
-            badge: "Spare 20%",
-            description: "Angehörigen- und Patienten-Ratgeber zusammen – für gemeinsame Orientierung.",
-            benefits: [
-                "Beide Perspektiven verstehen",
-                "Vollständiges Paket mit allen Checklisten",
-                "Sie sparen 1,99 €"
-            ],
-            price: "7,99 €",
-            link: "https://paulrawe.gumroad.com/l/otohnp"
-        }
-    };
-
-    document.querySelectorAll('.qc-answer-button').forEach(button => {
-        button.addEventListener('click', function() {
-            const answer = this.getAttribute('data-qc-answer');
-            qcAnswers['q' + qcCurrentQuestion] = answer;
-            qcNextQuestion();
-        });
-    });
-
-    function qcNextQuestion() {
-        document.querySelector('[data-qc-question="' + qcCurrentQuestion + '"]').classList.remove('active');
-        qcCurrentQuestion++;
-        const progress = (qcCurrentQuestion - 1) / qcTotalQuestions * 100;
-        document.getElementById('qcProgressFill').style.width = progress + '%';
-        
-        if (qcCurrentQuestion <= qcTotalQuestions) {
-            document.getElementById('qcProgressText').textContent = 'Frage ' + qcCurrentQuestion + ' von ' + qcTotalQuestions;
-            document.querySelector('[data-qc-question="' + qcCurrentQuestion + '"]').classList.add('active');
-        } else {
-            qcShowResults();
-        }
-    }
-
-    function qcShowResults() {
-        document.querySelector('.qc-progress-bar').style.display = 'none';
-        document.querySelector('.qc-progress-indicator').style.display = 'none';
-        
-        const recommendations = qcGetRecommendations();
-        document.getElementById('qcResultsText').textContent = recommendations.text;
-        
-        const productsHTML = recommendations.products.map(productKey => {
-            const product = qcProducts[productKey];
-            return '<div class="qc-product-card">' +
-                (product.badge ? '<span class="qc-product-badge">' + product.badge + '</span>' : '') +
-                '<h4 class="qc-product-title">' + product.title + '</h4>' +
-                '<p class="qc-product-description">' + product.description + '</p>' +
-                '<ul class="qc-product-benefits">' +
-                product.benefits.map(benefit => '<li>' + benefit + '</li>').join('') +
-                '</ul>' +
-                '<div class="qc-product-footer">' +
-                '<div class="qc-product-price">' + product.price + '</div>' +
-                '<a href="' + product.link + '" target="_blank" rel="noopener" class="qc-product-button">Jetzt herunterladen →</a>' +
-                '</div></div>';
-        }).join('');
-        
-        document.getElementById('qcRecommendedProducts').innerHTML = productsHTML;
-        document.getElementById('qcResultsSection').classList.add('show');
-    }
-
-    function qcGetRecommendations() {
-        const q1 = qcAnswers.q1;
-        const q2 = qcAnswers.q2;
-        const q3 = qcAnswers.q3;
-        
-        if (q2 === 'gespraech-heute' || q3 === 'sofort-fragen') {
-            return {
-                text: 'Sie brauchen jetzt sofort konkrete Hilfe. Diese Soforthilfe gibt Ihnen die wichtigsten Fragen und Begriffe an die Hand.',
-                products: ['soforthilfe']
-            };
-        }
-        
-        if (q2 === 'schwierige-entscheidung') {
-            return {
-                text: 'Bei schwierigen Entscheidungen brauchen Sie klare Orientierung. Dieser Ratgeber hilft Ihnen, die richtigen Fragen zu stellen.',
-                products: ['schwierige']
-            };
-        }
-        
-        if (q1 === 'patient-geplant') {
-            if (q3 === 'alles') {
-                return {
-                    text: 'Als Patient brauchen Sie umfassende Vorbereitung. Dieser Ratgeber begleitet Sie durch alle Phasen.',
-                    products: ['patienten']
-                };
-            } else {
-                return {
-                    text: 'Bereiten Sie sich optimal vor. Diese Kombination gibt Ihnen sowohl Soforthilfe als auch Hintergrundwissen.',
-                    products: ['soforthilfe', 'patienten']
-                };
-            }
-        }
-        
-        if (q1 === 'angehoeriger-akut') {
-            if (q3 === 'alles') {
-                return {
-                    text: 'Sie brauchen umfassende Orientierung. Dieser Ratgeber beantwortet alle wichtigen Fragen für Angehörige.',
-                    products: ['angehoerige']
-                };
-            } else if (q3 === 'sofort-fragen') {
-                return {
-                    text: 'Sie brauchen jetzt konkrete Hilfe. Diese Soforthilfe gibt Ihnen die wichtigsten Fragen an die Hand.',
-                    products: ['soforthilfe']
-                };
-            } else {
-                return {
-                    text: 'Diese Kombination gibt Ihnen sowohl Soforthilfe als auch umfassendes Hintergrundwissen.',
-                    products: ['soforthilfe', 'angehoerige']
-                };
-            }
-        }
-        
-        if (q1 === 'vorbereitung') {
-            if (q3 === 'alles') {
-                return {
-                    text: 'Für umfassende Information empfehlen wir beide Ratgeber – so verstehen Sie beide Perspektiven.',
-                    products: ['bundle']
-                };
-            } else {
-                return {
-                    text: 'Starten Sie mit der Soforthilfe und erweitern Sie bei Bedarf mit dem vollständigen Ratgeber.',
-                    products: ['soforthilfe']
-                };
-            }
-        }
-        
-        return {
-            text: 'Basierend auf Ihren Antworten empfehlen wir Ihnen diese Ratgeber für optimale Orientierung.',
-            products: ['soforthilfe', 'angehoerige']
-        };
-    }
-
-    window.qcRestart = function() {
-        qcCurrentQuestion = 1;
-        qcAnswers = {};
-        
-        document.querySelector('.qc-progress-bar').style.display = 'block';
-        document.querySelector('.qc-progress-indicator').style.display = 'block';
-        document.getElementById('qcProgressFill').style.width = '0%';
-        document.getElementById('qcProgressText').textContent = 'Frage 1 von 3';
-        
-        document.querySelectorAll('.quick-check-question').forEach(q => {
-            q.classList.remove('active');
-        });
-        
-        document.querySelector('[data-qc-question="1"]').classList.add('active');
-        document.getElementById('qcResultsSection').classList.remove('show');
-    };
-})();
-</script>
         `;
+    }
+
+    // Quick Check JavaScript - wird NACH dem Einfügen initialisiert
+    function initQuickCheckFunctionality() {
+        let qcCurrentQuestion = 1;
+        let qcAnswers = {};
+        const qcTotalQuestions = 3;
+
+        const qcProducts = {
+            soforthilfe: {
+                title: "Arztgespräch auf der Intensivstation",
+                badge: "Soforthilfe",
+                description: "Kompakte Orientierung für das nächste Arztgespräch – mit konkreten Beispielfragen und Begriffserklärungen.",
+                benefits: [
+                    "Direkt nutzbare Fragen fürs Arztgespräch",
+                    "Wichtigste medizinische Begriffe erklärt",
+                    "Passt in jede Tasche (15 Seiten)",
+                    "Sofort verfügbar als PDF"
+                ],
+                price: "2,99 €",
+                link: "https://paulrawe.gumroad.com/l/oroga"
+            },
+            schwierige: {
+                title: "„Wir müssen reden"",
+                badge: "Für schwierige Entscheidungen",
+                description: "Orientierung bei Therapiebegrenzung, Palliativversorgung und schwierigen medizinischen Entscheidungen.",
+                benefits: [
+                    "Die 10 wichtigsten Fragen für schwere Gespräche",
+                    "Wer entscheidet was? – Klarheit über Ihre Rolle",
+                    "Checklisten & Entscheidungshilfe zum Ausfüllen",
+                    "Beispielgespräche aus der Praxis"
+                ],
+                price: "2,99 €",
+                link: "https://paulrawe.gumroad.com/l/wtyksz"
+            },
+            angehoerige: {
+                title: "Intensivstation Ratgeber für Angehörige",
+                badge: "Umfassend",
+                description: "Vollständiger Ratgeber mit allen wichtigen Informationen, Checklisten und Vorlagen für Angehörige.",
+                benefits: [
+                    "Checklisten für die ersten 24 Stunden",
+                    "Alle medizinischen Begriffe verständlich erklärt",
+                    "Umgang mit schwierigen Situationen",
+                    "Vorlagen zum Ausfüllen & Ausdrucken"
+                ],
+                price: "4,99 €",
+                link: "https://paulrawe.gumroad.com/l/vniudu"
+            },
+            patienten: {
+                title: "Intensivstation Ratgeber für Patienten",
+                badge: "Für Patienten",
+                description: "Umfassende Vorbereitung auf Ihren geplanten Aufenthalt – inkl. Checklisten und Packliste.",
+                benefits: [
+                    "Checklisten zur Vorbereitung (2-3 Wochen vorher)",
+                    "Was Sie mitbringen sollten",
+                    "Beatmung und Aufwachphase erklärt",
+                    "Praktische Vorlagen & Notfallkontakte"
+                ],
+                price: "4,99 €",
+                link: "https://paulrawe.gumroad.com/l/hucwg"
+            },
+            bundle: {
+                title: "Bundle: Beide Ratgeber kombiniert",
+                badge: "Spare 20%",
+                description: "Angehörigen- und Patienten-Ratgeber zusammen – für gemeinsame Orientierung.",
+                benefits: [
+                    "Beide Perspektiven verstehen",
+                    "Vollständiges Paket mit allen Checklisten",
+                    "Sie sparen 1,99 €"
+                ],
+                price: "7,99 €",
+                link: "https://paulrawe.gumroad.com/l/otohnp"
+            }
+        };
+
+        // Event-Listener für alle Antwort-Buttons
+        document.querySelectorAll('.qc-answer-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const answer = this.getAttribute('data-qc-answer');
+                qcAnswers['q' + qcCurrentQuestion] = answer;
+                qcNextQuestion();
+            });
+        });
+
+        function qcNextQuestion() {
+            document.querySelector('[data-qc-question="' + qcCurrentQuestion + '"]').classList.remove('active');
+            qcCurrentQuestion++;
+            const progress = (qcCurrentQuestion - 1) / qcTotalQuestions * 100;
+            document.getElementById('qcProgressFill').style.width = progress + '%';
+            
+            if (qcCurrentQuestion <= qcTotalQuestions) {
+                document.getElementById('qcProgressText').textContent = 'Frage ' + qcCurrentQuestion + ' von ' + qcTotalQuestions;
+                document.querySelector('[data-qc-question="' + qcCurrentQuestion + '"]').classList.add('active');
+            } else {
+                qcShowResults();
+            }
+        }
+
+        function qcShowResults() {
+            document.querySelector('.qc-progress-bar').style.display = 'none';
+            document.querySelector('.qc-progress-indicator').style.display = 'none';
+            
+            const recommendations = qcGetRecommendations();
+            document.getElementById('qcResultsText').textContent = recommendations.text;
+            
+            const productsHTML = recommendations.products.map(productKey => {
+                const product = qcProducts[productKey];
+                return '<div class="qc-product-card">' +
+                    (product.badge ? '<span class="qc-product-badge">' + product.badge + '</span>' : '') +
+                    '<h4 class="qc-product-title">' + product.title + '</h4>' +
+                    '<p class="qc-product-description">' + product.description + '</p>' +
+                    '<ul class="qc-product-benefits">' +
+                    product.benefits.map(benefit => '<li>' + benefit + '</li>').join('') +
+                    '</ul>' +
+                    '<div class="qc-product-footer">' +
+                    '<div class="qc-product-price">' + product.price + '</div>' +
+                    '<a href="' + product.link + '" target="_blank" rel="noopener" class="qc-product-button">Jetzt herunterladen →</a>' +
+                    '</div></div>';
+            }).join('');
+            
+            document.getElementById('qcRecommendedProducts').innerHTML = productsHTML;
+            document.getElementById('qcResultsSection').classList.add('show');
+        }
+
+        function qcGetRecommendations() {
+            const q1 = qcAnswers.q1;
+            const q2 = qcAnswers.q2;
+            const q3 = qcAnswers.q3;
+            
+            if (q2 === 'gespraech-heute' || q3 === 'sofort-fragen') {
+                return {
+                    text: 'Sie brauchen jetzt sofort konkrete Hilfe. Diese Soforthilfe gibt Ihnen die wichtigsten Fragen und Begriffe an die Hand.',
+                    products: ['soforthilfe']
+                };
+            }
+            
+            if (q2 === 'schwierige-entscheidung') {
+                return {
+                    text: 'Bei schwierigen Entscheidungen brauchen Sie klare Orientierung. Dieser Ratgeber hilft Ihnen, die richtigen Fragen zu stellen.',
+                    products: ['schwierige']
+                };
+            }
+            
+            if (q1 === 'patient-geplant') {
+                if (q3 === 'alles') {
+                    return {
+                        text: 'Als Patient brauchen Sie umfassende Vorbereitung. Dieser Ratgeber begleitet Sie durch alle Phasen.',
+                        products: ['patienten']
+                    };
+                } else {
+                    return {
+                        text: 'Bereiten Sie sich optimal vor. Diese Kombination gibt Ihnen sowohl Soforthilfe als auch Hintergrundwissen.',
+                        products: ['soforthilfe', 'patienten']
+                    };
+                }
+            }
+            
+            if (q1 === 'angehoeriger-akut') {
+                if (q3 === 'alles') {
+                    return {
+                        text: 'Sie brauchen umfassende Orientierung. Dieser Ratgeber beantwortet alle wichtigen Fragen für Angehörige.',
+                        products: ['angehoerige']
+                    };
+                } else if (q3 === 'sofort-fragen') {
+                    return {
+                        text: 'Sie brauchen jetzt konkrete Hilfe. Diese Soforthilfe gibt Ihnen die wichtigsten Fragen an die Hand.',
+                        products: ['soforthilfe']
+                    };
+                } else {
+                    return {
+                        text: 'Diese Kombination gibt Ihnen sowohl Soforthilfe als auch umfassendes Hintergrundwissen.',
+                        products: ['soforthilfe', 'angehoerige']
+                    };
+                }
+            }
+            
+            if (q1 === 'vorbereitung') {
+                if (q3 === 'alles') {
+                    return {
+                        text: 'Für umfassende Information empfehlen wir beide Ratgeber – so verstehen Sie beide Perspektiven.',
+                        products: ['bundle']
+                    };
+                } else {
+                    return {
+                        text: 'Starten Sie mit der Soforthilfe und erweitern Sie bei Bedarf mit dem vollständigen Ratgeber.',
+                        products: ['soforthilfe']
+                    };
+                }
+            }
+            
+            return {
+                text: 'Basierend auf Ihren Antworten empfehlen wir Ihnen diese Ratgeber für optimale Orientierung.',
+                products: ['soforthilfe', 'angehoerige']
+            };
+        }
+
+        function qcRestart() {
+            qcCurrentQuestion = 1;
+            qcAnswers = {};
+            
+            document.querySelector('.qc-progress-bar').style.display = 'block';
+            document.querySelector('.qc-progress-indicator').style.display = 'block';
+            document.getElementById('qcProgressFill').style.width = '0%';
+            document.getElementById('qcProgressText').textContent = 'Frage 1 von 3';
+            
+            document.querySelectorAll('.quick-check-question').forEach(q => {
+                q.classList.remove('active');
+            });
+            
+            document.querySelector('[data-qc-question="1"]').classList.add('active');
+            document.getElementById('qcResultsSection').classList.remove('show');
+        }
+
+        // Restart-Button Event Listener
+        const restartBtn = document.getElementById('qcRestartButton');
+        if (restartBtn) {
+            restartBtn.addEventListener('click', qcRestart);
+        }
     }
 
     // Quick Check vor dem Footer einfügen
@@ -957,7 +963,11 @@ window.addEventListener('load', () => {
         wrapper.innerHTML = getQuickCheckHTML();
         footer.parentNode.insertBefore(wrapper, footer);
         
-        console.log('Quick Check Funnel erfolgreich geladen!');
+        // Event-Listener NACH dem Einfügen binden
+        setTimeout(function() {
+            initQuickCheckFunctionality();
+            console.log('Quick Check Funnel erfolgreich geladen!');
+        }, 100);
     }
 
     // Wenn DOM geladen ist, Quick Check einfügen
