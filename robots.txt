@@ -1,4 +1,29 @@
-User-agent: *
-Disallow:
+# robots.txt für intensivstation-ratgeber.de
+# Letzte Aktualisierung: Januar 2025
 
+# Alle Bots erlauben
+User-agent: *
+Allow: /
+
+# Sitemap
 Sitemap: https://intensivstation-ratgeber.de/sitemap.xml
+
+# Optional: AI-Bots blockieren (falls gewünscht)
+# User-agent: GPTBot
+# Disallow: /
+
+# User-agent: ChatGPT-User
+# Disallow: /
+
+# User-agent: CCBot
+# Disallow: /
+
+# User-agent: anthropic-ai
+# Disallow: /
+
+# User-agent: Claude-Web
+# Disallow: /
+
+# Crawl-Delay für höfliche Bots
+User-agent: *
+Crawl-delay: 1
