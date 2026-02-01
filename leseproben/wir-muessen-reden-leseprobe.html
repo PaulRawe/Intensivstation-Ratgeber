@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Wir müssen reden" - KOSTENLOSE LESEPROBE | Paul Rawe</title>
+    <meta name="description" content="Kostenlose Leseprobe: Kurzratgeber für schwierige Entscheidungen auf der Intensivstation. Wenn Therapiebegrenzung und Palliativversorgung besprochen werden.">
+    <link rel="canonical" href="https://intensivstation-ratgeber.de/leseproben/wir-muessen-reden-leseprobe.html">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #2c5f7d;
+            --color-secondary: #5dade2;
+            --color-accent: #3498db;
+            --color-light: #ebf8ff;
+            --color-white: #ffffff;
+            --color-text: #2c3e50;
+            --color-text-light: #7f8c8d;
+            --color-border: #d4e6f1;
+            --color-success: #27ae60;
+            --color-warning: #f39c12;
+            --color-danger: #e74c3c;
+            --shadow-sm: 0 2px 8px rgba(44, 95, 125, 0.08);
+            --shadow-md: 0 4px 16px rgba(44, 95, 125, 0.12);
+            --shadow-lg: 0 8px 32px rgba(44, 95, 125, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            line-height: 1.7;
+            color: var(--color-text);
+            background: linear-gradient(135deg, #ebf8ff 0%, #f8f9fa 100%);
+            font-size: 18px;
+        }
+
+        .preview-banner {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #c0392b 0%, #8e2f21 100%);
+            color: var(--color-white);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+            line-height: 1.2;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .preview-badge {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .content-section {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--color-danger);
+        }
+
+        .content-section h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1rem 0 1.5rem 2rem;
+            line-height: 1.8;
+        }
+
+        .content-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, #ffe6e6 0%, #ffd4d4 100%);
+            border-left: 5px solid var(--color-danger);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .alert-box strong {
+            color: var(--color-danger);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box {
+            background: var(--color-light);
+            border-left: 5px solid var(--color-secondary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .definition-box {
+            background: #f8f9fa;
+            border: 2px solid var(--color-border);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .definition-box strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .blur-section {
+            position: relative;
+            min-height: 400px;
+            margin: 2rem 0;
+        }
+
+        .blur-content {
+            filter: blur(5px);
+            user-select: none;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .unlock-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            max-width: 550px;
+            width: 90%;
+            border: 3px solid var(--color-danger);
+        }
+
+        .unlock-overlay h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-danger);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .unlock-overlay p {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-danger) 0%, #c0392b 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        .price-tag {
+            display: inline-block;
+            background: var(--color-danger);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        .benefits-list {
+            text-align: left;
+            max-width: 450px;
+            margin: 1.5rem auto;
+        }
+
+        .benefits-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .trust-badge {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .trust-badge strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--color-secondary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .unlock-overlay {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="preview-banner">
+    📖 KOSTENLOSE LESEPROBE – Vorbereitung auf schwierige Gespräche
+</div>
+
+<div class="header">
+    <h1>"Wir müssen reden"</h1>
+    <p class="subtitle">Kurzratgeber für schwierige Entscheidungen auf der Intensivstation</p>
+    <div class="preview-badge">KOSTENLOSE LESEPROBE</div>
+</div>
+
+<div class="container">
+
+    <!-- Intro Sektion -->
+    <div class="content-section">
+        <h2>Lesen Sie das zuerst</h2>
+        
+        <p>Wenn der Arzt sagt: <em>"Wir müssen reden"</em> oder <em>"Können wir uns zu einem Gespräch zusammensetzen?"</em>, ahnen viele Angehörige bereits, dass es schwierig wird.</p>
+
+        <p><strong>Dieser Ratgeber soll Ihnen jetzt sofort helfen:</strong></p>
+
+        <ul>
+            <li>Was solche Gespräche bedeuten</li>
+            <li>Welche Begriffe fallen werden</li>
+            <li>Was Sie entscheiden müssen – und was nicht</li>
+            <li>Welche Fragen wirklich wichtig sind</li>
+            <li>Was nach einer Entscheidung passiert</li>
+        </ul>
+
+        <div class="alert-box">
+            <strong>Wichtig zu wissen:</strong>
+            <p style="margin: 0.5rem 0 0;">
+                Sie müssen nicht allein entscheiden.<br>
+                Sie dürfen Zeit erbitten.<br>
+                Sie dürfen alle Fragen stellen, die Sie haben.
+            </p>
+        </div>
+    </div>
+
+    <!-- Was bedeutet "Wir müssen reden" -->
+    <div class="content-section">
+        <h2>Was "Wir müssen reden" bedeutet</h2>
+        
+        <p>Ein solches Gespräch wird anberaumt, wenn:</p>
+
+        <ul>
+            <li>Der Zustand sich verschlechtert hat oder nicht bessert</li>
+            <li>Die bisherige Behandlung nicht den erhofften Erfolg zeigt</li>
+            <li>Neue, sehr belastende Maßnahmen notwendig wären</li>
+            <li>Absehbar ist, dass Heilung nicht mehr möglich ist</li>
+            <li>Entscheidungen über den weiteren Behandlungsweg anstehen</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>Das Gespräch bedeutet NICHT automatisch:</h4>
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                <li>Dass sofort alles beendet wird</li>
+                <li>Dass keine Hoffnung mehr besteht</li>
+                <li>Dass Sie "den Stecker ziehen" müssen</li>
+            </ul>
+        </div>
+
+        <p style="margin-top: 1.5rem;">Meistens geht es darum, gemeinsam den weiteren Weg zu besprechen: Was ist noch sinnvoll? Was wäre zu belastend? Was hätte der Patient gewollt?</p>
+    </div>
+
+    <!-- Die wichtigsten Begriffe -->
+    <div class="content-section">
+        <h2>Die wichtigsten Begriffe – kurz erklärt</h2>
+
+        <div class="definition-box">
+            <strong>Therapiezieländerung</strong>
+            <p style="margin: 0;">Das Behandlungsziel wird angepasst. Statt "Heilung um jeden Preis" kann das Ziel werden: "Leiden lindern" oder "Würde bewahren".</p>
+        </div>
+
+        <div class="definition-box">
+            <strong>Therapiebegrenzung / Behandlungsbegrenzung</strong>
+            <p style="margin: 0;">Bestimmte Maßnahmen werden nicht mehr durchgeführt oder nicht gesteigert. Beispiel: Keine weitere Operation, keine Dialyse, keine Wiederbelebung.</p>
+        </div>
+
+        <div class="alert-box">
+            <strong>Wichtig:</strong>
+            <p style="margin: 0.5rem 0 0;">Therapiebegrenzung bedeutet NICHT "nichts tun". Pflege, Schmerztherapie, Zuwendung laufen weiter.</p>
+        </div>
+
+        <div class="definition-box">
+            <strong>Therapieabbruch</strong>
+            <p style="margin: 0;">Eine laufende Behandlung wird beendet, weil sie dem Patienten nicht mehr nützt oder ihn nur noch belastet. Beispiel: Beatmung wird beendet, wenn klar ist, dass der Patient nicht mehr selbstständig atmen kann und nicht mehr erwacht.</p>
+        </div>
+
+        <div class="definition-box">
+            <strong>Palliativversorgung / Palliative Therapie</strong>
+            <p style="margin: 0;">Alle Maßnahmen zielen auf Linderung, nicht auf Heilung. Schmerzen, Atemnot, Angst werden behandelt. Der Patient soll nicht leiden.</p>
+        </div>
+    </div>
+
+    <!-- Blur Section - hier beginnt der gesperrte Bereich -->
+    <div class="blur-section">
+        <div class="blur-content">
+            <div class="content-section">
+                <h2>Wer entscheidet was?</h2>
+                <p>Diese Frage verunsichert viele Angehörige am meisten...</p>
+                <h3>Was Ärzte entscheiden</h3>
+                <ul>
+                    <li>Welche Behandlungen medizinisch sinnvoll sind</li>
+                    <li>Welche Behandlungen nicht mehr helfen</li>
+                    <li>Ob eine Maßnahme medizinisch aussichtslos ist...</li>
+                </ul>
+                <h3>Die wichtigsten Fragen im Gespräch</h3>
+                <p>Diese Fragen sollten Sie stellen...</p>
+            </div>
+        </div>
+
+        <div class="unlock-overlay">
+            <h3>🔓 Jetzt vollständig vorbereiten</h3>
+            <p>Im vollständigen Ratgeber erhalten Sie:</p>
+            <ul class="benefits-list">
+                <li>Alle wichtigen Fachbegriffe erklärt</li>
+                <li>Wer entscheidet was – klare Übersicht</li>
+                <li>Über 30 konkrete Fragen für das Arztgespräch</li>
+                <li>2 vollständige Beispielgespräche</li>
+                <li>Was nach einer Entscheidung passiert</li>
+                <li>Wie Leiden vermieden wird (Schmerztherapie, Palliativ)</li>
+                <li>Checkliste zum Ausfüllen</li>
+                <li>Umgang mit Emotionen und Schuldgefühlen</li>
+            </ul>
+
+            <div class="price-tag">Nur 2,99 €</div>
+            <p style="margin-top: 1rem; margin-bottom: 1.5rem;"><strong>15 Seiten kompakte Soforthilfe</strong></p>
+
+            <a href="https://paulrawe.gumroad.com/l/wtyksz" class="cta-button">
+                Jetzt vollständigen Ratgeber erhalten
+            </a>
+
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-text-light);">
+                ✓ Sofortiger Download nach Kauf<br>
+                ✓ Als PDF für alle Geräte<br>
+                ✓ Ausdruckbar und mitnehmen
+            </p>
+        </div>
+    </div>
+
+    <!-- Trust Badge -->
+    <div class="trust-badge">
+        <strong>Aus der Praxis – für die Praxis</strong>
+        <p style="color: var(--color-text-light); margin: 0.5rem 0 0;">Paul Rawe · Fachkrankenpfleger für Intensiv- und Anästhesiepflege<br>17 Jahre Erfahrung mit schwierigen Gesprächen auf der Intensivstation</p>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="content-section">
+        <h2>Das sagen Angehörige</h2>
+        
+        <div class="info-box">
+            <p style="font-style: italic;">"Ich war vorbereitet auf das Gespräch. Die Fragen haben mir geholfen zu verstehen, was der Arzt meinte. Ich fühlte mich nicht mehr so hilflos."</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><strong>— Maria L., Tochter eines Patienten</strong></p>
+        </div>
+
+        <div class="info-box">
+            <p style="font-style: italic;">"Die Erklärung der Begriffe war Gold wert. Ich verstand endlich, was 'Therapiebegrenzung' wirklich bedeutet – und was eben nicht."</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><strong>— Klaus H., Ehemann einer Patientin</strong></p>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="content-section" style="text-align: center; background: linear-gradient(135deg, #ffe6e6 0%, #ffd4d4 100%);">
+        <h2>Bereiten Sie sich vor – jetzt</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">Verstehen Sie, was besprochen wird. Stellen Sie die richtigen Fragen. Handeln Sie im Sinne Ihres Angehörigen.</p>
+        
+        <a href="https://paulrawe.gumroad.com/l/wtyksz" class="cta-button">
+            Vollständigen Ratgeber für 2,99 € kaufen
+        </a>
+
+        <p style="margin-top: 2rem; color: var(--color-text-light);">
+            15 Seiten · Sofort-Download · PDF<br>
+            <strong>Geld-zurück-Garantie bei Nichtgefallen</strong>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>
+        <a href="https://intensivstation-ratgeber.de">intensivstation-ratgeber.de</a> |
+        <a href="https://intensivstation-ratgeber.de/impressum.html">Impressum</a> |
+        <a href="https://intensivstation-ratgeber.de/datenschutz.html">Datenschutz</a>
+    </p>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Paul Rawe – Intensivstation Ratgeber</p>
+</footer>
+
+</body>
+</html>
