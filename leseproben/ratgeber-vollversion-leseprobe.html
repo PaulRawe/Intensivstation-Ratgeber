@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intensivstation Ratgeber für Angehörige - KOSTENLOSE LESEPROBE | Paul Rawe</title>
+    <meta name="description" content="Kostenlose Leseprobe: Umfassender Ratgeber für Angehörige von Intensivpatienten. Über 65 Fragen beantwortet von einem erfahrenen Intensivpfleger.">
+    <link rel="canonical" href="https://intensivstation-ratgeber.de/leseproben/ratgeber-vollversion-leseprobe.html">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #2c5f7d;
+            --color-secondary: #5dade2;
+            --color-accent: #3498db;
+            --color-light: #ebf8ff;
+            --color-white: #ffffff;
+            --color-text: #2c3e50;
+            --color-text-light: #7f8c8d;
+            --color-border: #d4e6f1;
+            --color-success: #27ae60;
+            --color-warning: #f39c12;
+            --shadow-sm: 0 2px 8px rgba(44, 95, 125, 0.08);
+            --shadow-md: 0 4px 16px rgba(44, 95, 125, 0.12);
+            --shadow-lg: 0 8px 32px rgba(44, 95, 125, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            line-height: 1.7;
+            color: var(--color-text);
+            background: linear-gradient(135deg, #ebf8ff 0%, #f8f9fa 100%);
+            font-size: 18px;
+        }
+
+        .preview-banner {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #1e4460 100%);
+            color: var(--color-white);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+            line-height: 1.2;
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .preview-badge {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--color-secondary);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--color-primary);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--color-text-light);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .content-section {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--color-secondary);
+        }
+
+        .content-section h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1rem 0 1.5rem 2rem;
+            line-height: 1.8;
+        }
+
+        .content-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .info-box {
+            background: var(--color-light);
+            border-left: 5px solid var(--color-secondary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .checklist-box {
+            background: #f0f8f0;
+            border-left: 5px solid var(--color-success);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .checklist-item {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 0.8rem;
+        }
+
+        .checklist-item:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .category-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .category-card {
+            background: linear-gradient(135deg, var(--color-light) 0%, #e8f4f8 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-secondary);
+        }
+
+        .category-card h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .category-card .question-count {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        .blur-section {
+            position: relative;
+            min-height: 400px;
+            margin: 2rem 0;
+        }
+
+        .blur-content {
+            filter: blur(5px);
+            user-select: none;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .unlock-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            border: 3px solid var(--color-secondary);
+        }
+
+        .unlock-overlay h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .unlock-overlay p {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-success) 0%, #229954 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+        }
+
+        .price-tag {
+            display: inline-block;
+            background: var(--color-secondary);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .benefits-list {
+            text-align: left;
+            max-width: 500px;
+            margin: 1.5rem auto;
+        }
+
+        .benefits-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .trust-badge {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .trust-badge strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--color-secondary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .unlock-overlay {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="preview-banner">
+    📖 KOSTENLOSE LESEPROBE – Ihr umfassender Begleiter auf der Intensivstation
+</div>
+
+<div class="header">
+    <h1>Intensivstation Ratgeber für Angehörige</h1>
+    <p class="subtitle">Über 65 Fragen beantwortet – verständlich, ehrlich, aus der Praxis</p>
+    <div class="preview-badge">KOSTENLOSE LESEPROBE</div>
+</div>
+
+<div class="container">
+
+    <!-- Stats -->
+    <div class="stats-row">
+        <div class="stat-card">
+            <div class="stat-number">65+</div>
+            <div class="stat-label">Beantwortete Fragen</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">15</div>
+            <div class="stat-label">Umfassende Kapitel</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">17</div>
+            <div class="stat-label">Jahre Praxiserfahrung</div>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <div class="content-section">
+        <h2>Ihre Fragen – verständlich beantwortet</h2>
+        
+        <p>Wenn ein nahestehender Mensch auf der Intensivstation liegt, bestimmen Geräte, Schläuche und medizinische Begriffe plötzlich den Alltag. Dieser Ratgeber beantwortet die über 65 wichtigsten Fragen, die Angehörige stellen – aus über 17 Jahren Erfahrung als Intensivpfleger.</p>
+
+        <div class="info-box">
+            <h4>Was macht diesen Ratgeber besonders?</h4>
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                <li>Keine medizinischen Fachbegriffe ohne Erklärung</li>
+                <li>Ehrliche Antworten aus der Pflege-Perspektive</li>
+                <li>Praktische Tipps für den Besuch</li>
+                <li>Emotionale Unterstützung für Angehörige</li>
+                <li>Checklisten zum Ausdrucken und Mitnehmen</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Kategorien-Überblick -->
+    <div class="content-section">
+        <h2>Diese 9 Themengebiete werden behandelt</h2>
+
+        <div class="category-overview">
+            <div class="category-card">
+                <h4>1. Erste Orientierung</h4>
+                <p class="question-count">12 Fragen</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Besuchszeiten, was anziehen, Blumen mitbringen, übernachten...</p>
+            </div>
+
+            <div class="category-card">
+                <h4>2. Künstliches Koma</h4>
+                <p class="question-count">11 Fragen</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Dauer, Gefahr, Aufwachphase, Träume im Koma...</p>
+            </div>
+
+            <div class="category-card">
+                <h4>3. Beatmung</h4>
+                <p class="question-count">8 Fragen</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Tubus, Tracheotomie, Sprechen während Beatmung...</p>
+            </div>
+
+            <div class="category-card">
+                <h4>4. Kommunikation mit Team</h4>
+                <p class="question-count">5 Fragen</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Arztgespräch, welche Fragen stellen, Auskunft...</p>
+            </div>
+
+            <div class="category-card">
+                <h4>5. Kommunikation Patient</h4>
+                <p class="question-count">3 Fragen</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Kann mich hören, Kommunikation beatmeter Patient...</p>
+            </div>
+
+            <div class="category-card">
+                <h4>6. Medizin & Geräte</h4>
+                <p class="question-count">8 Fragen</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Sepsis, Delir, Katecholamine, Monitor, Dialyse...</p>
+            </div>
+
+            <div class="category-card">
+                <h4>7. Verlauf & Prognose</h4>
+                <p class="question-count">4 Fragen</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Überlebenschancen, wieder gesund, Verlegung...</p>
+            </div>
+
+            <div class="category-card">
+                <h4>8. Emotionale Belastung</h4>
+                <p class="question-count">7 Fragen</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Wie aushalten, weinen, Schuldgefühle, Selbstfürsorge...</p>
+            </div>
+
+            <div class="category-card">
+                <h4>9. Organisatorisches</h4>
+                <p class="question-count">10 Fragen</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Kosten, Vollmacht, Arbeitgeber, Pflegezeit...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Beispiel-Antwort -->
+    <div class="content-section">
+        <h2>Beispiel aus dem Ratgeber</h2>
+        
+        <h3>Wie bereite ich mich auf den ersten Besuch vor?</h3>
+
+        <p>Der erste Besuch auf der Intensivstation kann überwältigend sein. Hier sind konkrete Schritte, die helfen:</p>
+
+        <div class="checklist-box">
+            <h4>Vor dem Besuch:</h4>
+            <div class="checklist-item">Kurz anklingeln oder nach aktuellem Zustand fragen</div>
+            <div class="checklist-item">Jemanden mitnehmen zur Unterstützung</div>
+            <div class="checklist-item">Sich Zeit nehmen – nicht hetzen</div>
+            <div class="checklist-item">Tief durchatmen vor der Tür</div>
+        </div>
+
+        <h3>Beim ersten Anblick:</h3>
+        <ul>
+            <li><strong>Viele Schläuche und Kabel sind normal</strong> – jeder hat eine Funktion</li>
+            <li><strong>Piepende Geräte gehören dazu</strong> – das Personal hört genau hin</li>
+            <li><strong>Ihr Angehöriger sieht anders aus</strong> – geschwollen, blass, mit geschlossenen Augen</li>
+            <li><strong>Das ist erschreckend, aber erwartet</strong> – Sie dürfen erschrocken sein</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>💡 Tipp vom Intensivpfleger:</h4>
+            <p style="margin: 0;">Sprechen Sie mit Ihrem Angehörigen, auch wenn er im Koma liegt oder beatmet wird. Halten Sie seine Hand. Ihre Anwesenheit zählt – auch wenn er nicht reagiert.</p>
+        </div>
+    </div>
+
+    <!-- Blur Section -->
+    <div class="blur-section">
+        <div class="blur-content">
+            <div class="content-section">
+                <h2>Was bedeutet künstliche Beatmung?</h2>
+                <p>Künstliche Beatmung bedeutet, dass eine Maschine die Atemarbeit für den Patienten übernimmt...</p>
+                <h3>Wann wird beatmet?</h3>
+                <ul>
+                    <li>Bei schweren Lungenproblemen (Lungenentzündung, COPD-Exazerbation)</li>
+                    <li>Nach großen Operationen zur Erholung</li>
+                    <li>Bei Bewusstlosigkeit oder künstlichem Koma...</li>
+                </ul>
+                <h2>Kommunikation mit dem beatmeten Patienten</h2>
+                <p>Auch beatmete Patienten können oft kommunizieren...</p>
+            </div>
+        </div>
+
+        <div class="unlock-overlay">
+            <h3>🔓 Alle 65+ Fragen freischalten</h3>
+            <p>Im vollständigen Ratgeber erhalten Sie:</p>
+            <ul class="benefits-list">
+                <li>Alle 65+ Fragen ausführlich beantwortet</li>
+                <li>15 Kapitel zu allen wichtigen Themen</li>
+                <li>Praktische Checklisten zum Ausdrucken</li>
+                <li>Konkrete Tipps für Besuchssituationen</li>
+                <li>Umgang mit Notfallsituationen</li>
+                <li>Was nach der Intensivstation kommt</li>
+                <li>Emotionale Unterstützung für Angehörige</li>
+                <li>Organisatorische Hilfen (Arbeit, Kosten, Vollmacht)</li>
+            </ul>
+
+            <div class="price-tag">Nur 4,99 €</div>
+            <p style="margin-top: 1rem; margin-bottom: 1.5rem;"><strong>Über 100 Seiten umfassendes Wissen</strong></p>
+
+            <a href="https://paulrawe.gumroad.com/l/vniudu" class="cta-button">
+                Jetzt vollständigen Ratgeber erhalten
+            </a>
+
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-text-light);">
+                ✓ Sofortiger Download nach Kauf<br>
+                ✓ Als PDF für alle Geräte<br>
+                ✓ Ausdruckbar für Notizen
+            </p>
+        </div>
+    </div>
+
+    <!-- Trust Badge -->
+    <div class="trust-badge">
+        <strong>Aus 17 Jahren Intensivpflege</strong>
+        <p style="color: var(--color-text-light); margin: 0.5rem 0 0;">Paul Rawe · Fachkrankenpfleger für Intensiv- und Anästhesiepflege<br>Ehemalige Stationsleitung einer 23-Betten-Intensivstation</p>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="content-section">
+        <h2>Das sagen Angehörige</h2>
+        
+        <div class="info-box">
+            <p style="font-style: italic;">"Dieser Ratgeber hat mir durch die schlimmste Zeit meines Lebens geholfen. Endlich verstand ich, was passiert und was ich tun kann."</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><strong>— Sabine W., Ehefrau eines Intensivpatienten</strong></p>
+        </div>
+
+        <div class="info-box">
+            <p style="font-style: italic;">"Die ehrlichen Antworten ohne Beschönigung haben mir mehr geholfen als alle vorsichtigen Erklärungen der Ärzte. Ich konnte mich vorbereiten."</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><strong>— Michael H., Sohn eines Patienten</strong></p>
+        </div>
+
+        <div class="info-box">
+            <p style="font-style: italic;">"Die Checklisten waren Gold wert. Ich wusste endlich, welche Fragen ich stellen sollte und was ich mitbringen muss."</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><strong>— Jennifer K., Tochter einer Patientin</strong></p>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="content-section" style="text-align: center; background: linear-gradient(135deg, var(--color-light) 0%, #d4e6f1 100%);">
+        <h2>Finden Sie Antworten auf Ihre Fragen</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">Der umfassende Ratgeber für Angehörige von Intensivpatienten – ehrlich, verständlich, hilfreich.</p>
+        
+        <a href="https://paulrawe.gumroad.com/l/vniudu" class="cta-button">
+            Vollständigen Ratgeber für 4,99 € kaufen
+        </a>
+
+        <p style="margin-top: 2rem; color: var(--color-text-light);">
+            Über 100 Seiten · 65+ Fragen · 15 Kapitel<br>
+            <strong>Geld-zurück-Garantie bei Nichtgefallen</strong>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>
+        <a href="https://intensivstation-ratgeber.de">intensivstation-ratgeber.de</a> |
+        <a href="https://intensivstation-ratgeber.de/impressum.html">Impressum</a> |
+        <a href="https://intensivstation-ratgeber.de/datenschutz.html">Datenschutz</a>
+    </p>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Paul Rawe – Intensivstation Ratgeber</p>
+</footer>
+
+</body>
+</html>

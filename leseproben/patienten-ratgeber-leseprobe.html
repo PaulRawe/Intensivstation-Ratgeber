@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Aufenthalt auf der Intensivstation - KOSTENLOSE LESEPROBE | Paul Rawe</title>
+    <meta name="description" content="Kostenlose Leseprobe: Ratgeber für Patienten auf der Intensivstation. Was passiert mit mir? Was bedeuten die Geräte? Wie geht es weiter?">
+    <link rel="canonical" href="https://intensivstation-ratgeber.de/leseproben/patienten-ratgeber-leseprobe.html">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #2c5f7d;
+            --color-secondary: #5dade2;
+            --color-accent: #3498db;
+            --color-light: #ebf8ff;
+            --color-white: #ffffff;
+            --color-text: #2c3e50;
+            --color-text-light: #7f8c8d;
+            --color-border: #d4e6f1;
+            --color-success: #27ae60;
+            --color-warning: #f39c12;
+            --shadow-sm: 0 2px 8px rgba(44, 95, 125, 0.08);
+            --shadow-md: 0 4px 16px rgba(44, 95, 125, 0.12);
+            --shadow-lg: 0 8px 32px rgba(44, 95, 125, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            line-height: 1.7;
+            color: var(--color-text);
+            background: linear-gradient(135deg, #ebf8ff 0%, #f8f9fa 100%);
+            font-size: 18px;
+        }
+
+        .preview-banner {
+            background: linear-gradient(135deg, var(--color-success) 0%, #229954 100%);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #1e4460 100%);
+            color: var(--color-white);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+            line-height: 1.2;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .preview-badge {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .patient-note {
+            background: linear-gradient(135deg, #d5f4e6 0%, #a8e6cf 100%);
+            border-left: 5px solid var(--color-success);
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 700px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .patient-note strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-success);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .content-section {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--color-secondary);
+        }
+
+        .content-section h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1rem 0 1.5rem 2rem;
+            line-height: 1.8;
+        }
+
+        .content-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .comfort-box {
+            background: linear-gradient(135deg, #e8f8f5 0%, #d5f4e6 100%);
+            border-left: 5px solid var(--color-success);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .comfort-box h4 {
+            color: var(--color-success);
+            margin-bottom: 0.8rem;
+        }
+
+        .info-box {
+            background: var(--color-light);
+            border-left: 5px solid var(--color-secondary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .device-card {
+            background: #f8f9fa;
+            border: 2px solid var(--color-border);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .device-card h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .blur-section {
+            position: relative;
+            min-height: 400px;
+            margin: 2rem 0;
+        }
+
+        .blur-content {
+            filter: blur(5px);
+            user-select: none;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .unlock-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            max-width: 550px;
+            width: 90%;
+            border: 3px solid var(--color-success);
+        }
+
+        .unlock-overlay h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-success);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .unlock-overlay p {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-success) 0%, #229954 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+        }
+
+        .price-tag {
+            display: inline-block;
+            background: var(--color-success);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        .benefits-list {
+            text-align: left;
+            max-width: 450px;
+            margin: 1.5rem auto;
+        }
+
+        .benefits-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .trust-badge {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .trust-badge strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--color-secondary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .unlock-overlay {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="preview-banner">
+    📖 KOSTENLOSE LESEPROBE – Informationen für Patienten auf der Intensivstation
+</div>
+
+<div class="header">
+    <h1>Mein Aufenthalt auf der Intensivstation</h1>
+    <p class="subtitle">Was passiert mit mir? Ein Ratgeber für Patienten</p>
+    <div class="preview-badge">KOSTENLOSE LESEPROBE</div>
+</div>
+
+<div class="container">
+
+    <div class="patient-note">
+        <strong>Dieser Ratgeber ist für Sie</strong>
+        <p style="margin: 0;">Als Patient oder als jemand, der bald auf die Intensivstation kommt. Verständlich erklärt, ehrlich beantwortet.</p>
+    </div>
+
+    <!-- Intro -->
+    <div class="content-section">
+        <h2>Willkommen – oder: Warum bin ich hier?</h2>
+        
+        <p>Wenn Sie diese Zeilen lesen, sind Sie wahrscheinlich auf der Intensivstation oder werden dorthin verlegt. Vielleicht haben Sie Angst. Vielleicht sind Sie verwirrt. Vielleicht fragen Sie sich: <em>"Was passiert hier mit mir?"</em></p>
+
+        <p><strong>Das ist völlig normal.</strong></p>
+
+        <p>Die Intensivstation ist eine fremde, oft beängstigende Welt. Überall piept es, Sie sind umgeben von Geräten, haben Schläuche an sich, und vielleicht können Sie nicht einmal sprechen.</p>
+
+        <div class="comfort-box">
+            <h4>Das Wichtigste zuerst:</h4>
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                <li>Sie sind hier, weil Sie intensive medizinische Überwachung brauchen</li>
+                <li>Das Ziel ist, dass es Ihnen besser geht</li>
+                <li>Sie werden nicht für immer hier bleiben</li>
+                <li>Die Geräte und Schläuche helfen Ihnen</li>
+                <li>Sie sind nicht allein</li>
+            </ul>
+        </div>
+
+        <p>Dieser Ratgeber soll Ihnen helfen zu verstehen, was auf der Intensivstation passiert, was die ganzen Geräte bedeuten und was Sie selbst tun können, um schneller wieder gesund zu werden.</p>
+    </div>
+
+    <!-- Was ist eine Intensivstation -->
+    <div class="content-section">
+        <h2>Was ist eine Intensivstation überhaupt?</h2>
+        
+        <p>Die Intensivstation (oft "Intensiv" oder "ITS" genannt) ist eine besondere Station im Krankenhaus. Hier werden Patienten behandelt, die:</p>
+
+        <ul>
+            <li>Eine lebensbedrohliche Erkrankung haben</li>
+            <li>Nach einer großen Operation besondere Überwachung brauchen</li>
+            <li>Künstlich beatmet werden müssen</li>
+            <li>Einen sehr instabilen Zustand haben</li>
+            <li>Intensive Pflege rund um die Uhr benötigen</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>Der Unterschied zur Normalstation:</h4>
+            <p style="margin: 0;">Auf der Intensivstation kümmert sich eine Pflegekraft meist nur um 1-2 Patienten (statt 8-15 auf Normalstation). Sie werden permanent überwacht. Ein Arzt ist immer im Haus. Das bedeutet: maximale Aufmerksamkeit für Sie.</p>
+        </div>
+
+        <h3>Wie lange bleibe ich hier?</h3>
+        <p>Das ist sehr unterschiedlich:</p>
+        <ul>
+            <li><strong>Nach einer OP:</strong> Oft nur 1-2 Tage zur Überwachung</li>
+            <li><strong>Bei schwerer Erkrankung:</strong> Mehrere Tage bis Wochen</li>
+            <li><strong>Mit Beatmung:</strong> Solange, bis Sie selbst atmen können</li>
+        </ul>
+
+        <p><strong>Wichtig:</strong> Auf die Intensivstation zu kommen bedeutet NICHT, dass Sie sterben werden. Es bedeutet, dass Sie besondere Aufmerksamkeit brauchen – und bekommen.</p>
+    </div>
+
+    <!-- Die Geräte um mich herum -->
+    <div class="content-section">
+        <h2>Die Geräte um mich herum – was tun die?</h2>
+
+        <p>Sie sind umgeben von Bildschirmen, Pumpen, piependen Kästen. Das kann beängstigend sein. Hier eine kurze Erklärung:</p>
+
+        <div class="device-card">
+            <h4>Der Monitor (Bildschirm)</h4>
+            <p style="margin: 0;">Das ist der Bildschirm mit den bunten Zahlen und Kurven. Er zeigt Ihre Herzfrequenz, Ihren Blutdruck, Ihre Sauerstoffsättigung. Die Zahlen ändern sich ständig – das ist normal! Wenn etwas wirklich nicht stimmt, piept er laut und das Personal kommt sofort.</p>
+        </div>
+
+        <div class="device-card">
+            <h4>Das Beatmungsgerät</h4>
+            <p style="margin: 0;">Wenn Sie beatmet werden, übernimmt dieses Gerät die Atemarbeit für Sie. Sie hören ein regelmäßiges Zischen und Pfeifen – das ist Luft, die in Ihre Lungen gepumpt wird. Das Gerät gibt Ihnen Sauerstoff und nimmt Ihnen die anstrengende Atemarbeit ab.</p>
+        </div>
+
+        <div class="device-card">
+            <h4>Die Perfusorpumpen</h4>
+            <p style="margin: 0;">Das sind die kleinen Kästen mit Spritzen drin, die manchmal piepen. Sie geben Ihnen Medikamente über die Venen – ganz langsam und in genau der richtigen Menge. Manche Medikamente gegen Schmerzen, manche für den Kreislauf, manche zur Beruhigung.</p>
+        </div>
+    </div>
+
+    <!-- Blur Section -->
+    <div class="blur-section">
+        <div class="blur-content">
+            <div class="content-section">
+                <h2>Die Schläuche an mir – wofür sind die?</h2>
+                <p>Es kann sein, dass Sie mehrere Schläuche oder Kabel an sich haben...</p>
+                <div class="device-card">
+                    <h4>Der Beatmungsschlauch (Tubus)</h4>
+                    <p>Liegt in Ihrem Mund oder Ihrer Luftröhre...</p>
+                </div>
+                <h2>Kann ich etwas tun, um schneller gesund zu werden?</h2>
+                <p>Ja! Auch wenn Sie vielleicht schwach sind...</p>
+            </div>
+        </div>
+
+        <div class="unlock-overlay">
+            <h3>🔓 Vollständigen Ratgeber erhalten</h3>
+            <p>Im vollständigen Ratgeber erfahren Sie:</p>
+            <ul class="benefits-list">
+                <li>Alle Geräte und ihre Funktionen verstehen</li>
+                <li>Wofür jeder Schlauch gut ist</li>
+                <li>Was Sie selbst tun können für Ihre Genesung</li>
+                <li>Wie Sie mit der Beatmung umgehen</li>
+                <li>Kommunikation ohne Sprechen</li>
+                <li>Umgang mit Angst und Panik</li>
+                <li>Was nach der Intensivstation kommt</li>
+                <li>Rehabilitation und Genesung</li>
+            </ul>
+
+            <div class="price-tag">Nur 4,99 €</div>
+            <p style="margin-top: 1rem; margin-bottom: 1.5rem;"><strong>Umfassender Ratgeber für Patienten</strong></p>
+
+            <a href="https://paulrawe.gumroad.com/l/hucwg" class="cta-button">
+                Jetzt vollständigen Ratgeber erhalten
+            </a>
+
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-text-light);">
+                ✓ Sofortiger Download nach Kauf<br>
+                ✓ Als PDF zum Lesen am Tablet/Handy<br>
+                ✓ Auch für Angehörige zum Vorlesen geeignet
+            </p>
+        </div>
+    </div>
+
+    <!-- Trust Badge -->
+    <div class="trust-badge">
+        <strong>Geschrieben von jemandem, der es kennt</strong>
+        <p style="color: var(--color-text-light); margin: 0.5rem 0 0;">Paul Rawe · Fachkrankenpfleger für Intensiv- und Anästhesiepflege<br>17 Jahre auf der Intensivstation · Tausende Patienten begleitet</p>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="content-section">
+        <h2>Das sagen Patienten</h2>
+        
+        <div class="info-box">
+            <p style="font-style: italic;">"Nach 2 Wochen Intensiv war ich völlig durcheinander. Dieser Ratgeber hat mir geholfen zu verstehen, was mit mir passiert ist und warum ich so schwach war."</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><strong>— Peter M., 58 Jahre, nach Sepsis</strong></p>
+        </div>
+
+        <div class="info-box">
+            <p style="font-style: italic;">"Die Erklärung der Geräte hat meine Angst genommen. Plötzlich verstand ich, dass alles mir hilft, nicht mir schadet."</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><strong>— Martina L., 64 Jahre, nach Herz-OP</strong></p>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="content-section" style="text-align: center; background: linear-gradient(135deg, #e8f8f5 0%, #d5f4e6 100%);">
+        <h2>Verstehen Sie, was mit Ihnen passiert</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">Wissen nimmt Angst. Dieser Ratgeber erklärt Ihnen alles, was Sie über Ihren Intensivaufenthalt wissen müssen.</p>
+        
+        <a href="https://paulrawe.gumroad.com/l/hucwg" class="cta-button">
+            Vollständigen Ratgeber für 4,99 € kaufen
+        </a>
+
+        <p style="margin-top: 2rem; color: var(--color-text-light);">
+            Umfassender Patientenratgeber · PDF<br>
+            <strong>Geld-zurück-Garantie bei Nichtgefallen</strong>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>
+        <a href="https://intensivstation-ratgeber.de">intensivstation-ratgeber.de</a> |
+        <a href="https://intensivstation-ratgeber.de/impressum.html">Impressum</a> |
+        <a href="https://intensivstation-ratgeber.de/datenschutz.html">Datenschutz</a>
+    </p>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Paul Rawe – Intensivstation Ratgeber</p>
+</footer>
+
+</body>
+</html>

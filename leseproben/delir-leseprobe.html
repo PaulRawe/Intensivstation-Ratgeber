@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delir verstehen - KOSTENLOSE LESEPROBE | Paul Rawe</title>
+    <meta name="description" content="Kostenlose Leseprobe: Delir verstehen - Wenn Ihr Angehöriger plötzlich verwirrt ist. Praktischer Ratgeber für Angehörige von Intensivpatienten.">
+    <link rel="canonical" href="https://intensivstation-ratgeber.de/leseproben/delir-leseprobe.html">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #2c5f7d;
+            --color-secondary: #5dade2;
+            --color-accent: #3498db;
+            --color-light: #ebf8ff;
+            --color-white: #ffffff;
+            --color-text: #2c3e50;
+            --color-text-light: #7f8c8d;
+            --color-border: #d4e6f1;
+            --color-success: #27ae60;
+            --color-warning: #f39c12;
+            --shadow-sm: 0 2px 8px rgba(44, 95, 125, 0.08);
+            --shadow-md: 0 4px 16px rgba(44, 95, 125, 0.12);
+            --shadow-lg: 0 8px 32px rgba(44, 95, 125, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            line-height: 1.7;
+            color: var(--color-text);
+            background: linear-gradient(135deg, #ebf8ff 0%, #f8f9fa 100%);
+            font-size: 18px;
+        }
+
+        .preview-banner {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #1e4460 100%);
+            color: var(--color-white);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+            line-height: 1.2;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-badge {
+            background: rgba(243, 156, 18, 0.2);
+            border: 2px solid #f39c12;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .content-section {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--color-secondary);
+        }
+
+        .content-section h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1rem 0 1.5rem 2rem;
+            line-height: 1.8;
+        }
+
+        .content-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe5a3 100%);
+            border-left: 5px solid var(--color-warning);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            color: var(--color-warning);
+            font-size: 1.1rem;
+        }
+
+        .info-box {
+            background: var(--color-light);
+            border-left: 5px solid var(--color-secondary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .blur-section {
+            position: relative;
+            min-height: 300px;
+            margin: 2rem 0;
+        }
+
+        .blur-content {
+            filter: blur(5px);
+            user-select: none;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .unlock-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border: 3px solid var(--color-secondary);
+        }
+
+        .unlock-overlay h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .unlock-overlay p {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-success) 0%, #229954 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+        }
+
+        .price-tag {
+            display: inline-block;
+            background: var(--color-warning);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        .benefits-list {
+            text-align: left;
+            max-width: 400px;
+            margin: 1.5rem auto;
+        }
+
+        .benefits-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .trust-badge {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .trust-badge strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--color-secondary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .unlock-overlay {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="preview-banner">
+    📖 KOSTENLOSE LESEPROBE – Sehen Sie, ob dieser Ratgeber Ihnen hilft
+</div>
+
+<div class="header">
+    <h1>Delir verstehen</h1>
+    <p class="subtitle">Wenn Ihr Angehöriger plötzlich verwirrt ist</p>
+    <div class="preview-badge">KOSTENLOSE LESEPROBE</div>
+</div>
+
+<div class="container">
+
+    <!-- Intro Sektion -->
+    <div class="content-section">
+        <h2>Warum dieser Ratgeber?</h2>
+        
+        <p>Wenn Ihr Angehöriger auf der Intensivstation plötzlich verwirrt ist, nicht mehr weiß wo er ist, Sie nicht erkennt oder von beängstigenden Dingen spricht, die nicht real sind – dann erleben Sie höchstwahrscheinlich ein Delir.</p>
+
+        <div class="highlight-box">
+            <strong>80% aller Intensivpatienten erleben ein Delir</strong>
+        </div>
+
+        <p>Das Delir ist eine der häufigsten Komplikationen auf der Intensivstation. Es ist für Angehörige oft genauso belastend wie für die Betroffenen selbst. Die gute Nachricht: Ein Delir ist in den allermeisten Fällen vorübergehend. Und Sie können aktiv helfen.</p>
+
+        <p>Dieser Ratgeber erklärt Ihnen verständlich, was ein Delir ist, warum es entsteht und – das Wichtigste – wie Sie Ihrem Angehörigen in dieser schwierigen Phase beistehen können.</p>
+    </div>
+
+    <!-- Was ist ein Delir -->
+    <div class="content-section">
+        <h2>Was ist ein Delir?</h2>
+        
+        <p>Ein Delir ist ein akuter Zustand der Verwirrtheit, bei dem das Gehirn vorübergehend nicht richtig arbeitet. Es ist keine psychische Erkrankung und keine Demenz, sondern eine Reaktion des Gehirns auf die schwere Belastung durch Krankheit, Operation oder intensivmedizinische Behandlung.</p>
+
+        <h3>Typische Anzeichen eines Delirs</h3>
+        <p>Ihr Angehöriger kann plötzlich völlig anders wirken als Sie ihn kennen:</p>
+
+        <ul>
+            <li><strong>Desorientierung:</strong> Weiß nicht, wo er ist, welcher Tag ist, was passiert ist</li>
+            <li><strong>Verwirrtheit:</strong> Kann Gedanken nicht klar fassen, wirkt durcheinander</li>
+            <li><strong>Halluzinationen:</strong> Sieht, hört oder fühlt Dinge, die nicht da sind</li>
+            <li><strong>Wahnvorstellungen:</strong> Glaubt an beängstigende Dinge (z.B. "Die Schwestern wollen mich vergiften")</li>
+            <li><strong>Verkehrter Tag-Nacht-Rhythmus:</strong> Schläft tagsüber, ist nachts hellwach</li>
+            <li><strong>Veränderte Stimmung:</strong> Ängstlich, aggressiv, misstrauisch oder völlig teilnahmslos</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>Wichtig zu verstehen:</h4>
+            <p>Ihr Angehöriger erlebt diese Dinge als völlig real. Es nützt nichts, ihm zu sagen "Das bildest du dir nur ein". Für ihn ist es in diesem Moment Wirklichkeit, und das macht ihm Angst.</p>
+        </div>
+    </div>
+
+    <!-- Zwei Gesichter des Delirs -->
+    <div class="content-section">
+        <h2>Zwei Gesichter des Delirs</h2>
+        
+        <p>Delir kann sich auf zwei sehr unterschiedliche Arten zeigen. Beide Formen sind gleich ernst zu nehmen, auch wenn eine deutlich auffälliger ist als die andere.</p>
+
+        <h3>1. Hyperaktives Delir (auffällig)</h3>
+        <p>Der Patient ist:</p>
+        <ul>
+            <li>Unruhig und agitiert</li>
+            <li>Redet viel, oft wirres Zeug</li>
+            <li>Versucht, Schläuche oder Katheter zu entfernen</li>
+            <li>Will aus dem Bett aufstehen</li>
+            <li>Kann aggressiv werden</li>
+            <li>Reagiert stark auf Reize</li>
+        </ul>
+
+        <p>Diese Form ist für Angehörige besonders belastend, weil der geliebte Mensch "wie ausgetauscht" wirkt. <strong>Wichtig:</strong> Ihre Angehörige oder Ihr Angehöriger kann in diesem Zustand nichts dafür und wird sich später oft nicht daran erinnern.</p>
+
+        <h3>2. Hypoaktives Delir (unauffällig)</h3>
+        <p>Der Patient ist:</p>
+        <ul>
+            <li>Sehr ruhig und zurückgezogen</li>
+            <li>Teilnahmslos und apathisch</li>
+            <li>Antwortet kaum oder sehr verzögert</li>
+            <li>Wirkt extrem müde oder schläfrig</li>
+            <li>Zeigt wenig Interesse an der Umgebung</li>
+        </ul>
+
+        <p>Diese Form wird oft übersehen, weil der Patient "nur müde" wirkt. Tatsächlich durchlebt er aber innerlich dieselbe Verwirrtheit – nur eben nach innen gerichtet.</p>
+
+        <div class="info-box">
+            <p><strong>Achtung:</strong> Viele Patienten wechseln zwischen beiden Formen hin und her. Manchmal innerhalb weniger Stunden.</p>
+        </div>
+    </div>
+
+    <!-- Blur Section - hier wird's spannend -->
+    <div class="blur-section">
+        <div class="blur-content">
+            <div class="content-section">
+                <h2>Warum entsteht ein Delir?</h2>
+                <p>Ein Delir hat nie nur eine einzige Ursache. Meist kommen mehrere Faktoren zusammen...</p>
+                <h3>Körperliche Ursachen</h3>
+                <ul>
+                    <li>Schwere Erkrankung: Sepsis, Lungenentzündung, Organversagen</li>
+                    <li>Sauerstoffmangel: Das Gehirn bekommt nicht genug Sauerstoff</li>
+                    <li>Stoffwechselentgleisungen: Zu hoher/niedriger Blutzucker...</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unlock-overlay">
+            <h3>🔓 Jetzt weiterlesen</h3>
+            <p>Im vollständigen Ratgeber erfahren Sie:</p>
+            <ul class="benefits-list">
+                <li>Alle Ursachen eines Delirs verstehen</li>
+                <li>Konkrete Hilfen: Was Sie tun können (Checklisten!)</li>
+                <li>Wie lange ein Delir dauert</li>
+                <li>Wie Sie mit Halluzinationen umgehen</li>
+                <li>Wichtige Dinge zum Mitbringen</li>
+                <li>Sorge für sich selbst als Angehöriger</li>
+                <li>Häufig gestellte Fragen</li>
+            </ul>
+
+            <div class="price-tag">Nur 3,99 €</div>
+            <p style="margin-top: 1rem; margin-bottom: 1.5rem;"><strong>20 Seiten kompakte, praxisnahe Hilfe</strong></p>
+
+            <a href="https://paulrawe.gumroad.com/l/cytkz" class="cta-button">
+                Jetzt vollständigen Ratgeber erhalten
+            </a>
+
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-text-light);">
+                ✓ Sofortiger Download nach Kauf<br>
+                ✓ Als PDF für alle Geräte<br>
+                ✓ Ausdruckbar und für unterwegs
+            </p>
+        </div>
+    </div>
+
+    <!-- Trust Badge -->
+    <div class="trust-badge">
+        <strong>Von einem erfahrenen Intensivpfleger</strong>
+        <p style="color: var(--color-text-light); margin: 0.5rem 0 0;">Paul Rawe · Fachkrankenpfleger für Intensiv- und Anästhesiepflege<br>17 Jahre Berufserfahrung · Ehemalige Stationsleitung</p>
+    </div>
+
+    <!-- Was andere sagen -->
+    <div class="content-section">
+        <h2>Das sagen Angehörige</h2>
+        
+        <div class="info-box">
+            <p style="font-style: italic;">"Endlich verstand ich, was mit meinem Mann los war. Die konkreten Tipps haben mir geholfen, ruhig zu bleiben und ihm beizustehen."</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><strong>— Andrea M., Ehefrau eines Intensivpatienten</strong></p>
+        </div>
+
+        <div class="info-box">
+            <p style="font-style: italic;">"Die Checkliste zum Mitnehmen war Gold wert. Ich wusste endlich, was ich tun kann und was ich ins Krankenhaus mitbringen sollte."</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><strong>— Thomas K., Sohn einer Patientin</strong></p>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="content-section" style="text-align: center; background: linear-gradient(135deg, var(--color-light) 0%, #d4e6f1 100%);">
+        <h2>Helfen Sie Ihrem Angehörigen jetzt</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">Verstehen Sie das Delir und lernen Sie, wie Sie aktiv unterstützen können.</p>
+        
+        <a href="https://paulrawe.gumroad.com/l/cytkz" class="cta-button">
+            Vollständigen Ratgeber für 3,99 € kaufen
+        </a>
+
+        <p style="margin-top: 2rem; color: var(--color-text-light);">
+            20 Seiten · Sofort-Download · PDF<br>
+            <strong>Geld-zurück-Garantie bei Nichtgefallen</strong>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>
+        <a href="https://intensivstation-ratgeber.de">intensivstation-ratgeber.de</a> |
+        <a href="https://intensivstation-ratgeber.de/impressum.html">Impressum</a> |
+        <a href="https://intensivstation-ratgeber.de/datenschutz.html">Datenschutz</a>
+    </p>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Paul Rawe – Intensivstation Ratgeber</p>
+</footer>
+
+</body>
+</html>
