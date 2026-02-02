@@ -521,6 +521,21 @@
                 font-size: 2rem;
             }
         }
+@media (max-width: 768px) {
+    .product-card {
+        grid-template-columns: 1fr !important;
+    }
+
+    .product-image img {
+        height: 220px; /* optional: bessere mobile Darstellung */
+        object-fit: cover;
+    }
+
+    .btn-leseprobe {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+}
 
         /* Urgency Banner */
         .urgency-banner {
