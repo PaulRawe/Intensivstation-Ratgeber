@@ -1,9 +1,12 @@
+RewriteEngine On
+RewriteCond %{THE_REQUEST} /index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://intensivstation-ratgeber.de/ [R=301,L]
+
 <IfModule mod_authz_core.c>
   <Files "send-email.php">
     Require all granted
   </Files>
 </IfModule>
-
 <IfModule !mod_authz_core.c>
   <Files "send-email.php">
     Order allow,deny
