@@ -268,7 +268,7 @@ window.addEventListener('load', () => {
                 link: "https://paulrawe.gumroad.com/l/oroga"
             },
             schwierige: {
-                title: "„Wir müssen reden"",
+                title: "„Wir müssen reden",
                 badge: "Für schwierige Entscheidungen",
                 description: "Orientierung bei Therapiebegrenzung, Palliativversorgung und schwierigen medizinischen Entscheidungen.",
                 benefits: ["Die 10 wichtigsten Fragen für schwere Gespräche", "Wer entscheidet was? – Klarheit über Ihre Rolle", "Checklisten & Entscheidungshilfe zum Ausfüllen", "Beispielgespräche aus der Praxis"],
@@ -345,23 +345,7 @@ window.addEventListener('load', () => {
                     '</div></div>';
             }).join('');
             
-            // KDP Bücher Hinweis
-            const kdpHint = '<div style="margin-top:2rem;padding:1.5rem;background:#f0f4f8;border-radius:10px;border:1px solid #d0dae4;">' +
-                '<p style="font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;color:#888;margin-bottom:0.8rem;">Lieber ein gedrucktes Buch?</p>' +
-                '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">' +
-                '<a href="https://www.amazon.de/dp/B0H4HVD2X1" target="_blank" rel="noopener" ' +
-                'style="display:block;background:#fff;border:1px solid #d0dae4;border-radius:8px;padding:1rem;text-decoration:none;color:#1e3a5f;">' +
-                '<p style="font-weight:600;font-size:0.95rem;margin-bottom:0.3rem;">Was Angehörige wissen müssen</p>' +
-                '<p style="font-size:0.85rem;color:#888;">Taschenbuch · 12,99 € · Amazon</p>' +
-                '</a>' +
-                '<a href="https://www.amazon.de/dp/B0H4HN265H" target="_blank" rel="noopener" ' +
-                'style="display:block;background:#fff;border:1px solid #d0dae4;border-radius:8px;padding:1rem;text-decoration:none;color:#1e3a5f;">' +
-                '<p style="font-weight:600;font-size:0.95rem;margin-bottom:0.3rem;">Was Patienten erwartet</p>' +
-                '<p style="font-size:0.85rem;color:#888;">Taschenbuch · 12,99 € · Amazon</p>' +
-                '</a>' +
-                '</div></div>';
-
-            document.getElementById('qcRecommendedProducts').innerHTML = productsHTML + kdpHint;
+            document.getElementById('qcRecommendedProducts').innerHTML = productsHTML;
             document.getElementById('qcResultsSection').classList.add('show');
         }
 
