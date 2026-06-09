@@ -1,4 +1,4 @@
-name: Inject KDP Books Block into Frageseiten
+name: Remove KDP Books Block from Frageseiten
 
 on:
   workflow_dispatch:
@@ -7,57 +7,19 @@ on:
       - '.github/workflows/inject-kdp-books.yml'
 
 jobs:
-  inject-kdp-books:
+  remove-kdp-books:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Inject KDP book block into fragen/*.html
+      - name: Remove KDP block from fragen/*.html
         run: |
           python3 << 'PYEOF'
           import os
           import glob
-
-          # ─── KDP Block HTML ───────────────────────────────────────────────
-          KDP_BLOCK = '''
-          <!-- KDP_BOOKS_START -->
-          <div class="kdp-books-container" style="max-width:1200px;margin:2rem auto 0;padding:0 20px;">
-            <div style="background:linear-gradient(135deg,#f0f4f8 0%,#e8edf2 100%);border:2px solid #1e3a5f;border-radius:12px;padding:2rem;text-align:center;">
-              <p style="font-size:0.9rem;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;">auch erhältlich als Taschenbuch</p>
-              <h3 style="color:#1e3a5f;font-size:1.3rem;margin-bottom:1.5rem;">📚 Mehr als eine Website – meine Bücher bei Amazon</h3>
-              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:700px;margin:0 auto;">
-                <div style="background:white;border-radius:10px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,0.07);">
-                  <div style="font-size:2rem;margin-bottom:0.8rem;">📘</div>
-                  <p style="font-weight:600;color:#1e3a5f;font-size:1rem;margin-bottom:0.5rem;">Was Angehörige wissen müssen</p>
-                  <p style="font-size:0.9rem;color:#666;margin-bottom:1rem;">Taschenbuch · 12,99 €</p>
-                  <a href="https://www.amazon.de/dp/B0H4HVD2X1" target="_blank" rel="noopener"
-                     style="display:inline-block;background:#1e3a5f;color:white;padding:0.7rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:opacity 0.2s;"
-                     onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
-                    Bei Amazon →
-                  </a>
-                </div>
-                <div style="background:white;border-radius:10px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,0.07);">
-                  <div style="font-size:2rem;margin-bottom:0.8rem;">📗</div>
-                  <p style="font-weight:600;color:#1e3a5f;font-size:1rem;margin-bottom:0.5rem;">Was Patienten erwartet</p>
-                  <p style="font-size:0.9rem;color:#666;margin-bottom:1rem;">Taschenbuch · 12,99 €</p>
-                  <a href="https://www.amazon.de/dp/B0H4HN265H" target="_blank" rel="noopener"
-                     style="display:inline-block;background:#1e3a5f;color:white;padding:0.7rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:opacity 0.2s;"
-                     onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
-                    Bei Amazon →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- KDP_BOOKS_END -->
-          '''
-
-          # ─── Marker: vor dem Quick Check einfügen ────────────────────────
-          # Der Quick Check injiziert sich selbst vor dem Footer via JS.
-          # Wir setzen einen HTML-Kommentar als Anker direkt vor den Footer.
-          INJECT_BEFORE = '<!-- KDP_BOOKS_INJECT -->'
+          import re
 
           files = glob.glob('fragen/*.html')
           updated = 0
@@ -67,31 +29,24 @@ jobs:
               with open(filepath, 'r', encoding='utf-8') as f:
                   content = f.read()
 
-              # Bereits injiziert? → überspringen
-              if 'KDP_BOOKS_START' in content:
+              if 'KDP_BOOKS_START' not in content:
                   skipped += 1
                   continue
 
-              # Marker vorhanden? → davor einfügen
-              if INJECT_BEFORE in content:
-                  new_content = content.replace(INJECT_BEFORE, KDP_BLOCK + '\n' + INJECT_BEFORE)
-                  with open(filepath, 'w', encoding='utf-8') as f:
-                      f.write(new_content)
-                  updated += 1
-                  print(f'  ✓ {filepath}')
-                  continue
+              # Alles zwischen den Markern (inkl. Marker) entfernen
+              new_content = re.sub(
+                  r'\s*<!-- KDP_BOOKS_START -->.*?<!-- KDP_BOOKS_END -->',
+                  '',
+                  content,
+                  flags=re.DOTALL
+              )
 
-              # Kein Marker → vor </body> einfügen als Fallback
-              if '</body>' in content:
-                  new_content = content.replace('</body>', KDP_BLOCK + '\n</body>')
-                  with open(filepath, 'w', encoding='utf-8') as f:
-                      f.write(new_content)
-                  updated += 1
-                  print(f'  ✓ (fallback) {filepath}')
-              else:
-                  print(f'  ⚠ Kein Ankerpunkt gefunden: {filepath}')
+              with open(filepath, 'w', encoding='utf-8') as f:
+                  f.write(new_content)
+              updated += 1
+              print(f'  ✓ bereinigt: {filepath}')
 
-          print(f'\nFertig: {updated} Seiten aktualisiert, {skipped} bereits vorhanden.')
+          print(f'\nFertig: {updated} Seiten bereinigt, {skipped} ohne Block übersprungen.')
           PYEOF
 
       - name: Commit changes
@@ -99,5 +54,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add fragen/*.html
-          git diff --staged --quiet || git commit -m "inject: KDP Bücher Block in alle Frageseiten"
+          git diff --staged --quiet || git commit -m "cleanup: KDP Bücher Block aus allen Frageseiten entfernt"
           git push
