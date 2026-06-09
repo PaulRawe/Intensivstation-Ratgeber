@@ -57,7 +57,7 @@
 })();
 
 // ==========================================
-// SUCHFUNKTION - ALLE 65 FRAGEN
+// SUCHFUNKTION
 // ==========================================
 const searchData = [
     {title: "Was bedeutet Intensivstation überhaupt?", url: "fragen/was-bedeutet-intensivstation.html", category: "Erste Orientierung"},
@@ -67,76 +67,19 @@ const searchData = [
     {title: "Was ziehe ich beim Besuch an?", url: "fragen/was-anziehen.html", category: "Erste Orientierung"},
     {title: "Darf ich Blumen mitbringen?", url: "fragen/blumen-mitbringen.html", category: "Erste Orientierung"},
     {title: "Kann ich auf der Intensivstation übernachten?", url: "fragen/uebernachten.html", category: "Erste Orientierung"},
-    {title: "Wie lange bleibt man normalerweise auf der Intensivstation?", url: "fragen/wie-lange-intensivstation.html", category: "Erste Orientierung"},
-    {title: "Wie bereite ich mich auf den ersten Besuch vor?", url: "fragen/wie-bereite-ich-mich-vor.html", category: "Erste Orientierung"},
-    {title: "Darf ich mein Handy auf der Intensivstation benutzen?", url: "fragen/handy-auf-intensivstation.html", category: "Erste Orientierung"},
-    {title: "Was bedeutet IMC (Intermediate Care)?", url: "fragen/was-ist-imc.html", category: "Erste Orientierung"},
-    {title: "Wie finde ich die richtige Intensivstation im Krankenhaus?", url: "fragen/intensivstation-finden.html", category: "Erste Orientierung"},
     {title: "Was ist ein künstliches Koma?", url: "fragen/was-ist-kuenstliches-koma.html", category: "Künstliches Koma"},
-    {title: "Wie lange dauert ein künstliches Koma?", url: "fragen/wie-lange-kuenstliches-koma.html", category: "Künstliches Koma"},
-    {title: "Wie gefährlich ist ein künstliches Koma?", url: "fragen/wie-gefaehrlich.html", category: "Künstliches Koma"},
-    {title: "Wann wacht mein Angehöriger auf?", url: "fragen/wann-aufwachen.html", category: "Künstliches Koma"},
-    {title: "Wie lange dauert die Aufwachphase?", url: "fragen/aufwachphase-dauer.html", category: "Künstliches Koma"},
-    {title: "Was passiert beim Aufwachen?", url: "fragen/was-passiert-beim-aufwachen.html", category: "Künstliches Koma"},
-    {title: "Bekommt mein Angehöriger im Koma alles mit?", url: "fragen/alles-mitbekommen.html", category: "Künstliches Koma"},
-    {title: "Kann man im künstlichen Koma sterben?", url: "fragen/kann-man-sterben.html", category: "Künstliches Koma"},
-    {title: "Warum wird jemand ins künstliche Koma versetzt?", url: "fragen/warum-kuenstliches-koma.html", category: "Künstliches Koma"},
-    {title: "Träumt man im künstlichen Koma?", url: "fragen/traeumt-man-im-koma.html", category: "Künstliches Koma"},
-    {title: "Wie wird das künstliche Koma beendet?", url: "fragen/koma-beenden.html", category: "Künstliches Koma"},
-    {title: "Was bedeutet künstliche Beatmung?", url: "fragen/was-bedeutet-kuenstliche-beatmung.html", category: "Beatmung"},
-    {title: "Wann braucht man eine Beatmung?", url: "fragen/wann-braucht-man-beatmung.html", category: "Beatmung"},
-    {title: "Wie lange kann man beatmet werden?", url: "fragen/wie-lange-beatmet.html", category: "Beatmung"},
-    {title: "Was ist ein Beatmungsschlauch (Tubus)?", url: "fragen/beatmungsschlauch.html", category: "Beatmung"},
-    {title: "Was ist ein Luftröhrenschnitt (Tracheotomie)?", url: "fragen/luftroehrenschnitt.html", category: "Beatmung"},
-    {title: "Kann mein Angehöriger während der Beatmung sprechen?", url: "fragen/sprechen-waehrend-beatmung.html", category: "Beatmung"},
-    {title: "Was ist der Unterschied zwischen invasiver und nicht-invasiver Beatmung?", url: "fragen/invasive-nicht-invasive-beatmung.html", category: "Beatmung"},
-    {title: "Kann man mit Beatmung essen und trinken?", url: "fragen/mit-beatmung-essen.html", category: "Beatmung"},
-    {title: "Wie läuft ein Arztgespräch ab?", url: "fragen/arztgespraech.html", category: "Kommunikation mit dem Team"},
-    {title: "Welche Fragen sollte ich im Arztgespräch stellen?", url: "fragen/welche-fragen-stellen.html", category: "Kommunikation mit dem Team"},
-    {title: "Wer gibt mir Auskunft über meinen Angehörigen?", url: "fragen/wer-gibt-auskunft.html", category: "Kommunikation mit dem Team"},
-    {title: "Kann ich telefonisch Auskunft bekommen?", url: "fragen/telefonisch-auskunft.html", category: "Kommunikation mit dem Team"},
-    {title: "Kann ich eine zweite Meinung einholen?", url: "fragen/zweite-meinung.html", category: "Kommunikation mit dem Team"},
-    {title: "Kann mein Angehöriger mich hören?", url: "fragen/kann-mich-hoeren.html", category: "Kommunikation mit dem Patienten"},
-    {title: "Wie kommuniziere ich mit einem beatmeten Patienten?", url: "fragen/kommunikation-beatmeter-patient.html", category: "Kommunikation mit dem Patienten"},
-    {title: "Warum erkennt mich mein Angehöriger nicht?", url: "fragen/erkennt-mich-nicht.html", category: "Kommunikation mit dem Patienten"},
-    {title: "Was ist eine Sepsis?", url: "fragen/was-ist-sepsis.html", category: "Medizinische Begriffe"},
-    {title: "Was ist ein Delir?", url: "fragen/was-ist-delir.html", category: "Medizinische Begriffe"},
-    {title: "Was sind Katecholamine?", url: "fragen/was-sind-katecholamine.html", category: "Medizinische Begriffe"},
-    {title: "Wann ist eine Dialyse nötig?", url: "fragen/dialyse-wann-noetig.html", category: "Medizinische Begriffe"},
-    {title: "Was bedeuten die Werte auf dem Monitor?", url: "fragen/monitor-werte-bedeutung.html", category: "Medizinische Begriffe"},
-    {title: "Warum hat mein Angehöriger so viele Schläuche?", url: "fragen/warum-viele-schlaeuche.html", category: "Medizinische Begriffe"},
-    {title: "Warum reagiert mein Angehöriger nicht?", url: "fragen/warum-keine-reaktion.html", category: "Medizinische Begriffe"},
-    {title: "Warum dauert alles so lange?", url: "fragen/warum-dauert-lange.html", category: "Medizinische Begriffe"},
-    {title: "Wie sind die Überlebenschancen?", url: "fragen/ueberlebenschancen.html", category: "Verlauf und Prognose"},
-    {title: "Wird mein Angehöriger wieder gesund?", url: "fragen/wird-wieder-gesund.html", category: "Verlauf und Prognose"},
-    {title: "Wann erfolgt die Verlegung von der Intensivstation?", url: "fragen/wann-verlegung.html", category: "Verlauf und Prognose"},
-    {title: "Was kommt nach der Intensivstation?", url: "fragen/was-kommt-danach.html", category: "Verlauf und Prognose"},
-    {title: "Wie halte ich diese Situation aus?", url: "fragen/wie-aushalten.html", category: "Emotionale Belastung"},
-    {title: "Darf ich vor meinem Angehörigen weinen?", url: "fragen/darf-ich-weinen.html", category: "Emotionale Belastung"},
-    {title: "Wie gehe ich mit Schuldgefühlen um?", url: "fragen/schuldgefuehle.html", category: "Emotionale Belastung"},
-    {title: "Wo bekomme ich als Angehöriger Hilfe?", url: "fragen/hilfe-fuer-angehoerige.html", category: "Emotionale Belastung"},
-    {title: "Wie sorge ich für mich selbst?", url: "fragen/selbstfuersorge.html", category: "Emotionale Belastung"},
-    {title: "Wie erkläre ich die Situation meinen Kindern?", url: "fragen/kinder-informieren.html", category: "Emotionale Belastung"},
-    {title: "Wie kann ich Hoffnung behalten?", url: "fragen/hoffnung-behalten.html", category: "Emotionale Belastung"},
-    {title: "Wer bezahlt die Intensivstation?", url: "fragen/kosten-intensivstation.html", category: "Organisatorisches"},
-    {title: "Was kostet ein Tag auf der Intensivstation?", url: "fragen/was-kostet-intensivstation.html", category: "Organisatorisches"},
-    {title: "Brauche ich eine Vollmacht oder Betreuung?", url: "fragen/vollmacht-betreuung.html", category: "Organisatorisches"},
-    {title: "Was ist eine Patientenverfügung?", url: "fragen/patientenverfuegung.html", category: "Organisatorisches"},
-    {title: "Muss ich meinen Arbeitgeber informieren?", url: "fragen/arbeitgeber-informieren.html", category: "Organisatorisches"},
-    {title: "Gibt es Pflegezeit für Angehörige?", url: "fragen/pflegezeit.html", category: "Organisatorisches"},
-    {title: "Brauche ich eine Krankschreibung als Angehöriger?", url: "fragen/krankschreibung-angehoerige.html", category: "Organisatorisches"},
-    {title: "Wie organisiere ich Langzeitbesuche von weit her?", url: "fragen/langzeitbesuche-organisieren.html", category: "Organisatorisches"},
-    {title: "Was mache ich mit der Arbeit meines Angehörigen?", url: "fragen/arbeit-des-angehoerigen.html", category: "Organisatorisches"},
-    {title: "Wie informiere ich die Familie?", url: "fragen/familie-informieren.html", category: "Organisatorisches"}
+    {title: "Wie lange dauert ein künstliches Koma?", url: "fragen/wie-lange-kuenstliches-koma.html", category: "Künstliches Koma"}
 ];
 
 function insertSearchBox() {
     const nav = document.querySelector('nav');
     if (!nav || document.getElementById('auto-search-box')) return;
     
-    const html = '<div class="search-box" id="auto-search-box"><h2>Frage suchen</h2>' +
+    const html = '<div class="search-box" id="auto-search-box">' +
+        '<h2>Frage suchen</h2>' +
         '<input type="text" id="searchInput" placeholder="z.B. Beatmung, Koma, Besuchen..." autocomplete="off">' +
-        '<div id="searchResults"></div></div>';
+        '<div id="searchResults"></div>' +
+        '</div>';
     
     nav.insertAdjacentHTML('afterend', html);
 }
@@ -166,13 +109,12 @@ function performSearch() {
     resultsDiv.style.display = 'block';
     
     if (results.length === 0) {
-        resultsDiv.innerHTML = '<p class="search-no-results">Keine Ergebnisse gefunden</p>';
+        resultsDiv.innerHTML = '<p>Keine Ergebnisse gefunden</p>';
     } else {
-        let html = '<div class="search-results-container"><h3>Suchergebnisse (' + results.length + '):</h3><ul class="search-results-list">';
+        let html = '<div class="search-results-container"><h3>Suchergebnisse (' + results.length + '):</h3><ul>';
         results.forEach(result => {
             const url = getCorrectPath(result.url);
-            html += '<li class="search-result-item"><a href="' + url + '" class="search-result-link">' + result.title + '</a>';
-            html += '<span class="search-result-category">Kategorie: ' + result.category + '</span></li>';
+            html += '<li><a href="' + url + '">' + result.title + '</a></li>';
         });
         html += '</ul></div>';
         resultsDiv.innerHTML = html;
@@ -220,7 +162,7 @@ window.addEventListener('load', () => {
     function shouldLoadQuickCheck() {
         const path = window.location.pathname;
         
-        if (path.includes('index.html') || path === '/' || path.endsWith('/') ||
+        if (path.includes('index.html') || path === '/' || 
             path.includes('download') || path.includes('impressum') || 
             path.includes('datenschutz') || path.includes('agb') || 
             path.includes('ueber-mich') || path.includes('fuer-mitarbeiter')) {
@@ -326,7 +268,7 @@ window.addEventListener('load', () => {
                 link: "https://paulrawe.gumroad.com/l/oroga"
             },
             schwierige: {
-                title: '"Wir müssen reden"',
+                title: "„Wir müssen reden"",
                 badge: "Für schwierige Entscheidungen",
                 description: "Orientierung bei Therapiebegrenzung, Palliativversorgung und schwierigen medizinischen Entscheidungen.",
                 benefits: ["Die 10 wichtigsten Fragen für schwere Gespräche", "Wer entscheidet was? – Klarheit über Ihre Rolle", "Checklisten & Entscheidungshilfe zum Ausfüllen", "Beispielgespräche aus der Praxis"],
@@ -403,7 +345,23 @@ window.addEventListener('load', () => {
                     '</div></div>';
             }).join('');
             
-            document.getElementById('qcRecommendedProducts').innerHTML = productsHTML;
+            // KDP Bücher Hinweis
+            const kdpHint = '<div style="margin-top:2rem;padding:1.5rem;background:#f0f4f8;border-radius:10px;border:1px solid #d0dae4;">' +
+                '<p style="font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;color:#888;margin-bottom:0.8rem;">Lieber ein gedrucktes Buch?</p>' +
+                '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">' +
+                '<a href="https://www.amazon.de/dp/B0H4HVD2X1" target="_blank" rel="noopener" ' +
+                'style="display:block;background:#fff;border:1px solid #d0dae4;border-radius:8px;padding:1rem;text-decoration:none;color:#1e3a5f;">' +
+                '<p style="font-weight:600;font-size:0.95rem;margin-bottom:0.3rem;">Was Angehörige wissen müssen</p>' +
+                '<p style="font-size:0.85rem;color:#888;">Taschenbuch · 12,99 € · Amazon</p>' +
+                '</a>' +
+                '<a href="https://www.amazon.de/dp/B0H4HN265H" target="_blank" rel="noopener" ' +
+                'style="display:block;background:#fff;border:1px solid #d0dae4;border-radius:8px;padding:1rem;text-decoration:none;color:#1e3a5f;">' +
+                '<p style="font-weight:600;font-size:0.95rem;margin-bottom:0.3rem;">Was Patienten erwartet</p>' +
+                '<p style="font-size:0.85rem;color:#888;">Taschenbuch · 12,99 € · Amazon</p>' +
+                '</a>' +
+                '</div></div>';
+
+            document.getElementById('qcRecommendedProducts').innerHTML = productsHTML + kdpHint;
             document.getElementById('qcResultsSection').classList.add('show');
         }
 
