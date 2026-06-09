@@ -1,17 +1,11 @@
 // Fixed Download Button & zentrale Verkaufssteuerung
 (function () {
   'use strict';
-
   document.addEventListener('DOMContentLoaded', function () {
+    var isDownloadPage = window.location.pathname.endsWith('/download.html');
 
-    const isDownloadPage = window.location.pathname.endsWith('/download.html');
-
-    /* ===================================
-       1) VERKAUFSBOXEN ZENTRAL STEUERN
-       =================================== */
-
-    // Alles, was wie eine Download-Verkaufsbox aussieht
-    const salesSelectors = [
+    // Verkaufsboxen auf Nicht-Download-Seiten ausblenden
+    var salesSelectors = [
       '#sidebar-downloads',
       '.sidebar-download',
       '.sidebar-box.sidebar-download',
@@ -19,16 +13,11 @@
       '.download-box',
       '.download-offer'
     ];
-
-    document.querySelectorAll(salesSelectors.join(',')).forEach(el => {
+    document.querySelectorAll(salesSelectors.join(',')).forEach(function(el) {
       if (!isDownloadPage) {
         el.style.display = 'none';
       }
     });
-
-    /* ===================================
-       2) FIXER DOWNLOAD-BUTTON
-       =================================== */
 
     // Auf der Download-Seite keinen Button anzeigen
     if (isDownloadPage) {
@@ -36,35 +25,27 @@
     }
 
     // Alten Sticky-Sales-Button ausblenden
-    const oldSticky = document.querySelector('.sticky-sales-button');
+    var oldSticky = document.querySelector('.sticky-sales-button');
     if (oldSticky) {
       oldSticky.style.display = 'none';
     }
 
     // Neuen fixen Button erstellen
-    const fixedBtn = document.createElement('a');
+    var fixedBtn = document.createElement('a');
     fixedBtn.href = '/download.html';
     fixedBtn.className = 'fixed-download-button';
-    fixedBtn.innerHTML = `
-      <strong>Zu den Download-Ratgebern</strong>
-      <span>PDF-Ratgeber für Angehörige & Patienten</span>
-    `;
-
+    fixedBtn.innerHTML = '<strong>Zu den Download-Ratgebern</strong><span>PDF-Ratgeber für Angehörige &amp; Patienten</span>';
     document.body.appendChild(fixedBtn);
 
-    // Erst nach 20 % Scroll anzeigen
+    // Erst nach 20% Scroll anzeigen
     function toggleButton() {
-      const scrollPercent =
-        window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-
+      var scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
       if (scrollPercent > 0.2) {
         fixedBtn.classList.add('visible');
       } else {
         fixedBtn.classList.remove('visible');
       }
     }
-
     window.addEventListener('scroll', toggleButton);
   });
-
 })();
