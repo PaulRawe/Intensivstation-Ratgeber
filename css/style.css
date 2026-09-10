@@ -1374,3 +1374,114 @@ textarea:focus {
     }
 }
 
+/* CROSSLINKS_CSS_START – automatisch gepflegt von scripts/crosslinks.py */
+/* ===================================
+   QUERVERLINKUNG FRAGESEITEN
+   =================================== */
+.ql-nav {
+    margin: var(--spacing-xl) 0 var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 2px solid var(--border-color);
+}
+
+.ql-next {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: 22px 24px;
+    background: var(--primary-light);
+    border: 1px solid var(--primary);
+    border-left: 6px solid var(--primary-dark);
+    border-radius: var(--radius-md);
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.ql-next:hover {
+    background: #dff1fd;
+    box-shadow: var(--shadow-md);
+    color: var(--text-dark);
+}
+
+.ql-next:focus-visible,
+.ql-prev:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 3px;
+}
+
+.ql-next-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.ql-label {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--text-medium);
+}
+
+.ql-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: var(--line-height-heading);
+}
+
+.ql-arrow {
+    margin-left: auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-full);
+    background: var(--primary-dark);
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.ql-prev {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.ql-prev:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.ql-more {
+    margin-top: var(--spacing-lg);
+}
+
+.ql-more h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 600px) {
+    .ql-next {
+        padding: 18px;
+    }
+    .ql-title {
+        font-size: 1.08rem;
+    }
+    .ql-arrow {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ql-next {
+        transition: none;
+    }
+}
+/* CROSSLINKS_CSS_END */
