@@ -1,0 +1,50 @@
+name: Querverlinkung Frageseiten
+
+# Läuft automatisch, sobald index.html, eine Frageseite oder das Skript
+# geändert wird – und jederzeit manuell über "Run workflow".
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'fragen/**'
+      - 'scripts/crosslinks.py'
+      - '.github/workflows/crosslinks.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: crosslinks
+  cancel-in-progress: false
+
+jobs:
+  crosslinks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Querverlinkungen erzeugen
+        run: python3 scripts/crosslinks.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add fragen/*.html css/style.css
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen – alles aktuell."
+            exit 0
+          fi
+          git commit -m "SEO: Querverlinkungen der Frageseiten aktualisiert"
+          # Andere Workflows (Canonicals, Favicon) können parallel pushen –
+          # deshalb vor dem Push rebasen und bei Bedarf erneut versuchen.
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            echo "Push fehlgeschlagen, neuer Versuch in 5 s ($i/3) …"
+            sleep 5
+          done
+          exit 1
