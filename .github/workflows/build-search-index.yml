@@ -1,0 +1,129 @@
+name: Build Search Index
+
+# Erzeugt für jede vorhandene Sprache einen Suchindex und bindet die
+# Suchmaske in die jeweilige Startseite ein.
+#
+# Sprachneutral: Die Sprachen werden am Dateisystem erkannt, nicht aus
+# einer Liste gelesen. Sobald /ru/ oder /pl/ im Repository liegen,
+# entstehen search/index-ru.json bzw. search/index-pl.json automatisch.
+#
+# Der Lauf ist idempotent: Ändert sich an den Seiten nichts, entsteht
+# kein Commit.
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'fragen/**'
+      - 'tr/**'
+      - 'ru/**'
+      - 'pl/**'
+      - 'index.html'
+      - 'js/search.js'
+      - 'css/search.css'
+      - 'scripts/build_search_index.py'
+      - '.github/workflows/build-search-index.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: build-search-index
+  cancel-in-progress: false
+
+jobs:
+  build-search-index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Voraussetzungen prüfen
+        run: |
+          missing=0
+          for f in js/search.js css/search.css; do
+            if [ ! -f "$f" ]; then
+              echo "FEHLT: $f"
+              missing=1
+            fi
+          done
+          if [ "$missing" = "1" ]; then
+            echo "Ohne diese Dateien bleibt die Suchmaske funktionslos."
+            exit 1
+          fi
+          echo "OK"
+
+      - name: Suchindex bauen
+        run: python3 scripts/build_search_index.py
+
+      - name: Ergebnis verifizieren
+        run: |
+          python3 << 'PYEOF'
+          import json, glob, os, sys
+
+          fehler = 0
+          gesamt = 0
+
+          dateien = sorted(glob.glob("search/index-*.json"))
+          if not dateien:
+              print("FEHLER: kein Index erzeugt")
+              sys.exit(1)
+
+          for p in dateien:
+              data = json.load(open(p, encoding="utf-8"))
+              lang = data.get("lang")
+              items = data.get("items", [])
+              gesamt += len(items)
+
+              if not items:
+                  print(f"FEHLER leerer Index: {p}")
+                  fehler += 1
+                  continue
+
+              urls = set()
+              for it in items:
+                  # Zielseite muss existieren
+                  ziel = it["u"].lstrip("/")
+                  if not os.path.exists(ziel):
+                      print(f"FEHLER totes Ziel: {p} -> {it['u']}")
+                      fehler += 1
+                  # Keine Dubletten
+                  if it["u"] in urls:
+                      print(f"FEHLER doppelter Eintrag: {p} -> {it['u']}")
+                      fehler += 1
+                  urls.add(it["u"])
+                  # Titel darf nicht leer sein
+                  if not it.get("t", "").strip():
+                      print(f"FEHLER leerer Titel: {p} -> {it['u']}")
+                      fehler += 1
+
+              # Sprachreinheit: Einträge müssen im Sprachverzeichnis liegen
+              for it in items:
+                  erste = it["u"].lstrip("/").split("/", 1)[0]
+                  ist_de = erste not in ("tr", "ru", "pl")
+                  if (lang == "de") != ist_de:
+                      print(f"FEHLER falsche Sprache: {p} -> {it['u']}")
+                      fehler += 1
+
+              print(f"  {p}: {len(items)} Einträge")
+
+          print(f"\nGesamt: {gesamt} Einträge in {len(dateien)} Sprachen | Fehler: {fehler}")
+          if fehler:
+              sys.exit(1)
+          PYEOF
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet && echo "Keine Änderungen." || {
+            git commit -m "chore: Suchindex neu gebaut [skip ci]"
+            git push
+          }
