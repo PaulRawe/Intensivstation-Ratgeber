@@ -1,0 +1,114 @@
+name: Inject Language Switcher
+
+# Baut den sichtbaren Sprachumschalter in alle Seiten ein, die eine
+# Sprachentsprechung haben – auch in die deutschen Originalseiten.
+#
+# Die Zuordnung wird aus den hreflang-Angaben der Sprachseiten abgeleitet,
+# nicht aus einer festen Liste. Sobald /ru/ oder /pl/ im Repository liegen,
+# erscheinen sie automatisch im Umschalter aller Seiten.
+#
+# Der Lauf ist idempotent: Ändert sich nichts an der Sprachstruktur,
+# entsteht kein Commit.
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'tr/**'
+      - 'ru/**'
+      - 'pl/**'
+      - 'fragen/**'
+      - 'index.html'
+      - 'impressum.html'
+      - 'scripts/inject_langswitch.py'
+      - '.github/workflows/inject-langswitch.yml'
+  workflow_dispatch:
+
+# Verhindert, dass sich zwei Läufe gegenseitig in die Quere kommen
+concurrency:
+  group: inject-langswitch
+  cancel-in-progress: false
+
+jobs:
+  inject-langswitch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Sprachverzeichnisse prüfen
+        run: |
+          found=""
+          for d in tr ru pl; do
+            if [ -d "$d" ]; then
+              found="$found $d"
+              echo "gefunden: /$d/ mit $(find $d -name '*.html' | wc -l) Seiten"
+            fi
+          done
+          if [ -z "$found" ]; then
+            echo "Kein Sprachverzeichnis vorhanden – nichts zu tun."
+          fi
+
+      - name: Sprachumschalter einbauen
+        run: python3 scripts/inject_langswitch.py
+
+      - name: Ergebnis verifizieren
+        run: |
+          python3 << 'PYEOF'
+          import os, re, glob, sys
+
+          fehler = 0
+          seiten = 0
+
+          for f in glob.glob("**/*.html", recursive=True):
+              if f.startswith(".git"):
+                  continue
+              html = open(f, encoding="utf-8", errors="ignore").read()
+
+              # Kein doppelter Block
+              if html.count("LANGSWITCH_START") > 1:
+                  print(f"FEHLER doppelter Umschalter: {f}")
+                  fehler += 1
+                  continue
+
+              m = re.search(r"LANGSWITCH_START(.*?)LANGSWITCH_END", html, re.S)
+              if not m:
+                  continue
+              seiten += 1
+
+              # Kein toter Link im Umschalter
+              for href in re.findall(r'href="([^"]+)"', m.group(1)):
+                  p = href.lstrip("/")
+                  if href.endswith("/"):
+                      p += "index.html"
+                  if not os.path.exists(p):
+                      print(f"FEHLER toter Link: {f} -> {href}")
+                      fehler += 1
+
+              # CSS muss geladen sein, sonst ist der Umschalter unformatiert
+              if "css/i18n.css" not in html:
+                  print(f"FEHLER i18n.css fehlt: {f}")
+                  fehler += 1
+
+          print(f"\nSeiten mit Umschalter: {seiten} | Fehler: {fehler}")
+          if fehler:
+              sys.exit(1)
+          PYEOF
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet && echo "Keine Änderungen." || {
+            git commit -m "chore: Sprachumschalter aktualisiert [skip ci]"
+            git push
+          }
