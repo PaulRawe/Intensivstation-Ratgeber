@@ -6,8 +6,12 @@ intensivstation-ratgeber.de.
 **Diese Datei ist nicht für die Öffentlichkeit bestimmt und wird nirgends
 auf der Website verlinkt.**
 
-Stand: Türkisch VOLLSTÄNDIG (68/68) · **Polnisch VOLLSTÄNDIG (68/68)** · Russisch offen
+Stand: **alle drei geplanten Sprachen vollständig.**
+Türkisch 68/68 · Polnisch 68/68 · **Russisch 68/68**
 Quell-Repository: `PaulRawe/Intensivstation-Ratgeber` (Branch `main`)
+
+Dieser Eintrag beschreibt den **Russisch-Batch**. Die Angaben zu Türkisch und
+Polnisch sind unverändert gültig und stehen in der Git-Historie dieser Datei.
 
 ---
 
@@ -17,139 +21,142 @@ Quell-Repository: `PaulRawe/Intensivstation-Ratgeber` (Branch `main`)
 |---|---|---|---|---|
 | Deutsch (Original) | 68 in `index.html` verlinkt (71 Dateien in `fragen/`) | 1 | 4 | – |
 | Türkisch (`tr`) | 68 | 1 | 1 | 70 |
-| **Polnisch (`pl`)** | **68** | **1** | **1** | **70** |
-| Russisch (`ru`) | 0 | 0 | 0 | 0 (noch nicht begonnen) |
+| Polnisch (`pl`) | 68 | 1 | 1 | 70 |
+| **Russisch (`ru`)** | **68** | **1** | **1** | **70** |
 
-Verzeichnis: `pl/` mit `pl/pytania/` (Entsprechung zu `tr/sorular/`).
-Rechtsseite: `pl/informacje-prawne.html` (Entsprechung zu `tr/yasal-bilgiler.html`).
+Verzeichnis: `ru/` mit `ru/voprosy/` (Entsprechung zu `tr/sorular/`
+und `pl/pytania/`).
+Rechtsseite: `ru/pravovaya-informaciya.html`.
+
+Seitenbestand der Website insgesamt: 72 deutsche + 210 übersetzte URLs.
 
 ---
 
-## 2. Übersetzte Seiten (Polnisch)
+## 2. Übersetzte Seiten (Russisch)
 
-Kategorie „Erste Orientierung auf der Intensivstation“ → „Pierwsze kroki na oddziale intensywnej terapii“
+Kategorie „Erste Orientierung auf der Intensivstation“ → „Первые шаги в отделении интенсивной терапии“
 
-| Deutsche Quelle | Polnische Zielseite |
+| Deutsche Quelle | Russische Zielseite |
 |---|---|
-| `fragen/was-bedeutet-intensivstation.html` | `pl/pytania/czym-jest-oddzial-intensywnej-terapii.html` |
-| `fragen/wann-darf-ich-besuchen.html` | `pl/pytania/kiedy-moge-odwiedzic-bliskiego.html` |
-| `fragen/besuchszeiten.html` | `pl/pytania/godziny-odwiedzin.html` |
-| `fragen/wieviele-besucher.html` | `pl/pytania/ilu-odwiedzajacych-naraz.html` |
-| `fragen/was-anziehen.html` | `pl/pytania/w-czym-przyjsc-na-odwiedziny.html` |
-| `fragen/blumen-mitbringen.html` | `pl/pytania/czy-moge-przyniesc-kwiaty.html` |
-| `fragen/uebernachten.html` | `pl/pytania/czy-moge-zostac-na-noc.html` |
-| `fragen/wie-lange-intensivstation.html` | `pl/pytania/jak-dlugo-trwa-pobyt-na-oit.html` |
-| `fragen/wie-bereite-ich-mich-vor.html` | `pl/pytania/jak-przygotowac-sie-do-pierwszej-wizyty.html` |
-| `fragen/handy-auf-intensivstation.html` | `pl/pytania/telefon-komorkowy-na-oit.html` |
-| `fragen/was-ist-imc.html` | `pl/pytania/co-oznacza-imc.html` |
-| `fragen/intensivstation-finden.html` | `pl/pytania/jak-znalezc-wlasciwy-oddzial.html` |
+| `fragen/was-bedeutet-intensivstation.html` | `ru/voprosy/chto-takoe-otdelenie-intensivnoy-terapii.html` |
+| `fragen/wann-darf-ich-besuchen.html` | `ru/voprosy/kogda-mozhno-navestit-blizkogo.html` |
+| `fragen/besuchszeiten.html` | `ru/voprosy/chasy-poseshcheniy.html` |
+| `fragen/wieviele-besucher.html` | `ru/voprosy/skolko-posetiteley-odnovremenno.html` |
+| `fragen/was-anziehen.html` | `ru/voprosy/v-chem-prihodit-na-poseshchenie.html` |
+| `fragen/blumen-mitbringen.html` | `ru/voprosy/mozhno-li-prinesti-cvety.html` |
+| `fragen/uebernachten.html` | `ru/voprosy/mozhno-li-ostatsya-na-noch.html` |
+| `fragen/wie-lange-intensivstation.html` | `ru/voprosy/skolko-dlitsya-prebyvanie-v-orit.html` |
+| `fragen/wie-bereite-ich-mich-vor.html` | `ru/voprosy/kak-podgotovitsya-k-pervomu-vizitu.html` |
+| `fragen/handy-auf-intensivstation.html` | `ru/voprosy/mobilnyy-telefon-v-orit.html` |
+| `fragen/was-ist-imc.html` | `ru/voprosy/chto-oznachaet-imc.html` |
+| `fragen/intensivstation-finden.html` | `ru/voprosy/kak-nayti-nuzhnoe-otdelenie.html` |
 
-Kategorie „Künstliches Koma verstehen“ → „Zrozumieć śpiączkę farmakologiczną“
+Kategorie „Künstliches Koma verstehen“ → „Понять медикаментозную кому“
 
-| Deutsche Quelle | Polnische Zielseite |
+| Deutsche Quelle | Russische Zielseite |
 |---|---|
-| `fragen/was-ist-kuenstliches-koma.html` | `pl/pytania/czym-jest-spiaczka-farmakologiczna.html` |
-| `fragen/wie-lange-kuenstliches-koma.html` | `pl/pytania/jak-dlugo-trwa-spiaczka-farmakologiczna.html` |
-| `fragen/wie-gefaehrlich.html` | `pl/pytania/czy-spiaczka-farmakologiczna-jest-niebezpieczna.html` |
-| `fragen/wann-aufwachen.html` | `pl/pytania/kiedy-bliski-sie-obudzi.html` |
-| `fragen/aufwachphase-dauer.html` | `pl/pytania/jak-dlugo-trwa-wybudzanie.html` |
-| `fragen/was-passiert-beim-aufwachen.html` | `pl/pytania/co-dzieje-sie-podczas-wybudzania.html` |
-| `fragen/alles-mitbekommen.html` | `pl/pytania/czy-bliski-w-spiaczce-cos-slyszy.html` |
-| `fragen/kann-man-sterben.html` | `pl/pytania/czy-mozna-umrzec-w-spiaczce-farmakologicznej.html` |
-| `fragen/warum-kuenstliches-koma.html` | `pl/pytania/dlaczego-wprowadza-sie-w-spiaczke.html` |
-| `fragen/traeumt-man-im-koma.html` | `pl/pytania/czy-w-spiaczce-sie-sni.html` |
-| `fragen/koma-beenden.html` | `pl/pytania/jak-konczy-sie-spiaczka-farmakologiczna.html` |
+| `fragen/was-ist-kuenstliches-koma.html` | `ru/voprosy/chto-takoe-medikamentoznaya-koma.html` |
+| `fragen/wie-lange-kuenstliches-koma.html` | `ru/voprosy/skolko-dlitsya-medikamentoznaya-koma.html` |
+| `fragen/wie-gefaehrlich.html` | `ru/voprosy/opasna-li-medikamentoznaya-koma.html` |
+| `fragen/wann-aufwachen.html` | `ru/voprosy/kogda-blizkiy-prosnetsya.html` |
+| `fragen/aufwachphase-dauer.html` | `ru/voprosy/skolko-dlitsya-probuzhdenie.html` |
+| `fragen/was-passiert-beim-aufwachen.html` | `ru/voprosy/chto-proishodit-pri-probuzhdenii.html` |
+| `fragen/alles-mitbekommen.html` | `ru/voprosy/slyshit-li-pacient-v-kome.html` |
+| `fragen/kann-man-sterben.html` | `ru/voprosy/mozhno-li-umeret-v-medikamentoznoy-kome.html` |
+| `fragen/warum-kuenstliches-koma.html` | `ru/voprosy/pochemu-vvodyat-v-komu.html` |
+| `fragen/traeumt-man-im-koma.html` | `ru/voprosy/snyatsya-li-sny-v-kome.html` |
+| `fragen/koma-beenden.html` | `ru/voprosy/kak-zavershayut-medikamentoznuyu-komu.html` |
 
-Kategorie „Beatmung – Was Sie wissen sollten“ → „Wentylacja mechaniczna – co warto wiedzieć“
+Kategorie „Beatmung – Was Sie wissen sollten“ → „Искусственная вентиляция лёгких — что нужно знать“
 
-| Deutsche Quelle | Polnische Zielseite |
+| Deutsche Quelle | Russische Zielseite |
 |---|---|
-| `fragen/was-bedeutet-kuenstliche-beatmung.html` | `pl/pytania/czym-jest-wentylacja-mechaniczna.html` |
-| `fragen/wann-braucht-man-beatmung.html` | `pl/pytania/kiedy-potrzebna-jest-wentylacja.html` |
-| `fragen/wie-lange-beatmet.html` | `pl/pytania/jak-dlugo-mozna-byc-wentylowanym.html` |
-| `fragen/beatmungsschlauch.html` | `pl/pytania/czym-jest-rurka-intubacyjna.html` |
-| `fragen/luftroehrenschnitt.html` | `pl/pytania/czym-jest-tracheotomia.html` |
-| `fragen/sprechen-waehrend-beatmung.html` | `pl/pytania/czy-pacjent-wentylowany-moze-mowic.html` |
-| `fragen/invasive-nicht-invasive-beatmung.html` | `pl/pytania/wentylacja-inwazyjna-i-nieinwazyjna.html` |
-| `fragen/mit-beatmung-essen.html` | `pl/pytania/czy-mozna-jesc-przy-wentylacji.html` |
+| `fragen/was-bedeutet-kuenstliche-beatmung.html` | `ru/voprosy/chto-takoe-iskusstvennaya-ventilyaciya-legkih.html` |
+| `fragen/wann-braucht-man-beatmung.html` | `ru/voprosy/kogda-nuzhna-ivl.html` |
+| `fragen/wie-lange-beatmet.html` | `ru/voprosy/kak-dolgo-mozhno-byt-na-ivl.html` |
+| `fragen/beatmungsschlauch.html` | `ru/voprosy/chto-takoe-intubacionnaya-trubka.html` |
+| `fragen/luftroehrenschnitt.html` | `ru/voprosy/chto-takoe-traheotomiya.html` |
+| `fragen/sprechen-waehrend-beatmung.html` | `ru/voprosy/mozhet-li-pacient-na-ivl-govorit.html` |
+| `fragen/invasive-nicht-invasive-beatmung.html` | `ru/voprosy/invazivnaya-i-neinvazivnaya-ivl.html` |
+| `fragen/mit-beatmung-essen.html` | `ru/voprosy/mozhno-li-est-pri-ivl.html` |
 
-Kategorie „Kommunikation mit dem Behandlungsteam“ → „Rozmowa z zespołem leczącym“
+Kategorie „Kommunikation mit dem Behandlungsteam“ → „Общение с лечащей командой“
 
-| Deutsche Quelle | Polnische Zielseite |
+| Deutsche Quelle | Russische Zielseite |
 |---|---|
-| `fragen/arztgespraech.html` | `pl/pytania/jak-przebiega-rozmowa-z-lekarzem.html` |
-| `fragen/welche-fragen-stellen.html` | `pl/pytania/jakie-pytania-zadac-lekarzowi.html` |
-| `fragen/wer-gibt-auskunft.html` | `pl/pytania/kto-udziela-informacji.html` |
-| `fragen/telefonisch-auskunft.html` | `pl/pytania/czy-moge-uzyskac-informacje-telefonicznie.html` |
-| `fragen/zweite-meinung.html` | `pl/pytania/czy-moge-zasiegnac-drugiej-opinii.html` |
+| `fragen/arztgespraech.html` | `ru/voprosy/kak-prohodit-razgovor-s-vrachom.html` |
+| `fragen/welche-fragen-stellen.html` | `ru/voprosy/kakie-voprosy-zadat-vrachu.html` |
+| `fragen/wer-gibt-auskunft.html` | `ru/voprosy/kto-daet-informaciyu.html` |
+| `fragen/telefonisch-auskunft.html` | `ru/voprosy/mozhno-li-uznat-po-telefonu.html` |
+| `fragen/zweite-meinung.html` | `ru/voprosy/mozhno-li-poluchit-vtoroe-mnenie.html` |
 
-Kategorie „Kommunikation mit dem Patienten“ → „Kontakt z pacjentem“
+Kategorie „Kommunikation mit dem Patienten“ → „Контакт с пациентом“
 
-| Deutsche Quelle | Polnische Zielseite |
+| Deutsche Quelle | Russische Zielseite |
 |---|---|
-| `fragen/kann-mich-hoeren.html` | `pl/pytania/czy-bliski-mnie-slyszy.html` |
-| `fragen/kommunikation-beatmeter-patient.html` | `pl/pytania/jak-rozmawiac-z-pacjentem-wentylowanym.html` |
-| `fragen/erkennt-mich-nicht.html` | `pl/pytania/dlaczego-bliski-mnie-nie-poznaje.html` |
+| `fragen/kann-mich-hoeren.html` | `ru/voprosy/slyshit-li-menya-blizkiy.html` |
+| `fragen/kommunikation-beatmeter-patient.html` | `ru/voprosy/kak-obshchatsya-s-pacientom-na-ivl.html` |
+| `fragen/erkennt-mich-nicht.html` | `ru/voprosy/pochemu-blizkiy-menya-ne-uznaet.html` |
 
-Kategorie „Medizinische Begriffe und Geräte verstehen“ → „Terminy medyczne i aparatura“
+Kategorie „Medizinische Begriffe und Geräte verstehen“ → „Медицинские термины и аппаратура“
 
-| Deutsche Quelle | Polnische Zielseite |
+| Deutsche Quelle | Russische Zielseite |
 |---|---|
-| `fragen/was-ist-sepsis.html` | `pl/pytania/czym-jest-sepsa.html` |
-| `fragen/was-ist-delir.html` | `pl/pytania/czym-jest-majaczenie.html` |
-| `fragen/was-sind-katecholamine.html` | `pl/pytania/czym-sa-katecholaminy.html` |
-| `fragen/dialyse-wann-noetig.html` | `pl/pytania/kiedy-potrzebna-jest-dializa.html` |
-| `fragen/monitor-werte-bedeutung.html` | `pl/pytania/co-oznaczaja-wartosci-na-monitorze.html` |
-| `fragen/warum-viele-schlaeuche.html` | `pl/pytania/dlaczego-jest-tyle-drenow-i-cewnikow.html` |
-| `fragen/warum-keine-reaktion.html` | `pl/pytania/dlaczego-bliski-nie-reaguje.html` |
-| `fragen/warum-dauert-lange.html` | `pl/pytania/dlaczego-wszystko-trwa-tak-dlugo.html` |
+| `fragen/was-ist-sepsis.html` | `ru/voprosy/chto-takoe-sepsis.html` |
+| `fragen/was-ist-delir.html` | `ru/voprosy/chto-takoe-deliriy.html` |
+| `fragen/was-sind-katecholamine.html` | `ru/voprosy/chto-takoe-kateholaminy.html` |
+| `fragen/dialyse-wann-noetig.html` | `ru/voprosy/kogda-nuzhen-dializ.html` |
+| `fragen/monitor-werte-bedeutung.html` | `ru/voprosy/chto-oznachayut-pokazateli-na-monitore.html` |
+| `fragen/warum-viele-schlaeuche.html` | `ru/voprosy/pochemu-tak-mnogo-trubok-i-katetrov.html` |
+| `fragen/warum-keine-reaktion.html` | `ru/voprosy/pochemu-blizkiy-ne-reagiruet.html` |
+| `fragen/warum-dauert-lange.html` | `ru/voprosy/pochemu-vse-dlitsya-tak-dolgo.html` |
 
-Kategorie „Verlauf und Prognose“ → „Przebieg choroby i rokowanie“
+Kategorie „Verlauf und Prognose“ → „Течение болезни и прогноз“
 
-| Deutsche Quelle | Polnische Zielseite |
+| Deutsche Quelle | Russische Zielseite |
 |---|---|
-| `fragen/ueberlebenschancen.html` | `pl/pytania/jakie-sa-szanse-przezycia.html` |
-| `fragen/wird-wieder-gesund.html` | `pl/pytania/czy-bliski-wyzdrowieje.html` |
-| `fragen/wann-verlegung.html` | `pl/pytania/kiedy-nastapi-przeniesienie-z-oit.html` |
-| `fragen/was-kommt-danach.html` | `pl/pytania/co-dzieje-sie-po-oit.html` |
+| `fragen/ueberlebenschancen.html` | `ru/voprosy/kakovy-shansy-na-vyzhivanie.html` |
+| `fragen/wird-wieder-gesund.html` | `ru/voprosy/vyzdoroveet-li-blizkiy.html` |
+| `fragen/wann-verlegung.html` | `ru/voprosy/kogda-perevedut-iz-orit.html` |
+| `fragen/was-kommt-danach.html` | `ru/voprosy/chto-budet-posle-orit.html` |
 
-Kategorie „Emotionale Belastung bewältigen“ → „Radzenie sobie z obciążeniem emocjonalnym“
+Kategorie „Emotionale Belastung bewältigen“ → „Как справиться с эмоциональной нагрузкой“
 
-| Deutsche Quelle | Polnische Zielseite |
+| Deutsche Quelle | Russische Zielseite |
 |---|---|
-| `fragen/wie-aushalten.html` | `pl/pytania/jak-wytrzymac-te-sytuacje.html` |
-| `fragen/darf-ich-weinen.html` | `pl/pytania/czy-moge-plakac-przy-bliskim.html` |
-| `fragen/schuldgefuehle.html` | `pl/pytania/jak-radzic-sobie-z-poczuciem-winy.html` |
-| `fragen/hilfe-fuer-angehoerige.html` | `pl/pytania/gdzie-szukac-wsparcia-dla-bliskich.html` |
-| `fragen/selbstfuersorge.html` | `pl/pytania/jak-zadbac-o-siebie.html` |
-| `fragen/kinder-informieren.html` | `pl/pytania/jak-wytlumaczyc-sytuacje-dzieciom.html` |
-| `fragen/hoffnung-behalten.html` | `pl/pytania/jak-zachowac-nadzieje.html` |
+| `fragen/wie-aushalten.html` | `ru/voprosy/kak-perezhit-etu-situaciyu.html` |
+| `fragen/darf-ich-weinen.html` | `ru/voprosy/mozhno-li-plakat-ryadom-s-blizkim.html` |
+| `fragen/schuldgefuehle.html` | `ru/voprosy/kak-spravitsya-s-chuvstvom-viny.html` |
+| `fragen/hilfe-fuer-angehoerige.html` | `ru/voprosy/gde-poluchit-podderzhku-blizkim.html` |
+| `fragen/selbstfuersorge.html` | `ru/voprosy/kak-pozabotitsya-o-sebe.html` |
+| `fragen/kinder-informieren.html` | `ru/voprosy/kak-obyasnit-situaciyu-detyam.html` |
+| `fragen/hoffnung-behalten.html` | `ru/voprosy/kak-sohranit-nadezhdu.html` |
 
-Kategorie „Organisatorische und rechtliche Fragen“ → „Sprawy organizacyjne i prawne“
+Kategorie „Organisatorische und rechtliche Fragen“ → „Организационные и правовые вопросы“
 
-| Deutsche Quelle | Polnische Zielseite |
+| Deutsche Quelle | Russische Zielseite |
 |---|---|
-| `fragen/kosten-intensivstation.html` | `pl/pytania/kto-placi-za-oddzial-intensywnej-terapii.html` |
-| `fragen/was-kostet-intensivstation.html` | `pl/pytania/ile-kosztuje-dzien-na-oit.html` |
-| `fragen/vollmacht-betreuung.html` | `pl/pytania/czy-potrzebne-jest-pelnomocnictwo.html` |
-| `fragen/patientenverfuegung.html` | `pl/pytania/czym-jest-oswiadczenie-woli-pacjenta.html` |
-| `fragen/arbeitgeber-informieren.html` | `pl/pytania/czy-musze-poinformowac-pracodawce.html` |
-| `fragen/pflegezeit.html` | `pl/pytania/czy-przysluguje-urlop-opiekunczy.html` |
-| `fragen/krankschreibung-angehoerige.html` | `pl/pytania/czy-moge-dostac-zwolnienie-lekarskie.html` |
-| `fragen/langzeitbesuche-organisieren.html` | `pl/pytania/jak-zorganizowac-odwiedziny-z-daleka.html` |
-| `fragen/arbeit-des-angehoerigen.html` | `pl/pytania/co-z-praca-mojego-bliskiego.html` |
-| `fragen/familie-informieren.html` | `pl/pytania/jak-poinformowac-rodzine.html` |
+| `fragen/kosten-intensivstation.html` | `ru/voprosy/kto-platit-za-orit.html` |
+| `fragen/was-kostet-intensivstation.html` | `ru/voprosy/skolko-stoit-den-v-orit.html` |
+| `fragen/vollmacht-betreuung.html` | `ru/voprosy/nuzhna-li-doverennost.html` |
+| `fragen/patientenverfuegung.html` | `ru/voprosy/chto-takoe-patientenverfuegung.html` |
+| `fragen/arbeitgeber-informieren.html` | `ru/voprosy/nuzhno-li-soobshchat-rabotodatelyu.html` |
+| `fragen/pflegezeit.html` | `ru/voprosy/est-li-otpusk-po-uhodu.html` |
+| `fragen/krankschreibung-angehoerige.html` | `ru/voprosy/mogu-li-ya-poluchit-bolnichnyy.html` |
+| `fragen/langzeitbesuche-organisieren.html` | `ru/voprosy/kak-organizovat-poseshcheniya-izdaleka.html` |
+| `fragen/arbeit-des-angehoerigen.html` | `ru/voprosy/chto-delat-s-rabotoy-blizkogo.html` |
+| `fragen/familie-informieren.html` | `ru/voprosy/kak-soobshchit-rodstvennikam.html` |
 
-**Damit ist der gesamte Frage-Antwort-Bereich der deutschen Website auch
-auf Polnisch verfügbar: 68 von 68 Seiten.**
+**Damit ist der gesamte Frage-Antwort-Bereich der deutschen Website in allen
+drei Sprachen verfügbar.**
 
 ---
 
 ## 3. Bewusst NICHT übersetzte Seiten
 
-Identisch zur türkischen Fassung. `impressum.html`, `datenschutz.html`,
+Identisch zu Türkisch und Polnisch. `impressum.html`, `datenschutz.html`,
 `agb.html` und `widerruf.html` bleiben rechtsverbindlich deutsch; ersetzt
-durch `pl/informacje-prawne.html` mit Verweis auf die Originale.
+durch `ru/pravovaya-informaciya.html` mit Verweis auf die Originale.
 `ueber-mich.html`, `fuer-mitarbeiter.html`, `download.html`, `leseproben/`
 und `geschichten/` bleiben ebenfalls unübersetzt (Phase-1-Vorgabe).
 
@@ -157,46 +164,48 @@ und `geschichten/` bleiben ebenfalls unübersetzt (Phase-1-Vorgabe).
 
 ## 4. Sprachregister und Anrede
 
-Gewählt wurde ein **warm-neutrales Register**: überwiegend unpersönliche
-Konstruktionen („warto“, „można“) plus direkte Anrede in der Du-Form
-(„możesz zapytać“). Das ist der übliche Ton polnischer
-Patienteninformationsseiten für Angehörige und wirkt zugewandt statt
-distanziert. Die deutsche Vorlage wechselt selbst zwischen „Sie“ und „du“.
+Gewählt wurde durchgängig die **höfliche Anrede „вы“** (klein geschrieben, wie
+bei einem an ein allgemeines Publikum gerichteten Text üblich). Das ist im
+Russischen der natürliche Standard für einen Ratgeber dieser Art und
+funktioniert ohne die Geschlechtsformen-Probleme, die eine förmliche Anrede
+im Polnischen mit sich bringen würde.
 
-Falls stattdessen die förmliche Anrede („Pan/Pani“) gewünscht ist, lässt
-sich das umstellen – es betrifft aber alle 68 Seiten und sollte vor dem
-Lektorat entschieden werden. Siehe offener Punkt 1.
+**Wichtiger Unterschied zur polnischen Fassung:** Polnisch verwendet die
+Du-Form (siehe Abschnitt 4 der polnischen QA-Notizen), Russisch die
+Sie-Form. Das ist bewusst so und entspricht dem jeweils üblichen Register –
+es ist kein Übersetzungsfehler und sollte beim Lektorat nicht
+„vereinheitlicht“ werden.
 
 ---
 
 ## 5. Bewusst im Deutschen erhaltene Fachbegriffe
 
-Jeweils mit polnischer Erklärung und `lang="de"`-Auszeichnung, damit
+Jeweils mit russischer Erklärung und `lang="de"`-Auszeichnung, damit
 Angehörige den Begriff auf Station wiedererkennen:
 
-| Deutscher Begriff | Umsetzung im polnischen Text |
+| Deutscher Begriff | Umsetzung im russischen Text |
 |---|---|
-| Intensivstation | „oddział intensywnej terapii (Intensivstation)“, Kürzel `ITS`, `ICU`, poln. OIT |
-| Normalstation | „zwykły oddział (Normalstation)“ |
-| Beatmungsgerät | „respirator (Beatmungsgerät)“ |
-| künstliche Beatmung | „wentylacja mechaniczna (künstliche Beatmung)“ |
-| künstliches Koma / Sedierung | „śpiączka farmakologiczna (künstliches Koma)“, „sedacja (Sedierung)“ |
-| Beatmungsschlauch / Tubus | „rurka intubacyjna (Beatmungsschlauch / Tubus)“ |
+| Intensivstation | „отделение интенсивной терапии (Intensivstation)“, Kürzel `ITS`, `ICU`, russ. ОРИТ |
+| Normalstation | „обычное отделение (Normalstation)“ |
+| Beatmungsgerät | „аппарат ИВЛ (Beatmungsgerät)“ |
+| künstliche Beatmung | „искусственная вентиляция лёгких (künstliche Beatmung)“, russ. Kürzel ИВЛ |
+| künstliches Koma / Sedierung | „медикаментозная кома (künstliches Koma)“, „седация (Sedierung)“ |
+| Beatmungsschlauch / Tubus | „интубационная трубка (Beatmungsschlauch / Tubus)“ |
 | Intubation / Extubation | im Deutschen mitgeführt |
-| Tracheotomie / Luftröhrenschnitt | „tracheotomia (Luftröhrenschnitt)“ |
-| Sprechkanüle | „rurka mówiąca (Sprechkanüle)“ |
-| Weaning | im Deutschen belassen, poln. erklärt |
-| Magensonde | „sonda żołądkowa (Magensonde)“ |
-| Delir | „majaczenie / delirium (Delir)“, eigene Hinweisbox |
-| Fixierung | „unieruchomienie rąk (Fixierung)“, eigene Hinweisbox |
-| Sepsis | „sepsa (Sepsis)“, umgangssprachlich „zakażenie krwi“ mitgeführt |
-| Visite | „obchód lekarski (Visite)“ |
-| Schutzkleidung | „odzież ochronna (Schutzkleidung)“ |
-| Angehörigenzimmer | „pokoje dla rodzin (Angehörigenzimmer)“ |
-| Sozialdienst | „dział socjalny (Sozialdienst)“ |
-| Patientenverwaltung | „biuro obsługi pacjenta (Patientenverwaltung)“ |
-| Schweigepflicht | „tajemnica lekarska (Schweigepflicht)“ |
-| Konsil | „konsultacja (Konsil)“ |
+| Tracheotomie / Luftröhrenschnitt | „трахеотомия (Luftröhrenschnitt)“ |
+| Sprechkanüle | „речевая канюля (Sprechkanüle)“ |
+| Weaning | im Deutschen belassen, russ. erklärt |
+| Magensonde | „желудочный зонд (Magensonde)“ |
+| Delir | „делирий (Delir)“, eigene Hinweisbox |
+| Fixierung | „фиксация рук (Fixierung)“, eigene Hinweisbox |
+| Sepsis | „сепсис (Sepsis)“, umgangssprachlich „заражение крови“ mitgeführt |
+| Visite | „врачебный обход (Visite)“ |
+| Schutzkleidung | „защитная одежда (Schutzkleidung)“ |
+| Angehörigenzimmer | „комнаты для родственников (Angehörigenzimmer)“ |
+| Sozialdienst | „социальная служба (Sozialdienst)“ |
+| Patientenverwaltung | „бюро по работе с пациентами (Patientenverwaltung)“ |
+| Schweigepflicht | „врачебная тайна (Schweigepflicht)“ |
+| Konsil | „консультация (Konsil)“ |
 | ZVK / Zentraler Venenkatheter | im Deutschen mitgeführt |
 | Personalausweis / Versichertenkarte | in Klammern im Deutschen belassen |
 | Pförtner / Information | in Klammern im Deutschen belassen |
@@ -204,26 +213,25 @@ Angehörige den Begriff auf Station wiedererkennen:
 | Vorsorgevollmacht | durchgehend im Deutschen, eigene Hinweisbox |
 | Patientenverfügung | durchgehend im Deutschen, eigene Hinweisbox |
 | Betreuungsgericht / gesetzlicher Betreuer | im Deutschen belassen |
-| mutmaßlicher Wille | „domniemana wola (mutmaßlicher Wille)“ |
-| Pflegezeit / Familienpflegezeit | im Deutschen belassen, poln. erklärt |
+| mutmaßlicher Wille | „предполагаемая воля (mutmaßlicher Wille)“ |
+| Pflegezeit / Familienpflegezeit | im Deutschen belassen, russ. erklärt |
 | kurzfristige Arbeitsverhinderung | im Deutschen belassen |
 | Pflegeunterstützungsgeld / Pflegekasse | im Deutschen belassen |
-| Kündigungsschutz | „ochrona przed wypowiedzeniem (Kündigungsschutz)“ |
+| Kündigungsschutz | „защита от увольнения (Kündigungsschutz)“ |
 | Arbeitsunfähigkeitsbescheinigung / AU | im Deutschen belassen |
 | Sonderurlaub | im Deutschen belassen |
 | Krankengeld | im Deutschen belassen |
 | Pflegegrad | im Deutschen belassen |
 | Zuzahlung / Belastungsgrenze | im Deutschen belassen |
 | Wahlleistungen / Chefarztbehandlung | im Deutschen belassen |
-| Seelsorge | „opieka duszpasterska (Seelsorge)“ |
+| Seelsorge | „духовное сопровождение (Seelsorge)“ |
 | Impressum, Datenschutzerklärung, AGB, Widerrufsbelehrung | durchgängig im Deutschen |
 
-**Zusätzlich gegenüber der türkischen Fassung:** auf fünf Seiten gibt es
-`term-note`-Boxen mit **fertigen deutschen Sätzen zum Vorlesen oder Zeigen**
-auf Station (Anruf auf der Station, Bitte um Wiederholung, Hinweis auf
-fehlende Deutschkenntnisse, drei vorbereitete Fragen, Mitteilung an den
-Arbeitgeber). Das ist keine neue medizinische Aussage, sondern eine reine
-Kommunikationshilfe.
+Wie in der polnischen Fassung gibt es auf fünf Seiten `term-note`-Boxen mit
+**fertigen deutschen Sätzen zum Vorlesen oder Zeigen** auf Station (Anruf auf
+der Station, Bitte um Wiederholung, Hinweis auf fehlende Deutschkenntnisse,
+drei vorbereitete Fragen, Mitteilung an den Arbeitgeber). Das ist keine neue
+medizinische Aussage, sondern eine reine Kommunikationshilfe.
 
 ---
 
@@ -236,15 +244,15 @@ Kommunikationshilfe.
   Vorbehalte („keine festen Zeitvorgaben, sondern grobe Erfahrungswerte“,
   „Statistiken sind Durchschnittswerte“).
 - Prognoseaussagen behalten ihre Abstufung, z. B. „Die Dauer des Aufenthalts
-  sagt für sich allein nichts über die Prognose aus“ → „Sama długość pobytu
-  nie mówi nic o rokowaniu.“
-- Der medizinische Disclaimer steht auf **jeder** polnischen Seite, statisch
+  sagt für sich allein nichts über die Prognose aus“ → „Сама по себе
+  длительность пребывания ничего не говорит о прогнозе.“
+- Der medizinische Disclaimer steht auf **jeder** russischen Seite, statisch
   im HTML, nicht per JavaScript.
 
 ### Aus den Übersetzungen entfernte Inhalte
 
 Gemäß Phase-1-Vorgabe (keine Produktintegration) wurden dieselben Blöcke
-weggelassen wie in der türkischen Fassung:
+weggelassen wie in den beiden anderen Sprachen:
 
 | Quelle | Entfernter Block |
 |---|---|
@@ -256,36 +264,36 @@ weggelassen wie in der türkischen Fassung:
 | `fragen/kinder-informieren.html` | Verweis auf die deutschsprachige Vorlesegeschichte und die externe Kindergeschichten-Seite |
 | `fragen/langzeitbesuche-organisieren.html` | HRS-Affiliate-Block (awin1.com) |
 
-Die entfernten Produktblöcke wurden auf zwei Seiten durch eine neutrale
-`term-note`-Box mit Kommunikationshilfen ersetzt (siehe Abschnitt 5), damit
-an dieser Stelle kein inhaltliches Loch entsteht. Der medizinische Fließtext
-wurde dadurch nicht verändert.
+Der medizinische Fließtext wurde dadurch nicht verändert.
 
 ---
 
 ## 7. Technische SEO-Maßnahmen
 
-- **Canonical:** jede polnische Seite verweist auf ihre eigene URL unter `/pl/`.
-- **hreflang:** vollständig wechselseitig zwischen `de`, `tr` und `pl`,
-  `x-default` → `de`. Die 70 deutschen Dateien wurden per
-  `scripts/inject_hreflang_de.py` um `pl` erweitert, die 70 türkischen
-  Dateien ebenfalls.
-- **Sprachumschalter:** in den türkischen Seiten ist `Polski` jetzt ein
-  Link auf die jeweils entsprechende polnische Seite (vorher `lang-off`).
-  `Русский` bleibt bewusst unverlinkt.
-- **Titles und Descriptions:** eigenständig auf Polnisch formuliert, an der
-  Suchintention polnischsprachiger Angehöriger in Deutschland orientiert.
+- **Canonical:** jede russische Seite verweist auf ihre eigene URL unter `/ru/`.
+- **hreflang:** vollständig wechselseitig zwischen `de`, `tr`, `pl` und `ru`,
+  `x-default` → `de`. Jede der 280 Seiten führt alle vier Sprachcodes plus
+  `x-default`.
+- **Sprachumschalter:** in allen türkischen und polnischen Seiten ist
+  `Русский` jetzt ein Link auf die jeweils entsprechende russische Seite.
+  Damit gibt es auf der ganzen Website **keinen `lang-off`-Eintrag mehr** –
+  alle vier Sprachen sind von überall erreichbar.
+- **Titles und Descriptions:** eigenständig auf Russisch formuliert, an der
+  Suchintention russischsprachiger Angehöriger in Deutschland orientiert.
   Alle 70 seitenweit eindeutig.
-- **Open Graph:** `og:type`, `og:locale=pl_PL`, `og:locale:alternate=de_DE`,
+- **Open Graph:** `og:type`, `og:locale=ru_RU`, `og:locale:alternate=de_DE`,
   `og:site_name`, `og:title`, `og:description`, `og:url`.
-- **Alt-Texte:** `head.png` hat einen polnischen Alt-Text.
-- **Sitemap:** um 70 polnische URLs erweitert, 142 bestehende Einträge
-  unverändert. Neu: 212 URLs (72 deutsch, 70 türkisch, 70 polnisch).
+- **Alt-Texte:** `head.png` hat einen russischen Alt-Text.
+- **Sitemap:** um 70 russische URLs erweitert, 212 bestehende Einträge
+  unverändert. Neu: **282 URLs** (72 deutsch, 70 türkisch, 70 polnisch,
+  70 russisch).
 - **URLs:** ausschließlich ASCII-Kleinbuchstaben und Bindestriche, keine
-  polnischen Sonderzeichen (ą, ć, ę, ł, ń, ó, ś, ź, ż) in Dateinamen.
-- **robots.txt:** unverändert, `/pl/` ist crawlbar.
-- **css/i18n.css:** unverändert – die Datei deckte `html[lang="pl"]` bereits ab.
-- **js/consent-i18n.js:** unverändert, wird von den polnischen Seiten genutzt.
+  kyrillischen Zeichen in Dateinamen. Transliteration nach einem einheitlichen
+  Schema (щ → shch, ж → zh, ч → ch, ш → sh, ы → y, я → ya, ю → yu).
+- **robots.txt:** unverändert, `/ru/` ist crawlbar.
+- **css/i18n.css:** unverändert – die Datei deckte `html[lang="ru"]` bereits ab,
+  inklusive der erhöhten Zeilenhöhe für kyrillischen Fließtext.
+- **js/consent-i18n.js:** unverändert, wird von den russischen Seiten genutzt.
 
 ---
 
@@ -295,22 +303,24 @@ wurde dadurch nicht verändert.
 |---|---|
 | Tag-Balance / Wohlgeformtheit (70 Dateien) | 70/70 fehlerfrei |
 | UTF-8-Decodierung | 70/70 fehlerfrei |
-| Tote interne Links und Pfade | 0 |
+| Tote interne Links und Pfade (ru + pl + tr, 210 Dateien) | 0 |
 | Doppelte HTML-IDs | 0 |
 | Titles und Descriptions seitenweit eindeutig | 0 Duplikate |
-| `<html lang="pl">` gesetzt | 70/70 |
-| Genau ein Canonical pro Seite, zeigt auf `/pl/` | 70/70 |
-| hreflang `de` + `tr` + `pl` + `x-default` vorhanden | 70/70 |
-| hreflang `pl` identisch mit Canonical | 70/70 |
+| `<html lang="ru">` gesetzt | 70/70 |
+| Genau ein Canonical pro Seite, zeigt auf `/ru/` | 70/70 |
+| hreflang `de` + `tr` + `pl` + `ru` + `x-default` vorhanden | 70/70 |
+| hreflang `ru` identisch mit Canonical | 70/70 |
 | Title ≥ 20 Zeichen, Description ≥ 70 Zeichen | 70/70 |
 | Keine Gumroad-/Amazon-/Awin-/Etsy-Links | 70/70 sauber |
 | Kein Laden von `cookie-consent.js`, `sticky-sales.js`, `goatcounter-init.js`, `sales-banner.html`, `sidebar-downloads.html` | 70/70 sauber |
 | Deutsche Textreste außerhalb bewusster `lang="de"`-Auszeichnung | keine gefunden |
-| Reziprozität DE → PL (Ziel existiert) | 70/70 |
-| Reziprozität TR → PL (hreflang + Sprachumschalter) | 70/70 |
-| Sitemap XML-valide, keine Duplikate | bestanden (212 URLs) |
+| Reziprozität DE → PL/RU/TR (Ziel existiert) | 70/70 |
+| Reziprozität TR → DE/PL/RU (hreflang + Umschalter) | 70/70 |
+| Reziprozität PL → DE/RU/TR (hreflang + Umschalter) | 70/70 |
+| Reziprozität RU → DE/PL/TR (hreflang + Umschalter) | 70/70 |
+| Sitemap XML-valide, keine Duplikate | bestanden (282 URLs) |
 | Deutsche Dateien: Änderungen außerhalb hreflang | 0 |
-| Längste ununterbrochene Zeichenkette (Mobil-Risiko) | 23 Zeichen – unkritisch |
+| Längste ununterbrochene Zeichenkette (Mobil-Risiko) | 26 Zeichen – unkritisch |
 
 ---
 
@@ -318,47 +328,54 @@ wurde dadurch nicht verändert.
 
 **Hohe Priorität**
 
-1. **Muttersprachliches Lektorat Polnisch.** Die Übersetzung ist fachlich
+1. **Muttersprachliches Lektorat Russisch.** Die Übersetzung ist fachlich
    sorgfältig erstellt, sollte bei medizinisch sensiblen Texten für Menschen
-   in Ausnahmesituationen aber von einem polnischen Muttersprachler
+   in Ausnahmesituationen aber von einem russischen Muttersprachler
    gegengelesen werden – idealerweise mit Bezug zum deutschen
    Gesundheitswesen. Besonders zu prüfen:
-   - die durchgängige Anredeform (siehe Abschnitt 4),
-   - `czy-mozna-umrzec-w-spiaczce-farmakologicznej.html` (Sterben,
+   - `mozhno-li-umeret-v-medikamentoznoy-kome.html` (Sterben,
      Therapiezieländerung, palliative Begleitung),
-   - `co-dzieje-sie-podczas-wybudzania.html` und
-     `jak-dlugo-trwa-wybudzanie.html` (Fixierung der Hände),
-   - `ilu-odwiedzajacych-naraz.html` und `czy-moge-zostac-na-noc.html`
-     (Abschiedssituationen),
-   - die Fachterminologie in Kategorie 6 (sepsa, majaczenie, katecholaminy,
-     dializa) gegen gängigen polnischen Klinikgebrauch.
-2. **`pl/informacje-prawne.html` juristisch prüfen lassen.** Gleiches Modell
-   wie bei `tr/yasal-bilgiler.html`: deutsche Fassung allein verbindlich.
+   - `chto-proishodit-pri-probuzhdenii.html` und
+     `skolko-dlitsya-probuzhdenie.html` (Fixierung der Hände),
+   - `skolko-posetiteley-odnovremenno.html` und
+     `mozhno-li-ostatsya-na-noch.html` (Abschiedssituationen),
+   - die Fachterminologie in Kategorie 6 (сепсис, делирий, катехоламины,
+     диализ) gegen gängigen russischen Klinikgebrauch,
+   - Zielgruppenfrage: das Publikum sind russischsprachige Menschen in
+     Deutschland, darunter viele Spätaussiedler und Zugewanderte aus
+     verschiedenen postsowjetischen Ländern. Der Text ist bewusst neutral
+     gehalten und vermeidet landesspezifische Bezüge außerhalb Deutschlands.
+2. **`ru/pravovaya-informaciya.html` juristisch prüfen lassen.** Gleiches
+   Modell wie bei den anderen Sprachen: deutsche Fassung allein verbindlich.
 3. **Sichtprüfung auf echten Geräten**, mindestens iPhone SE (375 px) und ein
-   Android-Gerät. Automatisch geprüft wurde nur die Zeichenkettenlänge.
+   Android-Gerät. Kyrillisch wirkt bei gleicher Punktgröße etwas gedrängter;
+   `css/i18n.css` setzt dafür bereits `line-height: 1.8` für
+   `html[lang="ru"]`. Das sollte einmal in echt angesehen werden.
 
 **Mittlere Priorität**
 
 4. **Die eingefügten deutschen Beispielsätze** (Abschnitt 5) von jemandem
-   gegenlesen lassen, der im Klinikalltag steht – sie sollen auf Station
-   wörtlich funktionieren.
+   gegenlesen lassen, der im Klinikalltag steht.
 5. **Inhaltliche Lücke, bewusst nicht geschlossen:** ein Hinweis auf das Recht
    auf Sprachmittlung/Dolmetscher im Krankenhaus fehlt im deutschen Original
-   und wurde deshalb auch hier nicht ergänzt. Auf zwei Seiten
-   (`jak-przebiega-rozmowa-z-lekarzem.html`, `kto-udziela-informacji.html`)
-   wäre er für die Zielgruppe besonders wertvoll. Empfehlung unverändert:
-   zuerst im deutschen Original ergänzen, dann in alle Sprachen übertragen.
-6. **Kindergeschichte fehlt auf Polnisch** – wie auf Türkisch. Der Verweis in
-   `jak-wytlumaczyc-sytuacje-dzieciom.html` wurde nicht übernommen, weil die
-   Geschichte nur auf Deutsch existiert.
+   und wurde deshalb auch hier nicht ergänzt. Für russischsprachige
+   Angehörige wäre er auf `kak-prohodit-razgovor-s-vrachom.html` und
+   `kto-daet-informaciyu.html` besonders wertvoll. Empfehlung unverändert:
+   zuerst im deutschen Original ergänzen, dann in alle drei Sprachen
+   übertragen.
+6. **Kindergeschichte fehlt auf Russisch** – wie auf Türkisch und Polnisch.
 7. **`inject-kdp-books.yml` prüfen:** falls dieser Workflow über die
-   Sprachordner läuft, würde er Produktlinks in `/pl/` schreiben. Vor dem
-   nächsten Lauf auf `fragen/` beschränken.
+   Sprachordner läuft, würde er Produktlinks in `/ru/` schreiben. Vor dem
+   nächsten Lauf auf `fragen/` beschränken. Das gilt jetzt für drei
+   Sprachordner statt für einen.
 
 **Niedrige Priorität**
 
-8. Den deutschen Seiten fehlen weiterhin Open-Graph-Tags.
+8. Den deutschen Seiten fehlen weiterhin Open-Graph-Tags. Die drei
+   Sprachversionen sind hier vollständiger als das Original.
 9. Zwei `<h1>` pro Seite – bewusst wie in der deutschen Vorlage beibehalten.
+10. Die Suchfunktion in `js/cookie-consent.js` enthält weiterhin nur 9 von 68
+    Fragen. Betrifft nur die deutsche Version.
 
 ---
 
@@ -367,11 +384,14 @@ wurde dadurch nicht verändert.
 | Batch | Inhalt | Status |
 |---|---|---|
 | 1–5 | Türkisch `/tr/sorular/` (68 Seiten) | **abgeschlossen** |
-| 6 | **Polnisch `/pl/pytania/` (68 Seiten)** | **abgeschlossen** |
-| 7+ | Russisch `/ru/voprosy/` (68 Seiten) | offen |
+| 6 | Polnisch `/pl/pytania/` (68 Seiten) | **abgeschlossen** |
+| 7 | **Russisch `/ru/voprosy/` (68 Seiten)** | **abgeschlossen** |
 
-Für Russisch sind zu aktualisieren: `scripts/inject_hreflang_de.py`
-(MAP um `ru` erweitern und erneut ausführen), `sitemap.xml`, sowie der
-Sprachumschalter in allen türkischen **und** polnischen Seiten – dort ist
-`Русский` aktuell als `lang-off` markiert und muss dann zu einem Link werden.
-Die Slug-Zuordnung DE→PL steht vollständig in Abschnitt 2 dieser Datei.
+**Der ursprünglich geplante Sprachausbau ist damit vollständig.**
+
+Falls später eine weitere Sprache dazukommt, sind zu aktualisieren:
+`scripts/inject_hreflang_de.py` (MAP um den neuen Code erweitern und erneut
+ausführen), `sitemap.xml`, sowie der Sprachumschalter in allen bestehenden
+türkischen, polnischen und russischen Seiten. Die Slug-Zuordnungen
+DE→TR, DE→PL und DE→RU stehen vollständig in Abschnitt 2 der jeweiligen
+Fassung dieser Datei (Git-Historie).
