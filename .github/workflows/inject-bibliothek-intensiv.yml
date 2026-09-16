@@ -83,7 +83,9 @@ jobs:
                   orig = html
                   lang = sprache(rel)
                   ziel, text = BIB[lang]
-                  eintrag = MARK + '<li><a href="%s">%s</a></li>' % (ziel, text)
+                  eintrag = (MARK + '<li><a href="%s" class="bib-nav-link" '
+                             'style="color:#d63031;font-weight:700;">%s</a></li>'
+                             % (ziel, text))
 
                   if MARK in html:
                       html = re.sub(re.escape(MARK) + r'<li>.*?</li>', eintrag, html, flags=re.S)
