@@ -84,7 +84,9 @@ jobs:
                   lang = sprache(rel)
                   ziel, text = BIB[lang]
                   eintrag = (MARK + '<li><a href="%s" class="bib-nav-link" '
-                             'style="color:#d63031;font-weight:700;">%s</a></li>'
+                             'style="background:#d63031;color:#fff;font-weight:700;'
+                             'padding:6px 16px;border-radius:20px;text-decoration:none;'
+                             'display:block;width:fit-content;margin:0 auto;">%s</a></li>'
                              % (ziel, text))
 
                   if MARK in html:
