@@ -1,0 +1,77 @@
+/* Bibliothek – baut auf den Variablen aus style.css auf */
+.bib-head{background:var(--bg-white);border-bottom:1px solid var(--border-color);padding:28px 0 24px;}
+.bib-head h1{color:var(--text-dark);font-size:1.75rem;line-height:1.25;margin:0 0 10px;}
+.bib-intro{color:var(--text-medium);max-width:62ch;margin:0;}
+.bib-krumen{font-size:.85rem;color:var(--text-light);margin:0 0 12px;}
+.bib-krumen a{color:var(--primary-dark);}
+.bib-main{padding:24px 0 60px;}
+.bib-block{background:var(--bg-white);border:1px solid var(--border-color);border-radius:10px;
+  padding:22px 24px;margin-bottom:20px;}
+.bib-block h2{color:var(--text-dark);font-size:1.3rem;margin:0 0 10px;}
+.bib-kat{color:var(--primary-dark);font-size:1.02rem;margin:22px 0 4px;}
+.bib-katintro{color:var(--text-light);font-size:.9rem;margin:0 0 8px;}
+.bib-fragen{list-style:none;padding:0;margin:0;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px 18px;}
+.bib-fragen li{padding:5px 0;border-bottom:1px solid var(--border-color);}
+.bib-fragen a{color:var(--text-medium);text-decoration:none;font-size:.94rem;}
+.bib-fragen a:hover,.bib-fragen a:focus{color:var(--primary-dark);text-decoration:underline;}
+
+#bib-suche{width:100%;padding:14px 16px;font-size:1rem;font-family:inherit;
+  border:2px solid var(--border-color);border-radius:8px;background:var(--bg-light);color:var(--text-dark);}
+#bib-suche:focus{border-color:var(--primary);outline:none;background:var(--bg-white);}
+.bib-suchlabel{display:block;font-weight:600;color:var(--text-dark);margin-bottom:8px;}
+.bib-treffer{color:var(--text-light);font-size:.88rem;margin:10px 0 0;}
+.bib-leer{display:none;color:var(--text-light);padding:14px 0;margin:0;}
+
+.bib-zg-gitter{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;}
+.bib-zg-kachel{display:flex;flex-direction:column;gap:6px;background:var(--bg-light);
+  border:1px solid var(--border-color);border-radius:10px;padding:18px 20px;
+  text-decoration:none;color:inherit;}
+.bib-zg-kachel:hover,.bib-zg-kachel:focus{border-color:var(--primary);background:var(--primary-light);}
+.bib-zg-name{font-weight:700;color:var(--primary-dark);font-size:1.06rem;}
+.bib-zg-text{font-size:.9rem;color:var(--text-medium);line-height:1.5;}
+.bib-zg-anz{font-size:.8rem;color:var(--text-light);margin-top:2px;}
+.bib-zg-klein{display:flex;gap:10px;flex-wrap:wrap;}
+.bib-zg-klein a{background:var(--bg-light);border:1px solid var(--border-color);border-radius:20px;
+  padding:7px 16px;text-decoration:none;color:var(--primary-dark);font-size:.9rem;font-weight:600;}
+.bib-zg-klein a:hover{background:var(--primary-light);}
+
+.bib-gitter{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin-top:14px;}
+.bib-karte{background:var(--bg-light);border:1px solid var(--border-color);border-radius:10px;
+  padding:16px 17px;display:flex;flex-direction:column;gap:8px;}
+.bib-karte h3{font-size:1rem;line-height:1.35;color:var(--text-dark);margin:0;}
+.bib-kurz{font-size:.88rem;color:var(--text-medium);margin:0;flex:1;}
+.bib-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.bib-tag{font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:20px;}
+.bib-tag-buch{background:#dff1fd;color:#1a6ea8;}
+.bib-tag-pdf{background:#fff3cd;color:var(--warning-text);}
+.bib-tag-frei{background:#e3f6e8;color:#1e7a45;}
+.bib-tag-hinweis{background:#ecf0f1;color:var(--text-light);}
+.bib-tag-info{background:#ecf0f1;color:var(--text-medium);}
+.bib-btns{display:flex;gap:7px;flex-wrap:wrap;}
+.bib-btn{display:inline-block;padding:9px 14px;border-radius:7px;text-decoration:none;
+  font-weight:600;font-size:.85rem;}
+.bib-btn-amazon{background:var(--primary-dark);color:#fff;}
+.bib-btn-etsy{background:#ff6b35;color:#fff;}
+.bib-btn-gumroad{background:var(--text-medium);color:#fff;}
+.bib-btn-frei{background:var(--bg-white);border:2px solid var(--primary);color:var(--primary-dark);}
+.bib-btn:hover,.bib-btn:focus{filter:brightness(1.08);}
+
+.bib-werbung{font-size:.82rem;color:var(--text-light);background:var(--bg-light);
+  border-left:3px solid var(--primary);border-radius:0 6px 6px 0;padding:10px 14px;
+  line-height:1.55;margin:0 0 6px;}
+.bib-lernolotl{background:var(--primary-light);border-color:var(--primary);}
+.bib-lernolotl h2{color:var(--primary-dark);}
+.bib-footer{background:var(--bg-white);border-top:1px solid var(--border-color);
+  padding:22px 0;text-align:center;font-size:.88rem;color:var(--text-light);}
+.bib-footer a{color:var(--primary-dark);}
+.bib-medizin{max-width:62ch;margin:0 auto 12px;font-size:.84rem;}
+.bib-copy{margin:8px 0 0;font-size:.8rem;}
+:focus-visible{outline:3px solid var(--primary-dark);outline-offset:2px;}
+
+@media(max-width:640px){
+  .bib-head h1{font-size:1.4rem;}
+  .bib-block{padding:17px 15px;}
+  .bib-gitter{grid-template-columns:1fr;}
+  .bib-fragen{grid-template-columns:1fr;}
+}
