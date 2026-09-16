@@ -1,0 +1,124 @@
+name: Bibliothek-Link in alle Sprachfassungen
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+    if: "github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, 'Bibliothek-Link automatisch')"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Bibliothek in Navigation und Kindern-Hinweis setzen
+        run: |
+          python3 << 'PYEOF'
+          import os, re
+
+          # Sprache -> (Ziel-URL, Linktext)
+          BIB = {
+            'de': ('/bibliothek/',        'Bibliothek'),
+            'pl': ('/pl/biblioteka/',     'Biblioteka'),
+            'ru': ('/ru/biblioteka/',     'Библиотека'),
+            'tr': ('/tr/kutuphane/',      'Kütüphane'),
+          }
+          # Der jeweils erste Navigationspunkt, hinter dem eingehängt wird
+          HOME = {
+            'de': r'<li><a href="[^"]*">Startseite</a></li>',
+            'pl': r'<li><a href="[^"]*">Strona główna</a></li>',
+            'ru': r'<li><a href="[^"]*">Главная</a></li>',
+            'tr': r'<li><a href="[^"]*">Ana sayfa</a></li>',
+          }
+
+          MARK = '<!-- bib-nav -->'
+
+          def sprache(pfad):
+              teile = pfad.replace('\\\\', '/').lstrip('./').split('/')
+              if teile and teile[0] in ('pl', 'ru', 'tr'):
+                  return teile[0]
+              return 'de'
+
+          # Hinweis auf den Lernolotl: nur auf den deutschen Seiten,
+          # auf denen Kinder tatsaechlich Thema sind.
+          KIND_SEITEN = {
+            'fragen/kinder-informieren.html',
+            'geschichten/leon-und-opas-besonderes-zimmer.html',
+          }
+          LMARK = '<!-- lernolotl-hinweis -->'
+          LEND  = '<!-- /lernolotl-hinweis -->'
+          LBOX = LMARK + '''
+          <aside style="background:#ebf8ff;border:1px solid #5dade2;border-radius:10px;
+            padding:16px 20px;margin:28px auto;max-width:700px;">
+            <p style="font-weight:700;color:#3498db;margin:0 0 6px;">
+              Kostenlose Vorlesegeschichten f&uuml;r Kinder
+            </p>
+            <p style="margin:0;font-size:.94rem;color:#34495e;line-height:1.6;">
+              Kinder verstehen mehr, als man denkt &ndash; sie brauchen nur andere Worte.
+              Auf unserer Schwesterseite <a href="https://www.lernolotl.de/bibliothek/"
+              rel="noopener" style="color:#3498db;font-weight:700;">Der Lernolotl</a>
+              gibt es kostenlose Geschichten zu Gef&uuml;hlen, Sorgen und Abschied.
+            </p>
+          </aside>''' + LEND
+
+          nav_neu = nav_akt = lern_neu = 0
+
+          for root, dirs, files in os.walk('.'):
+              dirs[:] = [d for d in dirs if d not in ('.git', 'node_modules', '.github')]
+              for fn in files:
+                  if not fn.endswith('.html'): continue
+                  pfad = os.path.join(root, fn)
+                  rel = pfad.replace('\\\\', '/').lstrip('./')
+                  if 'google' in fn.lower() or fn == '404.html': continue
+                  # die Bibliothek selbst nicht anfassen
+                  if '/bibliothek/' in '/' + rel or '/biblioteka/' in '/' + rel or '/kutuphane/' in '/' + rel:
+                      continue
+                  try:
+                      html = open(pfad, encoding='utf-8').read()
+                  except Exception:
+                      continue
+                  orig = html
+                  lang = sprache(rel)
+                  ziel, text = BIB[lang]
+                  eintrag = MARK + '<li><a href="%s">%s</a></li>' % (ziel, text)
+
+                  if MARK in html:
+                      html = re.sub(re.escape(MARK) + r'<li>.*?</li>', eintrag, html, flags=re.S)
+                      if html != orig: nav_akt += 1
+                  else:
+                      m = re.search(HOME[lang], html)
+                      if m:
+                          html = html[:m.end()] + '\n                ' + eintrag + html[m.end():]
+                          nav_neu += 1
+
+                  if rel in KIND_SEITEN:
+                      if LMARK in html:
+                          html = re.sub(re.escape(LMARK) + r'.*?' + re.escape(LEND), LBOX, html, flags=re.S)
+                      elif '</main>' in html:
+                          html = html.replace('</main>', LBOX + '\n</main>', 1)
+                          lern_neu += 1
+                      elif '<footer' in html:
+                          i = html.index('<footer')
+                          html = html[:i] + LBOX + '\n' + html[i:]
+                          lern_neu += 1
+
+                  if html != orig:
+                      open(pfad, 'w', encoding='utf-8').write(html)
+
+          print('Nav neu: %d | Nav aktualisiert: %d | Lernolotl-Hinweis: %d'
+                % (nav_neu, nav_akt, lern_neu))
+          PYEOF
+
+      - name: Commit & Push
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git add -A
+          git diff --staged --quiet && echo "Keine Änderungen." || (
+            git commit -m "Bibliothek-Link automatisch in alle Sprachfassungen gesetzt" &&
+            git pull --rebase origin main &&
+            git push
+          )
