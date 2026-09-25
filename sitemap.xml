@@ -22,11 +22,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intensivstation-ratgeber.de/Intensivstation_Index.html</loc>
-    <lastmod>2026-03-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://intensivstation-ratgeber.de/agb.html</loc>
     <lastmod>2026-03-22</lastmod>
     <priority>0.8</priority>
@@ -90,16 +85,6 @@
     <loc>https://intensivstation-ratgeber.de/download.html</loc>
     <lastmod>2026-09-16</lastmod>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://intensivstation-ratgeber.de/fragen/Intensivstation-Patienten-Ratgeber-LESEPROBE.html</loc>
-    <lastmod>2026-09-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://intensivstation-ratgeber.de/fragen/Intensivstation-Ratgeber-LESEPROBE.html</loc>
-    <lastmod>2026-09-16</lastmod>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://intensivstation-ratgeber.de/fragen/alles-mitbekommen.html</loc>
@@ -835,11 +820,6 @@
     <loc>https://intensivstation-ratgeber.de/leseproben/wir-muessen-reden-leseprobe.html</loc>
     <lastmod>2026-09-16</lastmod>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://intensivstation-ratgeber.de/pinterest-5853b.html</loc>
-    <lastmod>2026-03-22</lastmod>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intensivstation-ratgeber.de/pl/</loc>
