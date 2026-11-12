@@ -1,0 +1,62 @@
+name: Bibliothek-Produkte und Buchtipps
+
+# Baut aus  bibliothek/produkte.json  (die EINZIGE Stelle zum Pflegen):
+#  - den Kasten "Ratgeber und Materialien" auf allen Bibliotheksseiten (DE/PL/RU/TR)
+#  - die Produkte in der Bibliothek-Suche
+#  - die weiteren Buecher auf download.html
+#  - den Kasten "Passend zu diesem Thema" in allen Frageseiten (DE/PL/RU/TR)
+# Laeuft automatisch, wenn produkte.json oder eine Frageseite geaendert wird.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'bibliothek/produkte.json'
+      - 'scripts/build_bibliothek_produkte.py'
+      - 'scripts/build_buchtipps.py'
+      - 'fragen/**'
+      - 'pl/pytania/**'
+      - 'ru/voprosy/**'
+      - 'tr/sorular/**'
+      - 'fuer-mitarbeiter.html'
+      - '.github/workflows/bibliothek-produkte.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: intensiv-site-writes
+  cancel-in-progress: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    if: "github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, 'Bibliothek-Produkte automatisch')"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Bibliothek und Download-Seite bauen
+        run: python3 scripts/build_bibliothek_produkte.py
+      - name: Buchtipps in die Frageseiten schreiben
+        run: python3 scripts/build_buchtipps.py
+      - name: Aenderungen speichern
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Keine Aenderungen."
+            exit 0
+          fi
+          git commit -m "Bibliothek-Produkte automatisch: Bibliothek und Buchtipps aus produkte.json gebaut"
+          for versuch in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main || exit 1
+            sleep 3
+          done
+          exit 1
