@@ -1374,6 +1374,37 @@ textarea:focus {
     }
 }
 
+
+/* BUCHTIPP_CSS_START – Kasten "Passend zu diesem Thema" (scripts/build_buchtipps.py) */
+.buchtipp{margin:2rem 0 1.5rem;padding:18px 20px;background:#fbfcfd;border:1px solid var(--border-color,#e1e8ed);
+  border-left:5px solid var(--primary,#5dade2);border-radius:10px;}
+.buchtipp .bt-titel{font-weight:700;font-size:1.05rem;color:var(--text-dark,#2c3e50);margin:0;}
+.buchtipp .bt-hinweis{font-size:.75rem;color:var(--text-light,#7f8c8d);margin:2px 0 12px;}
+.buchtipp .bt-karte{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--border-color,#e1e8ed);}
+.buchtipp .bt-cover{width:84px;height:auto;flex:0 0 84px;border-radius:3px;box-shadow:0 2px 8px rgba(0,0,0,.18);}
+.buchtipp .bt-cover-leer{height:116px;display:flex;align-items:center;justify-content:center;background:#fff3cd;
+  color:#856404;font-weight:700;font-size:.8rem;box-shadow:none;}
+.buchtipp .bt-text{flex:1;min-width:0;}
+.buchtipp .bt-name{font-weight:700;margin:0 0 4px;line-height:1.35;color:var(--text-dark,#2c3e50);}
+.buchtipp .bt-sprache{display:inline-block;font-size:.7rem;font-weight:600;color:var(--text-light,#7f8c8d);
+  background:#ecf0f1;border-radius:20px;padding:1px 8px;margin-left:4px;vertical-align:middle;}
+.buchtipp .bt-kurz{font-size:.9rem;margin:0 0 8px;line-height:1.5;color:var(--text-medium,#34495e);}
+.buchtipp .bt-knoepfe{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.buchtipp .bt-btn{display:inline-block;background:var(--primary-dark,#3498db);color:#fff;text-decoration:none;
+  padding:7px 14px;border-radius:7px;font-size:.85rem;font-weight:600;}
+.buchtipp .bt-btn-pdf{background:var(--text-medium,#34495e);}
+.buchtipp .bt-btn:hover,.buchtipp .bt-btn:focus{filter:brightness(1.08);}
+.buchtipp .bt-link{font-size:.85rem;color:var(--primary-dark,#3498db);}
+.buchtipp .bt-mehr{margin:10px 0 0;font-size:.85rem;}
+.buchtipp .bt-mehr a{color:var(--primary-dark,#3498db);}
+@media (max-width:480px){.buchtipp{padding:15px 14px;}.buchtipp .bt-cover{width:64px;flex-basis:64px;}}
+/* Quellenangaben in Artikeln */
+.quellen{margin-top:2rem;font-size:.82rem;color:var(--text-light,#7f8c8d);}
+.quellen h2{font-size:1rem;margin-bottom:.4rem;}
+.quellen ol{padding-left:1.2rem;}
+.quellen li{margin-bottom:.35rem;line-height:1.45;}
+/* BUCHTIPP_CSS_END */
+
 /* CROSSLINKS_CSS_START – automatisch gepflegt von scripts/crosslinks.py */
 /* ===================================
    QUERVERLINKUNG FRAGESEITEN

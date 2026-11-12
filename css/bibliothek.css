@@ -75,3 +75,10 @@
   .bib-gitter{grid-template-columns:1fr;}
   .bib-fragen{grid-template-columns:1fr;}
 }
+/* Buchcover und weitere Sprachausgaben (aus bibliothek/produkte.json) */
+.bib-cover{background:var(--bg-white);border-radius:8px;display:flex;justify-content:center;
+  align-items:center;padding:10px;margin:-4px -4px 2px;height:210px;overflow:hidden;}
+.bib-cover img{max-height:190px;width:auto;max-width:100%;height:auto;border-radius:3px;
+  box-shadow:0 3px 10px rgba(0,0,0,.18);}
+.bib-ausgaben{font-size:.8rem;color:var(--text-light);margin:0;line-height:1.6;}
+.bib-ausgaben a{color:var(--primary-dark);}
