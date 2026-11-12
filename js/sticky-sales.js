@@ -34,7 +34,7 @@
     var fixedBtn = document.createElement('a');
     fixedBtn.href = '/download.html';
     fixedBtn.className = 'fixed-download-button';
-    fixedBtn.innerHTML = '<strong>Zu den Download-Ratgebern</strong><span>PDF-Ratgeber für Angehörige &amp; Patienten</span>';
+    fixedBtn.innerHTML = '<strong>Bücher &amp; Ratgeber</strong><span>Für Angehörige &amp; Patienten</span>';
     document.body.appendChild(fixedBtn);
 
     // Erst nach 20% Scroll anzeigen
