@@ -1,0 +1,610 @@
+{
+ "hinweis": "EINZIGE Stelle fuer Buecher und PDFs der Intensivstation-Seite. Nach jeder Aenderung baut die Action 'Bibliothek-Produkte' alle Bibliotheksseiten (DE/PL/RU/TR) und die Suche neu. Reihenfolge hier = Reihenfolge auf der Seite. 'seiten' = auf welchen Sprachfassungen die Karte erscheint, 'vorn' = dort ganz oben. 'zg' = Zielgruppen: angehoerige, patienten, mitarbeiter, institutionen.",
+ "texte": {
+  "de": {
+   "werbung": "<strong>Anzeige:</strong> Hier werden eigene Bücher und Materialien vorgestellt. Die Links führen zu Amazon und Gumroad; beim Kauf dort erhalten wir eine Vergütung. Für Sie ändert sich der Preis nicht. Alle Antworten auf dieser Website bleiben kostenlos.",
+   "ausgaben": "Auch erhältlich auf:",
+   "zaehler": "ratgeber und materialien"
+  },
+  "pl": {
+   "werbung": "<strong>Reklama:</strong> Prezentujemy tu własne książki i materiały. Linki prowadzą do Amazon i Gumroad; przy zakupie otrzymujemy wynagrodzenie. Cena dla Ciebie pozostaje taka sama. Wszystkie odpowiedzi na tej stronie są bezpłatne.",
+   "ausgaben": "Inne wydania:",
+   "zaehler": "poradniki i materiały"
+  },
+  "ru": {
+   "werbung": "<strong>Реклама:</strong> Здесь представлены собственные книги и материалы. Ссылки ведут на Amazon и Gumroad; при покупке мы получаем вознаграждение. Цена для вас не меняется. Все ответы на этом сайте остаются бесплатными.",
+   "ausgaben": "Другие издания:",
+   "zaehler": "руководства и материалы"
+  },
+  "tr": {
+   "werbung": "<strong>Reklam:</strong> Burada kendi kitaplarımız ve materyallerimiz tanıtılmaktadır. Bağlantılar Amazon ve Gumroad’a gider; oradan satın alırsanız bir ücret alırız. Sizin için fiyat değişmez. Bu sitedeki tüm yanıtlar ücretsiz kalır.",
+   "ausgaben": "Diğer baskılar:",
+   "zaehler": "rehberler ve materyaller"
+  }
+ },
+ "produkte": [
+  {
+   "id": "intensivtagebuch-tr",
+   "art": "buch",
+   "seiten": [
+    "tr"
+   ],
+   "vorn": [
+    "tr"
+   ],
+   "titel": "Yoğun Bakım Günlüğü",
+   "kurz": "Yoğun bakım hastalarının yakınları için bir yol arkadaşı günlüğü. Doldurulacak 50 gün — onun hatırlamayacağı anıları saklamak için.",
+   "tag": "Türkçe",
+   "amazon": "https://www.amazon.de/dp/B0HKH8FLG9",
+   "cover": "/bilder/buecher/intensivtagebuch-tr.jpg",
+   "zg": [
+    "angehoerige",
+    "patienten"
+   ],
+   "ausgabe_von": "intensivtagebuch"
+  },
+  {
+   "id": "kommunikationsbuch-tr",
+   "art": "buch",
+   "seiten": [
+    "tr"
+   ],
+   "vorn": [
+    "tr"
+   ],
+   "titel": "Sesiniz olmasa da anlaşılmak – Auch ohne Stimme verstanden werden",
+   "kurz": "Konuşamıyorsanız gösterin. Almanca bilmeseniz de anlaşılın. Büyük gösterge tabloları — hastane, bakım evi ve evde bakım için.",
+   "tag": "Türkçe–Almanca",
+   "amazon": "https://www.amazon.de/dp/B0HKSC8PJ8",
+   "cover": "/bilder/buecher/kommunikationsbuch-tr.jpg",
+   "zg": [
+    "patienten",
+    "angehoerige",
+    "institutionen",
+    "mitarbeiter"
+   ],
+   "ausgabe_von": "kommunikationsbuch"
+  },
+  {
+   "id": "kommunikationsbuch-pl",
+   "art": "buch",
+   "seiten": [
+    "pl"
+   ],
+   "vorn": [
+    "pl"
+   ],
+   "titel": "Być zrozumianym nawet bez głosu – Auch ohne Stimme verstanden werden",
+   "kurz": "Nie możesz mówić — pokaż. Zrozumieją Cię także bez niemieckiego. Duże tablice do wskazywania — dla szpitala, domu opieki i opieki w domu.",
+   "tag": "Polsko-niemiecki",
+   "amazon": "https://www.amazon.de/dp/B0HN4HQB24",
+   "cover": "",
+   "zg": [
+    "patienten",
+    "angehoerige",
+    "institutionen",
+    "mitarbeiter"
+   ],
+   "ausgabe_von": "kommunikationsbuch"
+  },
+  {
+   "id": "kommunikationsbuch-uk",
+   "art": "buch",
+   "seiten": [
+    "ru"
+   ],
+   "vorn": [
+    "ru"
+   ],
+   "titel": "Бути зрозумілим навіть без голосу – Auch ohne Stimme verstanden werden",
+   "kurz": "Не можете говорити — покажіть. Вас зрозуміють і без німецької. Большие таблицы для указания — для больницы, дома престарелых и ухода на дому.",
+   "tag": "Украинско-немецкое издание",
+   "amazon": "https://www.amazon.de/dp/B0HNNQLV5T",
+   "cover": "/bilder/buecher/kommunikationsbuch-uk.jpg",
+   "zg": [
+    "patienten",
+    "angehoerige",
+    "institutionen",
+    "mitarbeiter"
+   ],
+   "ausgabe_von": "kommunikationsbuch"
+  },
+  {
+   "id": "angehoerige-ratgeber",
+   "art": "buch",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Intensivstation – Was Angehörige wissen müssen",
+   "kurz": "Der Ratgeber direkt von der Station: was auf Sie zukommt, was die Geräte bedeuten und welche Fragen Sie stellen dürfen.",
+   "amazon": "https://www.amazon.de/dp/B0H4HVD2X1",
+   "cover": "/bilder/buecher/angehoerige-ratgeber.jpg",
+   "zg": [
+    "angehoerige"
+   ],
+   "ausgaben": [
+    {
+     "sprache": "English",
+     "amazon": "https://www.amazon.de/dp/B0H5JLLQF8"
+    }
+   ]
+  },
+  {
+   "id": "intensivtagebuch",
+   "art": "buch",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Das Intensivtagebuch",
+   "kurz": "50 Tage zum Ausfüllen. Festhalten, was passiert ist — für die Zeit danach, in der Erinnerungen fehlen.",
+   "amazon": "https://www.amazon.de/dp/B0HJV6MG93",
+   "cover": "/bilder/buecher/intensivtagebuch.jpg",
+   "zg": [
+    "angehoerige",
+    "patienten"
+   ],
+   "ausgaben": [
+    {
+     "sprache": "English",
+     "amazon": "https://www.amazon.de/dp/B0HKHCVFBT"
+    },
+    {
+     "sprache": "Türkçe",
+     "amazon": "https://www.amazon.de/dp/B0HKH8FLG9"
+    },
+    {
+     "sprache": "Español",
+     "amazon": "https://www.amazon.de/dp/B0HL8L9NN5"
+    },
+    {
+     "sprache": "Français",
+     "amazon": "https://www.amazon.de/dp/B0HL8PGZR9"
+    },
+    {
+     "sprache": "Português",
+     "amazon": "https://www.amazon.de/dp/B0HKH6ZF9X"
+    }
+   ]
+  },
+  {
+   "id": "klinikmappe",
+   "art": "buch",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Die Klinikmappe",
+   "kurz": "24 Kopiervorlagen A4 — vorbereitet, bevor es ernst wird: von der Vorsorge über die Aufnahme bis zu den ersten Tagen danach.",
+   "amazon": "https://www.amazon.de/dp/B0HK3RWZ57",
+   "cover": "/bilder/buecher/klinikmappe.jpg",
+   "zg": [
+    "angehoerige",
+    "patienten",
+    "institutionen"
+   ]
+  },
+  {
+   "id": "nach-dem-krankenhaus",
+   "art": "buch",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Was kommt nach dem Krankenhaus",
+   "kurz": "Trachealkanüle, PEG, Katheter, Stoma und Beatmung zu Hause verstehen — für die Zeit nach der Intensivstation.",
+   "amazon": "https://www.amazon.de/dp/B0HJ2VY76W",
+   "cover": "/bilder/buecher/nach-dem-krankenhaus.jpg",
+   "zg": [
+    "angehoerige",
+    "institutionen"
+   ]
+  },
+  {
+   "id": "pflegeordner",
+   "art": "buch",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Nachschlagen statt suchen – Der Pflegeordner zum Kopieren",
+   "kurz": "47 Kopiervorlagen für die Pflege zu Hause — Organisation, Dokumentation, Notfall und Ablage an einem Ort.",
+   "amazon": "https://www.amazon.de/dp/B0HMKZWJCL",
+   "cover": "/bilder/buecher/pflegeordner.jpg",
+   "zg": [
+    "angehoerige",
+    "institutionen"
+   ]
+  },
+  {
+   "id": "kommunikationsbuch",
+   "art": "buch",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Auch ohne Stimme verstanden werden – Kommunikationsbuch",
+   "kurz": "Große Zeigetafeln für Menschen, die nicht sprechen können — bei Beatmung, Trachealkanüle, nach einem Schlaganfall oder bei Sprachbarriere. Für Klinik, Pflegeheim und Zuhause.",
+   "amazon": "https://www.amazon.de/dp/B0HMPKQM4C",
+   "cover": "/bilder/buecher/kommunikationsbuch.jpg",
+   "zg": [
+    "patienten",
+    "angehoerige",
+    "institutionen",
+    "mitarbeiter"
+   ],
+   "ausgaben": [
+    {
+     "sprache": "Türkçe",
+     "amazon": "https://www.amazon.de/dp/B0HKSC8PJ8"
+    },
+    {
+     "sprache": "Polski",
+     "amazon": "https://www.amazon.de/dp/B0HN4HQB24"
+    },
+    {
+     "sprache": "Українська",
+     "amazon": "https://www.amazon.de/dp/B0HNNQLV5T"
+    },
+    {
+     "sprache": "العربية",
+     "amazon": "https://www.amazon.de/dp/B0HNKDYB2B"
+    }
+   ]
+  },
+  {
+   "id": "patienten-ratgeber",
+   "art": "buch",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Intensivstation – Was Patienten erwartet",
+   "kurz": "Für alle, die eine Intensivbehandlung vor sich haben oder hinter sich — was passiert ist und warum.",
+   "amazon": "https://www.amazon.de/dp/B0H4HN265H",
+   "cover": "/bilder/buecher/patienten-ratgeber.jpg",
+   "zg": [
+    "patienten"
+   ],
+   "ausgaben": [
+    {
+     "sprache": "English",
+     "amazon": "https://www.amazon.de/dp/B0H5CDZ9M3"
+    }
+   ]
+  },
+  {
+   "id": "wie-ueberlebe-ich-1",
+   "art": "buch",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Wie überlebe ich die Intensivstation?",
+   "kurz": "Der ehrliche Praxisleitfaden für neue Pflegekräfte — das, was im Lehrbuch nicht steht.",
+   "amazon": "https://www.amazon.de/dp/B0H7VXND2B",
+   "cover": "/bilder/buecher/wie-ueberlebe-ich-1.jpg",
+   "zg": [
+    "mitarbeiter",
+    "institutionen"
+   ]
+  },
+  {
+   "id": "wie-ueberlebe-ich-2",
+   "art": "buch",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Wie überlebe ich die Intensivstation? — Band 2: Die Krankheitsbilder",
+   "kurz": "Über 30 Krankheitsbilder und Notfälle, bewusst einfach erklärt für die ersten 12 Monate.",
+   "amazon": "https://www.amazon.de/dp/B0H8YK5VPL",
+   "cover": "/bilder/buecher/wie-ueberlebe-ich-2.jpg",
+   "zg": [
+    "mitarbeiter",
+    "institutionen"
+   ]
+  },
+  {
+   "id": "pdf-ratgeber-angehoerige",
+   "art": "pdf",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Ratgeber für Angehörige (PDF)",
+   "kurz": "Sofort lesbar, ohne Konto. Die wichtigsten Antworten kompakt zum Ausdrucken oder auf dem Handy.",
+   "gumroad": "https://paulrawe.gumroad.com/l/vniudu",
+   "leseprobe": "/leseproben/ratgeber-vollversion-leseprobe.html",
+   "zg": [
+    "angehoerige"
+   ]
+  },
+  {
+   "id": "pdf-arztgespraech",
+   "art": "pdf",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Arztgespräch auf der Intensivstation",
+   "kurz": "Welche Fragen Sie stellen können und wie Sie sich auf das Gespräch vorbereiten, wenn wenig Zeit bleibt.",
+   "gumroad": "https://paulrawe.gumroad.com/l/oroga",
+   "leseprobe": "/leseproben/arztgespraech-soforthilfe-leseprobe.html",
+   "zg": [
+    "angehoerige"
+   ]
+  },
+  {
+   "id": "pdf-delir",
+   "art": "pdf",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Delir verstehen",
+   "kurz": "Warum ein Mensch auf der Intensivstation plötzlich verwirrt wirkt — und was das für Angehörige bedeutet.",
+   "gumroad": "https://paulrawe.gumroad.com/l/cytkz",
+   "leseprobe": "/leseproben/delir-leseprobe.html",
+   "zg": [
+    "angehoerige",
+    "patienten"
+   ]
+  },
+  {
+   "id": "pdf-wir-muessen-reden",
+   "art": "pdf",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "„Wir müssen reden“",
+   "kurz": "Wenn das Gespräch über Therapieziele ansteht: worum es dabei geht und worauf Sie sich einstellen können.",
+   "gumroad": "https://paulrawe.gumroad.com/l/wtyksz",
+   "leseprobe": "/leseproben/wir-muessen-reden-leseprobe.html",
+   "zg": [
+    "angehoerige"
+   ]
+  },
+  {
+   "id": "pdf-ratgeber-patienten",
+   "art": "pdf",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Ratgeber für Patienten (PDF)",
+   "kurz": "Was Sie auf der Intensivstation erwartet, in verständlicher Sprache — sofort verfügbar.",
+   "gumroad": "https://paulrawe.gumroad.com/l/hucwg",
+   "leseprobe": "/leseproben/patienten-ratgeber-leseprobe.html",
+   "zg": [
+    "patienten"
+   ]
+  },
+  {
+   "id": "pdf-bundle",
+   "art": "pdf",
+   "seiten": [
+    "de",
+    "pl",
+    "ru",
+    "tr"
+   ],
+   "titel": "Beide PDF-Ratgeber kombiniert",
+   "kurz": "Angehörigen- und Patienten-Ratgeber zusammen — günstiger als einzeln.",
+   "gumroad": "https://paulrawe.gumroad.com/l/otohnp",
+   "zg": [
+    "angehoerige",
+    "patienten"
+   ]
+  }
+ ],
+ "artikel_hinweis": "Welche Frageseite welche Buecher im Kasten 'Passend zu diesem Thema' zeigt (hoechstens 2, Reihenfolge zaehlt). Seiten ohne Eintrag zeigen 'artikel_standard'. Uebersetzte Seiten (PL/RU/TR) uebernehmen die Zuordnung ihrer deutschen Vorlage.",
+ "artikel_standard": [
+  "angehoerige-ratgeber"
+ ],
+ "artikel": {
+  "fragen/wie-aushalten.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/selbstfuersorge.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/schuldgefuehle.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/darf-ich-weinen.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/hoffnung-behalten.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/was-ist-kuenstliches-koma.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/warum-kuenstliches-koma.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/wie-lange-kuenstliches-koma.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/koma-beenden.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/traeumt-man-im-koma.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/kann-mich-hoeren.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/alles-mitbekommen.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/wann-aufwachen.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/warum-keine-reaktion.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/warum-dauert-lange.html": [
+   "intensivtagebuch"
+  ],
+  "fragen/hilfe-fuer-angehoerige.html": [
+   "intensivtagebuch",
+   "angehoerige-ratgeber"
+  ],
+  "fragen/was-ist-delir.html": [
+   "intensivtagebuch",
+   "pdf-delir"
+  ],
+  "fragen/erkennt-mich-nicht.html": [
+   "intensivtagebuch",
+   "pdf-delir"
+  ],
+  "fragen/was-passiert-beim-aufwachen.html": [
+   "intensivtagebuch",
+   "pdf-delir"
+  ],
+  "fragen/aufwachphase-dauer.html": [
+   "intensivtagebuch",
+   "pdf-delir"
+  ],
+  "fragen/kommunikation-beatmeter-patient.html": [
+   "kommunikationsbuch",
+   "intensivtagebuch"
+  ],
+  "fragen/sprechen-waehrend-beatmung.html": [
+   "kommunikationsbuch",
+   "intensivtagebuch"
+  ],
+  "fragen/luftroehrenschnitt.html": [
+   "kommunikationsbuch",
+   "nach-dem-krankenhaus"
+  ],
+  "fragen/beatmungsschlauch.html": [
+   "kommunikationsbuch",
+   "nach-dem-krankenhaus"
+  ],
+  "fragen/wie-lange-beatmet.html": [
+   "kommunikationsbuch",
+   "nach-dem-krankenhaus"
+  ],
+  "fragen/kommunikationshilfen.html": [
+   "nach-dem-krankenhaus",
+   "intensivtagebuch"
+  ],
+  "fragen/was-kommt-danach.html": [
+   "nach-dem-krankenhaus",
+   "pflegeordner"
+  ],
+  "fragen/wie-geht-es-weiter.html": [
+   "nach-dem-krankenhaus",
+   "pflegeordner"
+  ],
+  "fragen/wann-verlegung.html": [
+   "nach-dem-krankenhaus",
+   "pflegeordner"
+  ],
+  "fragen/nach-hause-mit-trachealkanuele.html": [
+   "klinikmappe",
+   "kommunikationsbuch"
+  ],
+  "fragen/pflegezeit.html": [
+   "nach-dem-krankenhaus",
+   "pflegeordner"
+  ],
+  "fragen/vollmacht-betreuung.html": [
+   "klinikmappe",
+   "angehoerige-ratgeber"
+  ],
+  "fragen/patientenverfuegung.html": [
+   "klinikmappe",
+   "angehoerige-ratgeber"
+  ],
+  "fragen/wie-bereite-ich-mich-vor.html": [
+   "klinikmappe",
+   "angehoerige-ratgeber"
+  ],
+  "fragen/familie-informieren.html": [
+   "klinikmappe",
+   "angehoerige-ratgeber"
+  ],
+  "fragen/unterlagen-krankenhaus.html": [
+   "angehoerige-ratgeber",
+   "pflegeordner"
+  ],
+  "fragen/arztgespraech.html": [
+   "angehoerige-ratgeber",
+   "pdf-arztgespraech"
+  ],
+  "fragen/welche-fragen-stellen.html": [
+   "angehoerige-ratgeber",
+   "pdf-arztgespraech"
+  ],
+  "fragen/wer-gibt-auskunft.html": [
+   "angehoerige-ratgeber",
+   "pdf-arztgespraech"
+  ],
+  "fragen/telefonisch-auskunft.html": [
+   "angehoerige-ratgeber",
+   "pdf-arztgespraech"
+  ],
+  "fragen/zweite-meinung.html": [
+   "angehoerige-ratgeber",
+   "pdf-arztgespraech"
+  ],
+  "fragen/kann-man-sterben.html": [
+   "angehoerige-ratgeber",
+   "pdf-wir-muessen-reden"
+  ],
+  "fragen/ueberlebenschancen.html": [
+   "angehoerige-ratgeber",
+   "pdf-wir-muessen-reden"
+  ],
+  "fragen/wird-wieder-gesund.html": [
+   "angehoerige-ratgeber",
+   "pdf-wir-muessen-reden"
+  ],
+  "fragen/wie-gefaehrlich.html": [
+   "angehoerige-ratgeber",
+   "pdf-wir-muessen-reden"
+  ],
+  "fragen/intensivtagebuch.html": [
+   "angehoerige-ratgeber",
+   "pdf-delir"
+  ],
+  "fuer-mitarbeiter.html": [
+   "wie-ueberlebe-ich-1",
+   "wie-ueberlebe-ich-2"
+  ]
+ }
+}

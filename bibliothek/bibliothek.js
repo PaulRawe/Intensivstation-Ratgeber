@@ -17,7 +17,8 @@
     if(x.etsy)     b+='<a class="bib-btn bib-btn-etsy" href="'+esc(x.etsy)+'" target="_blank" rel="noopener sponsored">'+esc(T.bei_etsy)+'</a>';
     if(x.gumroad)  b+='<a class="bib-btn bib-btn-gumroad" href="'+esc(x.gumroad)+'" target="_blank" rel="noopener sponsored">'+esc(T.bei_gumroad)+'</a>';
     if(x.leseprobe)b+='<a class="bib-btn bib-btn-frei" href="'+esc(x.leseprobe)+'">'+esc(T.leseprobe)+'</a>';
-    return '<article class="bib-karte"><div class="bib-tags">'+tags+'</div><h3>'+esc(x.titel)+'</h3>'+
+    var img=x.cover?'<div class="bib-cover"><img src="'+esc(x.cover)+'" alt="" loading="lazy"></div>':'';
+    return '<article class="bib-karte">'+img+'<div class="bib-tags">'+tags+'</div><h3>'+esc(x.titel)+'</h3>'+
            (x.kurz?'<p class="bib-kurz">'+esc(x.kurz)+'</p>':'')+
            '<div class="bib-btns">'+b+'</div></article>';
   }
